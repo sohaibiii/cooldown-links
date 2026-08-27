@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="How to remove everything Cooldown holds — all of it on your phone — and what happens to your subscription.">
+<meta name="robots" content="index,follow">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F5F6FA">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0F1214">
+<meta property="og:title" content="Delete your data — Cooldown">
+<meta property="og:description" content="How to remove everything Cooldown holds — all of it on your phone — and what happens to your subscription.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sohaibiii.github.io/cooldown-links/delete-data/">
+<link rel="canonical" href="https://sohaibiii.github.io/cooldown-links/delete-data/">
+<link rel="icon" href="/cooldown-links/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/cooldown-links/apple-touch-icon.png">
+<title>Delete your data — Cooldown</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  --bg:#F5F6FA;--surface:#FFFFFF;--fill:#EAECF4;--ink:#12151B;--ink-2:#5A6070;--ink-3:#6B7180;
+  --line:rgba(0,0,0,.06);--accent:#4A5AC4;--accent-strong:#3F4EB2;--accent-soft:rgba(74,90,196,.12);--on-accent:#FFFFFF;
+  --glow:transparent;--card-shadow:0 10px 30px rgba(18,21,27,.07);--card-edge:transparent;
+  --savings:#2E7D4F;--savings-soft:rgba(46,125,79,.13);--cooling:#8A5D0A;--cooling-soft:rgba(138,93,10,.13);
+  --hero-top:#1D2347;--hero-bottom:#12152A;--hero-glow:rgba(123,140,222,.42);--hero-ink:#F2F4F7;--hero-ink-2:rgba(242,244,247,.74);--hero-stroke:rgba(255,255,255,.10);--hero-fill:rgba(255,255,255,.10);
+  --moon-core:#D3DCFF;--moon-edge:#8FA0EA;--moon-glow:rgba(123,140,222,.70);
+  --r-card:20px;--r-hero:28px;--r-control:14px;--r-chip:12px;--r-tile:10px;
+  --max:760px;--wide:1080px;
+  --display:"Nunito",ui-rounded,"SF Pro Rounded",-apple-system,system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0F1214;--surface:#181D20;--fill:#222931;--ink:#F2F4F7;--ink-2:#9AA3AF;--ink-3:#7C8594;
+  --line:rgba(255,255,255,.08);--accent:#8FA0EA;--accent-strong:#A3B2F2;--accent-soft:rgba(123,140,222,.16);--on-accent:#0F1214;
+  --glow:rgba(123,140,222,.35);--card-shadow:none;--card-edge:rgba(255,255,255,.07);
+  --savings:#7FC98F;--savings-soft:rgba(127,201,143,.16);--cooling:#E8C170;--cooling-soft:rgba(232,193,112,.16);
+}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:var(--accent);text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--accent) 40%,transparent);text-underline-offset:3px;overflow-wrap:anywhere}
+a:hover{text-decoration-color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;top:8px;left:8px;background:var(--surface);color:var(--ink);padding:8px 12px;z-index:20;border-radius:var(--r-chip);box-shadow:var(--card-shadow)}
+.skip:not(:focus){clip:rect(0 0 0 0);clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap;padding:0;margin:-1px}
+h1,h2,h3{margin:0;letter-spacing:-.022em;text-wrap:balance;font-family:var(--display);font-weight:800}
+h1{font-size:clamp(32px,4.6vw,48px);line-height:1.06}
+h2{font-size:25px;line-height:1.24}
+h3{font-weight:700;font-size:18px;line-height:1.3}
+p{margin:0 0 1em}
+p:last-child{margin-bottom:0}
+ul,ol{margin:0;padding-left:1.3em}
+li{margin:.45em 0}
+li::marker{color:var(--accent)}
+strong{font-weight:600}
+.muted{color:var(--ink-2)}
+small,.small{font-size:14px;color:var(--ink-2)}
+code{font:.92em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--fill);padding:.1em .4em;border-radius:6px}
+kbd{font:inherit;background:var(--fill);border-radius:8px;padding:.05em .5em;white-space:nowrap}
+.est{font-style:normal;color:var(--ink-2);font-size:.86em;font-weight:500}
+
+/* top bar — the one glass surface, like the app's navigation layer */
+.topbar{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
+.topbar .in{max-width:var(--wide);margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.02em}
+.mark{width:26px;height:26px;border-radius:8px;flex:none;display:grid;place-items:center;background:linear-gradient(160deg,#252B52,#12152A);box-shadow:0 0 0 1px var(--hero-stroke),0 0 14px var(--moon-glow)}
+.mark svg{width:15px;height:15px}
+nav.pages{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+nav.pages a{text-decoration:none;color:var(--ink-2);font-size:15px;font-weight:500;padding:7px 12px;border-radius:999px}
+nav.pages a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
+nav.pages a:hover{color:var(--ink)}
+@media (max-width:640px){nav.pages{margin-left:0;width:100%;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;padding-bottom:2px}nav.pages::-webkit-scrollbar{display:none}nav.pages a{flex:none}}
+
+/* hero — the app's protection island, dark in both appearances */
+.hero-wrap{max-width:var(--wide);margin:24px auto 0;padding:0 20px}
+.hero{position:relative;overflow:hidden;border-radius:var(--r-hero);background:linear-gradient(135deg,var(--hero-top),var(--hero-bottom));color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke),0 24px 60px rgba(15,18,20,.20);padding:clamp(36px,6vw,64px) clamp(24px,5vw,56px)}
+.hero::before{content:"";position:absolute;inset:-40% -18% auto auto;width:62%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--hero-glow) 0,transparent 62%);pointer-events:none}
+.hero>*{position:relative}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--hero-ink-2);margin-bottom:18px;font-family:var(--display)}
+.hero .eyebrow .dot{width:9px;height:9px;border-radius:50%;background:var(--moon-edge);box-shadow:0 0 10px var(--moon-glow)}
+.hero h1{max-width:18ch}
+.hero .sub{margin:16px 0 0;max-width:56ch;font-size:clamp(17px,2vw,20px);color:var(--hero-ink-2)}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;align-items:center}
+.hero .ctas a,.hero .ctas span{color:var(--hero-ink)}
+.hero .ctas .btn.primary{background:linear-gradient(to bottom,#8FA0EA,#7B8CDE);color:#0F1214;box-shadow:0 8px 24px rgba(123,140,222,.34)}
+.hero .ctas .btn.quiet{background:var(--hero-fill);color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke)}
+.hero .meta{margin-top:22px;font-size:14px;color:var(--hero-ink-2)}
+.hero .meta a{color:var(--hero-ink);text-decoration-color:rgba(255,255,255,.4)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:16px;line-height:1;padding:14px 20px;border-radius:var(--r-control);text-decoration:none;white-space:nowrap}
+.btn.primary{background:var(--accent);color:var(--on-accent);box-shadow:0 8px 24px var(--glow)}
+.btn.quiet{background:var(--fill);color:var(--ink)}
+.btn svg{width:18px;height:18px;flex:none}
+.soon{display:inline-flex;align-items:center;gap:8px;font-size:15px;color:var(--hero-ink-2);padding:12px 4px}
+.soon svg{width:18px;height:18px;flex:none}
+
+/* content */
+main{max-width:var(--wide);margin:0 auto;padding:32px 20px 64px}
+.grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
+@media (min-width:900px){.grid.with-toc{grid-template-columns:240px minmax(0,1fr);align-items:start}}
+.toc{position:sticky;top:76px;padding:20px 22px;border-radius:var(--r-card);background:var(--surface);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge)}
+.toc .lbl{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);margin-bottom:10px;font-family:var(--display)}
+.toc ol{list-style:none;padding:0;margin:0}
+.toc li{margin:0}
+.toc a{display:block;padding:6px 0;font-size:15px;color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--line)}
+.toc li:last-child a{border-bottom:0}
+.toc a:hover{color:var(--accent)}
+.stack{display:grid;gap:20px;max-width:var(--max)}
+.grid.with-toc .stack{max-width:none}
+.card{background:var(--surface);border-radius:var(--r-card);padding:clamp(22px,3.4vw,32px);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge)}
+.card h2{margin-bottom:12px;scroll-margin-top:84px}
+.card h3{margin:20px 0 6px}
+.card h3:first-of-type{margin-top:0}
+.card p+h3{margin-top:18px}
+.lead{font-size:clamp(18px,2vw,21px);line-height:1.5;color:var(--ink)}
+.stamp{font-size:14px;color:var(--ink-2);margin:0 0 4px}
+.callout{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:var(--r-control);background:var(--accent-soft)}
+.callout .tile{flex:none;width:32px;height:32px;border-radius:var(--r-tile);display:grid;place-items:center;background:var(--accent);color:var(--on-accent)}
+.callout .tile svg{width:18px;height:18px}
+.callout.amber{background:var(--cooling-soft)}.callout.amber .tile{background:var(--cooling);color:var(--bg)}
+.callout.green{background:var(--savings-soft)}.callout.green .tile{background:var(--savings);color:var(--bg)}
+.rows{list-style:none;padding:0;margin:0;display:grid;gap:2px}
+.rows li{display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px;padding:12px 0;margin:0;border-bottom:1px solid var(--line);align-items:start}
+.rows li:last-child{border-bottom:0}
+.rows .tile{width:40px;height:40px;border-radius:var(--r-tile);display:grid;place-items:center;background:var(--accent-soft);color:var(--accent)}
+.rows .tile.amber{background:var(--cooling-soft);color:var(--cooling)}
+.rows .tile.green{background:var(--savings-soft);color:var(--savings)}
+.rows .tile svg{width:20px;height:20px}
+.rows b{display:block;font-weight:600}
+.rows span{color:var(--ink-2);font-size:15.5px}
+.features{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.features .card{display:flex;flex-direction:column;gap:10px}
+.features .tile{width:44px;height:44px;border-radius:var(--r-chip);display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);margin-bottom:6px}
+.features .tile.amber{background:var(--cooling-soft);color:var(--cooling)}
+.features .tile.green{background:var(--savings-soft);color:var(--savings)}
+.features .tile svg{width:22px;height:22px}
+.features .card h3{margin:0}
+.features .card p{color:var(--ink-2);font-size:16px}
+.tiers{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.tier{background:var(--surface);border-radius:var(--r-card);padding:24px;box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge);display:flex;flex-direction:column;gap:10px}
+.tier .lbl{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);font-family:var(--display)}
+.tier .price{font-family:var(--display);font-size:28px;font-weight:800;letter-spacing:-.02em}
+.tier .price small{font-size:15px;font-weight:500;color:var(--ink-2)}
+.tier ul{margin-top:4px;color:var(--ink-2);font-size:15.5px}
+.tier.premium{background:linear-gradient(135deg,var(--hero-top),var(--hero-bottom));color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke)}
+.tier.premium .lbl,.tier.premium ul{color:var(--hero-ink-2)}
+.tier.premium li::marker{color:#8FA0EA}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--fill);color:var(--ink-2);border-radius:999px;padding:4px 10px;font-size:13.5px;font-weight:500}
+dl.faq{margin:0}
+dl.faq dt{font-weight:600;margin-top:18px}
+dl.faq dt:first-child{margin-top:0}
+dl.faq dd{margin:6px 0 0;color:var(--ink-2)}
+table{width:100%;border-collapse:collapse;font-size:15.5px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px 10px 0;border-bottom:1px solid var(--line)}
+th{font-weight:700;color:var(--ink-2);font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-family:var(--display)}
+tr:last-child td{border-bottom:0}
+.table-wrap{overflow-x:auto}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.steps li{display:grid;grid-template-columns:32px minmax(0,1fr);gap:14px;margin:0;align-items:start}
+.steps li::before{counter-increment:s;content:counter(s);width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--on-accent);font-weight:800;font-size:14px;font-family:var(--display)}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:28px 20px 44px;color:var(--ink-2);font-size:14.5px}
+footer .in{max-width:var(--wide);margin:0 auto;display:flex;gap:10px 22px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+footer nav{display:flex;gap:6px 16px;flex-wrap:wrap}
+footer a{color:var(--ink-2)}
+footer a:hover{color:var(--accent)}
+</style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="topbar"><div class="in">
+  <a class="brand" href="/cooldown-links/"><span class="mark" aria-hidden="true"><svg viewBox="0 0 100 100" aria-hidden="true"><defs><radialGradient id="mg" cx="38%" cy="32%" r="72%"><stop offset="0" stop-color="#D3DCFF"/><stop offset="1" stop-color="#8FA0EA"/></radialGradient></defs><path d="M50 6a44 44 0 1 0 40 62A36 36 0 0 1 50 6Z" fill="url(#mg)"/></svg></span>Cooldown</a>
+  <nav class="pages" aria-label="Pages"><a href="/cooldown-links/">Support</a><a href="/cooldown-links/about/">About</a><a href="/cooldown-links/privacy/">Privacy</a><a href="/cooldown-links/terms/">Terms</a><a href="/cooldown-links/delete-data/" aria-current="page">Your data</a></nav>
+</div></header>
+<div class="hero-wrap"><section class="hero"><div class="eyebrow"><span class="dot" aria-hidden="true"></span>Your data</div><h1>Delete your data</h1><p class="sub">Everything Cooldown knows is on your phone. Here is how to remove it, what happens to your subscription, and what — nothing — is left on our side.</p><p class="meta">See also the <a href="/cooldown-links/privacy/">Privacy Policy</a></p></section></div>
+<main id="content"><div class="grid with-toc"><aside class="toc" aria-label="On this page"><div class="lbl">On this page</div><ol><li><a href="#where">What is stored where</a></li><li><a href="#inapp">Remove it in the app</a></li><li><a href="#ai">The weekly write-up</a></li><li><a href="#uninstall">Delete the app</a></li><li><a href="#subscription">Your subscription</a></li><li><a href="#email">Ask us</a></li></ol></aside><div class="stack"><section class="card" id="where"><h2 id="where-h">What is stored where</h2>
+<p class="lead">Cooldown has no account and keeps nothing about you on a server, so there is nothing to request from us. Everything it holds is on your iPhone.</p>
+<div class="table-wrap"><table>
+<tr><th>Data</th><th>Where it lives</th><th>How to remove it</th></tr>
+<tr><td>Wishlist, prices, feelings, spend log, savings history, rules</td><td>The app's private storage on your phone</td><td>Delete the app, or restore the phone</td></tr>
+<tr><td>Your shop selection</td><td>Opaque Screen Time tokens in the app's private storage</td><td>Change it in the app; withdrawing Screen Time access in iOS Settings also ends every shield</td></tr>
+<tr><td>Widget and Live Activity snapshot</td><td>A small file of counts and dates on your phone</td><td>Removed with the app</td></tr>
+<tr><td>The weekly write-up</td><td>On your phone, only if the AI reflection is on</td><td>Switching AI reflection off deletes it</td></tr>
+<tr><td>Premium entitlement</td><td>Your Apple ID (Apple), and a copy of its status on your phone</td><td>Managed in your App Store settings — see below</td></tr>
+<tr><td>Anything on our servers</td><td>—</td><td>There is none. Our service keeps no copy of anything the app sends it.</td></tr>
+</table></div>
+</section><section class="card" id="inapp"><h2 id="inapp-h">Remove it in the app</h2>
+<p>Cooldown is built so that your own data thins out as you use it, rather than piling up:</p>
+<ul>
+  <li>An item leaves your list the moment you decide about it — let it go, or keep it.</li>
+  <li>Changing your shops replaces the stored tokens; there is no history of shops you used to protect.</li>
+  <li>Turning <strong>Protection</strong> off takes every shield down immediately.</li>
+</ul>
+<div class="callout amber"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><div>While <strong>strict mode</strong> is running, your setup is held in place — that is the one commitment you asked the app to keep for you. It ends on its own at the time you chose.</div></div>
+</section><section class="card" id="ai"><h2 id="ai-h">The weekly write-up</h2>
+<p>If you switched on the AI reflection, Cooldown keeps the latest Sunday write-up on your phone so you can read it again. Switching AI reflection off in Settings deletes it, removes the Sunday reminder from your notifications, and returns the app to making no network calls of its own.</p>
+<p>Our service never held a copy to begin with — it keeps only that a request happened, how long it took and whether it worked. There is nothing there to delete.</p>
+</section><section class="card" id="uninstall"><h2 id="uninstall-h">Delete the app</h2>
+<p>Deleting Cooldown from your iPhone removes all of its data with it, including the Screen Time tokens, and ends every shield immediately. If the app is included in an iCloud or encrypted local backup, that copy belongs to your Apple ID and is governed by Apple's terms; we have no access to it.</p>
+</section><section class="card" id="subscription"><h2 id="subscription-h">Your subscription</h2>
+<p>Deleting the app does not cancel a subscription — it belongs to your Apple ID, not to the app. Cancel it in <a href="https://apps.apple.com/account/subscriptions">App Store subscription settings</a>; it stays active until the end of the current period. Refunds are handled by <a href="https://support.apple.com/billing">Apple Support</a>. A lifetime purchase does not renew and needs nothing cancelled.</p>
+</section><section class="card" id="email"><h2 id="email-h">Ask us</h2>
+<p>If you would like written confirmation that we hold nothing about you, or you believe we do, write to <a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a> from any address. We will reply within 30 days. Please do not send us your wishlist, your prices or screenshots of them — we do not need them to answer.</p>
+</section></div></div></main>
+<footer><div class="in">
+  <div>© 2026 Cooldown · TOPSOL · All rights reserved.</div>
+  <nav aria-label="Footer"><a href="/cooldown-links/">Support</a> · <a href="/cooldown-links/about/">About</a> · <a href="/cooldown-links/privacy/">Privacy</a> · <a href="/cooldown-links/terms/">Terms</a> · <a href="/cooldown-links/delete-data/">Your data</a> · <a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a></nav>
+</div></footer>
+</body>
+</html>

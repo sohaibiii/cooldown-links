@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Official support for Cooldown, the iPhone app that puts one night between you and the buy button. How it works, requirements, FAQ and contact.">
+<meta name="robots" content="index,follow">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F5F6FA">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0F1214">
+<meta property="og:title" content="Cooldown — Support">
+<meta property="og:description" content="Official support for Cooldown, the iPhone app that puts one night between you and the buy button. How it works, requirements, FAQ and contact.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sohaibiii.github.io/cooldown-links/">
+<link rel="canonical" href="https://sohaibiii.github.io/cooldown-links/">
+<link rel="icon" href="/cooldown-links/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/cooldown-links/apple-touch-icon.png">
+<title>Cooldown — Support</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  --bg:#F5F6FA;--surface:#FFFFFF;--fill:#EAECF4;--ink:#12151B;--ink-2:#5A6070;--ink-3:#6B7180;
+  --line:rgba(0,0,0,.06);--accent:#4A5AC4;--accent-strong:#3F4EB2;--accent-soft:rgba(74,90,196,.12);--on-accent:#FFFFFF;
+  --glow:transparent;--card-shadow:0 10px 30px rgba(18,21,27,.07);--card-edge:transparent;
+  --savings:#2E7D4F;--savings-soft:rgba(46,125,79,.13);--cooling:#8A5D0A;--cooling-soft:rgba(138,93,10,.13);
+  --hero-top:#1D2347;--hero-bottom:#12152A;--hero-glow:rgba(123,140,222,.42);--hero-ink:#F2F4F7;--hero-ink-2:rgba(242,244,247,.74);--hero-stroke:rgba(255,255,255,.10);--hero-fill:rgba(255,255,255,.10);
+  --moon-core:#D3DCFF;--moon-edge:#8FA0EA;--moon-glow:rgba(123,140,222,.70);
+  --r-card:20px;--r-hero:28px;--r-control:14px;--r-chip:12px;--r-tile:10px;
+  --max:760px;--wide:1080px;
+  --display:"Nunito",ui-rounded,"SF Pro Rounded",-apple-system,system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0F1214;--surface:#181D20;--fill:#222931;--ink:#F2F4F7;--ink-2:#9AA3AF;--ink-3:#7C8594;
+  --line:rgba(255,255,255,.08);--accent:#8FA0EA;--accent-strong:#A3B2F2;--accent-soft:rgba(123,140,222,.16);--on-accent:#0F1214;
+  --glow:rgba(123,140,222,.35);--card-shadow:none;--card-edge:rgba(255,255,255,.07);
+  --savings:#7FC98F;--savings-soft:rgba(127,201,143,.16);--cooling:#E8C170;--cooling-soft:rgba(232,193,112,.16);
+}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:var(--accent);text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--accent) 40%,transparent);text-underline-offset:3px;overflow-wrap:anywhere}
+a:hover{text-decoration-color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;top:8px;left:8px;background:var(--surface);color:var(--ink);padding:8px 12px;z-index:20;border-radius:var(--r-chip);box-shadow:var(--card-shadow)}
+.skip:not(:focus){clip:rect(0 0 0 0);clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap;padding:0;margin:-1px}
+h1,h2,h3{margin:0;letter-spacing:-.022em;text-wrap:balance;font-family:var(--display);font-weight:800}
+h1{font-size:clamp(32px,4.6vw,48px);line-height:1.06}
+h2{font-size:25px;line-height:1.24}
+h3{font-weight:700;font-size:18px;line-height:1.3}
+p{margin:0 0 1em}
+p:last-child{margin-bottom:0}
+ul,ol{margin:0;padding-left:1.3em}
+li{margin:.45em 0}
+li::marker{color:var(--accent)}
+strong{font-weight:600}
+.muted{color:var(--ink-2)}
+small,.small{font-size:14px;color:var(--ink-2)}
+code{font:.92em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--fill);padding:.1em .4em;border-radius:6px}
+kbd{font:inherit;background:var(--fill);border-radius:8px;padding:.05em .5em;white-space:nowrap}
+.est{font-style:normal;color:var(--ink-2);font-size:.86em;font-weight:500}
+
+/* top bar — the one glass surface, like the app's navigation layer */
+.topbar{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
+.topbar .in{max-width:var(--wide);margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.02em}
+.mark{width:26px;height:26px;border-radius:8px;flex:none;display:grid;place-items:center;background:linear-gradient(160deg,#252B52,#12152A);box-shadow:0 0 0 1px var(--hero-stroke),0 0 14px var(--moon-glow)}
+.mark svg{width:15px;height:15px}
+nav.pages{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+nav.pages a{text-decoration:none;color:var(--ink-2);font-size:15px;font-weight:500;padding:7px 12px;border-radius:999px}
+nav.pages a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
+nav.pages a:hover{color:var(--ink)}
+@media (max-width:640px){nav.pages{margin-left:0;width:100%;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;padding-bottom:2px}nav.pages::-webkit-scrollbar{display:none}nav.pages a{flex:none}}
+
+/* hero — the app's protection island, dark in both appearances */
+.hero-wrap{max-width:var(--wide);margin:24px auto 0;padding:0 20px}
+.hero{position:relative;overflow:hidden;border-radius:var(--r-hero);background:linear-gradient(135deg,var(--hero-top),var(--hero-bottom));color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke),0 24px 60px rgba(15,18,20,.20);padding:clamp(36px,6vw,64px) clamp(24px,5vw,56px)}
+.hero::before{content:"";position:absolute;inset:-40% -18% auto auto;width:62%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--hero-glow) 0,transparent 62%);pointer-events:none}
+.hero>*{position:relative}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--hero-ink-2);margin-bottom:18px;font-family:var(--display)}
+.hero .eyebrow .dot{width:9px;height:9px;border-radius:50%;background:var(--moon-edge);box-shadow:0 0 10px var(--moon-glow)}
+.hero h1{max-width:18ch}
+.hero .sub{margin:16px 0 0;max-width:56ch;font-size:clamp(17px,2vw,20px);color:var(--hero-ink-2)}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;align-items:center}
+.hero .ctas a,.hero .ctas span{color:var(--hero-ink)}
+.hero .ctas .btn.primary{background:linear-gradient(to bottom,#8FA0EA,#7B8CDE);color:#0F1214;box-shadow:0 8px 24px rgba(123,140,222,.34)}
+.hero .ctas .btn.quiet{background:var(--hero-fill);color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke)}
+.hero .meta{margin-top:22px;font-size:14px;color:var(--hero-ink-2)}
+.hero .meta a{color:var(--hero-ink);text-decoration-color:rgba(255,255,255,.4)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:16px;line-height:1;padding:14px 20px;border-radius:var(--r-control);text-decoration:none;white-space:nowrap}
+.btn.primary{background:var(--accent);color:var(--on-accent);box-shadow:0 8px 24px var(--glow)}
+.btn.quiet{background:var(--fill);color:var(--ink)}
+.btn svg{width:18px;height:18px;flex:none}
+.soon{display:inline-flex;align-items:center;gap:8px;font-size:15px;color:var(--hero-ink-2);padding:12px 4px}
+.soon svg{width:18px;height:18px;flex:none}
+
+/* content */
+main{max-width:var(--wide);margin:0 auto;padding:32px 20px 64px}
+.grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
+@media (min-width:900px){.grid.with-toc{grid-template-columns:240px minmax(0,1fr);align-items:start}}
+.toc{position:sticky;top:76px;padding:20px 22px;border-radius:var(--r-card);background:var(--surface);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge)}
+.toc .lbl{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);margin-bottom:10px;font-family:var(--display)}
+.toc ol{list-style:none;padding:0;margin:0}
+.toc li{margin:0}
+.toc a{display:block;padding:6px 0;font-size:15px;color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--line)}
+.toc li:last-child a{border-bottom:0}
+.toc a:hover{color:var(--accent)}
+.stack{display:grid;gap:20px;max-width:var(--max)}
+.grid.with-toc .stack{max-width:none}
+.card{background:var(--surface);border-radius:var(--r-card);padding:clamp(22px,3.4vw,32px);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge)}
+.card h2{margin-bottom:12px;scroll-margin-top:84px}
+.card h3{margin:20px 0 6px}
+.card h3:first-of-type{margin-top:0}
+.card p+h3{margin-top:18px}
+.lead{font-size:clamp(18px,2vw,21px);line-height:1.5;color:var(--ink)}
+.stamp{font-size:14px;color:var(--ink-2);margin:0 0 4px}
+.callout{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:var(--r-control);background:var(--accent-soft)}
+.callout .tile{flex:none;width:32px;height:32px;border-radius:var(--r-tile);display:grid;place-items:center;background:var(--accent);color:var(--on-accent)}
+.callout .tile svg{width:18px;height:18px}
+.callout.amber{background:var(--cooling-soft)}.callout.amber .tile{background:var(--cooling);color:var(--bg)}
+.callout.green{background:var(--savings-soft)}.callout.green .tile{background:var(--savings);color:var(--bg)}
+.rows{list-style:none;padding:0;margin:0;display:grid;gap:2px}
+.rows li{display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px;padding:12px 0;margin:0;border-bottom:1px solid var(--line);align-items:start}
+.rows li:last-child{border-bottom:0}
+.rows .tile{width:40px;height:40px;border-radius:var(--r-tile);display:grid;place-items:center;background:var(--accent-soft);color:var(--accent)}
+.rows .tile.amber{background:var(--cooling-soft);color:var(--cooling)}
+.rows .tile.green{background:var(--savings-soft);color:var(--savings)}
+.rows .tile svg{width:20px;height:20px}
+.rows b{display:block;font-weight:600}
+.rows span{color:var(--ink-2);font-size:15.5px}
+.features{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.features .card{display:flex;flex-direction:column;gap:10px}
+.features .tile{width:44px;height:44px;border-radius:var(--r-chip);display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);margin-bottom:6px}
+.features .tile.amber{background:var(--cooling-soft);color:var(--cooling)}
+.features .tile.green{background:var(--savings-soft);color:var(--savings)}
+.features .tile svg{width:22px;height:22px}
+.features .card h3{margin:0}
+.features .card p{color:var(--ink-2);font-size:16px}
+.tiers{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.tier{background:var(--surface);border-radius:var(--r-card);padding:24px;box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge);display:flex;flex-direction:column;gap:10px}
+.tier .lbl{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);font-family:var(--display)}
+.tier .price{font-family:var(--display);font-size:28px;font-weight:800;letter-spacing:-.02em}
+.tier .price small{font-size:15px;font-weight:500;color:var(--ink-2)}
+.tier ul{margin-top:4px;color:var(--ink-2);font-size:15.5px}
+.tier.premium{background:linear-gradient(135deg,var(--hero-top),var(--hero-bottom));color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke)}
+.tier.premium .lbl,.tier.premium ul{color:var(--hero-ink-2)}
+.tier.premium li::marker{color:#8FA0EA}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--fill);color:var(--ink-2);border-radius:999px;padding:4px 10px;font-size:13.5px;font-weight:500}
+dl.faq{margin:0}
+dl.faq dt{font-weight:600;margin-top:18px}
+dl.faq dt:first-child{margin-top:0}
+dl.faq dd{margin:6px 0 0;color:var(--ink-2)}
+table{width:100%;border-collapse:collapse;font-size:15.5px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px 10px 0;border-bottom:1px solid var(--line)}
+th{font-weight:700;color:var(--ink-2);font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-family:var(--display)}
+tr:last-child td{border-bottom:0}
+.table-wrap{overflow-x:auto}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.steps li{display:grid;grid-template-columns:32px minmax(0,1fr);gap:14px;margin:0;align-items:start}
+.steps li::before{counter-increment:s;content:counter(s);width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--on-accent);font-weight:800;font-size:14px;font-family:var(--display)}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:28px 20px 44px;color:var(--ink-2);font-size:14.5px}
+footer .in{max-width:var(--wide);margin:0 auto;display:flex;gap:10px 22px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+footer nav{display:flex;gap:6px 16px;flex-wrap:wrap}
+footer a{color:var(--ink-2)}
+footer a:hover{color:var(--accent)}
+</style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="topbar"><div class="in">
+  <a class="brand" href="/cooldown-links/"><span class="mark" aria-hidden="true"><svg viewBox="0 0 100 100" aria-hidden="true"><defs><radialGradient id="mg" cx="38%" cy="32%" r="72%"><stop offset="0" stop-color="#D3DCFF"/><stop offset="1" stop-color="#8FA0EA"/></radialGradient></defs><path d="M50 6a44 44 0 1 0 40 62A36 36 0 0 1 50 6Z" fill="url(#mg)"/></svg></span>Cooldown</a>
+  <nav class="pages" aria-label="Pages"><a href="/cooldown-links/" aria-current="page">Support</a><a href="/cooldown-links/about/">About</a><a href="/cooldown-links/privacy/">Privacy</a><a href="/cooldown-links/terms/">Terms</a><a href="/cooldown-links/delete-data/">Your data</a></nav>
+</div></header>
+<div class="hero-wrap"><section class="hero"><div class="eyebrow"><span class="dot" aria-hidden="true"></span>Support</div><h1>Help with Cooldown</h1><p class="sub">One night between you and the buy button. Cooldown shields the shopping apps and websites you chose and asks you to sleep on it first. This page covers how it works, what it needs, and how to reach us.</p><div class="ctas"><span class="soon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.3 1.2 9.7.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.2-.8s1.9.8 3.2.8 2.1-1.2 2.9-2.4c.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.5-1-2.5-3.8zM14 5.5c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.2-.6 2.8-1.4z"/></svg> Coming soon to the App Store</span><a class="btn quiet" href="#faq">Read the FAQ</a></div><p class="meta">No account · no bank access · <a href="/cooldown-links/privacy/">Privacy Policy</a></p></section></div>
+<main id="content"><div class="grid with-toc"><aside class="toc" aria-label="On this page"><div class="lbl">On this page</div><ol><li><a href="#how">How Cooldown works</a></li><li><a href="#requirements">Requirements</a></li><li><a href="#start">Getting started</a></li><li><a href="#money">About the savings number</a></li><li><a href="#faq">Frequently asked questions</a></li><li><a href="#trouble">Troubleshooting</a></li><li><a href="#contact">Contact</a></li></ol></aside><div class="stack"><section class="card" id="how"><h2 id="how-h">How Cooldown works</h2>
+<p class="lead">Cooldown puts one night between you and the buy button.</p>
+<p>You choose the shopping apps and websites that get you. From then on, opening one does not take you straight to the checkout — Cooldown steps in first with a quiet screen that says <em>Sleep on it.</em> You can note the thing down, walk away, or open the shop anyway for a few minutes. Nothing is ever bought or cancelled on your behalf.</p>
+<p>Anything you note down waits twenty-four hours. When the wait is over Cooldown asks one question: do you still want it? Most wants don't survive the night — and the ones that do were real.</p>
+<ul class="rows">
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/></svg></span><div><b>Protection</b><span>One switch. While it is on, the shops you chose show Cooldown's shield instead of opening — the app <em>and</em> the website, including in Safari.</span></div></li>
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11l4 4v12H5z"/><path d="M9 11h7M9 15h5"/></svg></span><div><b>Capture</b><span>Name the thing, tap a price, tap how you feel — bored, stressed, celebrating, deal FOMO, or “I need it”. Fifteen seconds, one screen, no keyboard gymnastics.</span></div></li>
+  <li><span class="tile amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.5 7l17 10M20.5 7l-17 10"/></svg></span><div><b>On ice</b><span>Captured items wait under a slow twenty-four-hour ring. Nothing is bought while an item cools.</span></div></li>
+  <li><span class="tile green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.6" y="6" width="18.8" height="12" rx="2.6"/><circle cx="12" cy="12" r="2.7"/></svg></span><div><b>Estimated savings</b><span>Every item you let go counts toward a running total, built entirely from prices you typed yourself.</span></div></li>
+  <li><span class="tile amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Danger hours and rules</b><span>Make late nights a little stricter, or close one shop's door entirely between certain hours. The rule lifts on its own.</span></div></li>
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><div><b>Strict mode</b><span>Hold your own setup in place so it can't be undone in the moment you would most like to undo it.</span></div></li>
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg></span><div><b>Widgets</b><span>This month's estimated savings and what's on ice, on the Home Screen and the Lock Screen, with a Live Activity while an item cools.</span></div></li>
+</ul>
+</section><section class="card" id="requirements"><h2 id="requirements-h">Requirements</h2>
+<div class="table-wrap"><table>
+<tr><th>Device</th><td>iPhone running <strong>iOS 17 or newer</strong>. Cooldown is designed for iPhone.</td></tr>
+<tr><th>Permission</th><td><strong>Screen Time</strong> access, granted once during setup through Apple's own prompt. Cooldown uses Apple's Screen Time framework — the same system behind iOS's built-in app limits — and Apple, not Cooldown, is what actually stands in front of a shop.</td></tr>
+<tr><th>Account</th><td>None. There is no sign-up, no email field and no password anywhere in the app.</td></tr>
+<tr><th>Internet</th><td>Not needed. Every shield, capture, timer and total works offline. The only network traffic is Apple's when you buy or restore Premium — and the optional AI reflection, if you switch it on.</td></tr>
+<tr><th>Notifications</th><td>Optional, and generated on the phone. Cooldown uses them to hand you from the shield into the capture screen, and to tell you when an item's cooldown is over.</td></tr>
+</table></div>
+</section><section class="card" id="start"><h2 id="start-h">Getting started</h2>
+<p>Setup is a handful of screens and ends with protection already on.</p>
+<ol class="steps">
+  <li><div><b>Allow Screen Time access</b> when Apple asks. Cooldown cannot work without it, and you can withdraw it any time in <kbd>Settings</kbd> → <kbd>Screen Time</kbd>.</div></li>
+  <li><div><b>Pick your shops</b> in Apple's picker, and add the websites you want shielded. Cooldown never learns their names — see <a href="/cooldown-links/privacy/">Privacy</a>.</div></li>
+  <li><div><b>Set danger hours</b> if you want them — the hours when shopping goes badly for you. Optional, and changeable later.</div></li>
+  <li><div><b>Done.</b> Open one of your shops and meet the shield.</div></li>
+</ol>
+<div class="callout"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg></span><div>The first shield can feel abrupt. That is the moment the app exists for — tap <strong>Something caught my eye</strong> and take fifteen seconds.</div></div>
+</section><section class="card" id="money"><h2 id="money-h">About the savings number</h2>
+<p>Every price in Cooldown is one you typed yourself, and every figure the app shows is labelled <strong>estimated</strong>. That is not a disclaimer bolted on afterwards — it is the whole design.</p>
+<ul>
+  <li>Cooldown <strong>does not connect to your bank</strong>, read your purchase history, or check what anything actually costs.</li>
+  <li>An item counts toward the total <strong>once</strong>, when you let it go after cooling down.</li>
+  <li>Items you keep never touch the total, and keeping something is not treated as a failure anywhere in the app.</li>
+</ul>
+<div class="callout green"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.6" y="6" width="18.8" height="12" rx="2.6"/><circle cx="12" cy="12" r="2.7"/></svg></span><div>The number is a record of what you decided not to buy, at the prices you guessed. It is a good number to be proud of and a bad number to put in a spreadsheet.</div></div>
+</section><section class="card" id="faq"><h2 id="faq-h">Frequently asked questions</h2>
+<dl class="faq">
+<dt>Is Cooldown free?</dt>
+<dd>Yes, and free is a working product rather than a demo: <strong>one shopping app and one website</strong> shielded, the full twenty-four-hour cooldown list, and your estimated savings.</dd>
+<dt>What does Premium add?</dt>
+<dd>Every shop and website you want to shield, cooldown lengths of 12, 24, 48 or 72 hours, danger-hour and per-shop rules, strict mode, how purchases felt afterwards, widgets, and the optional reflection. Premium is a monthly or yearly subscription — the yearly plan starts with a <strong>free trial</strong> — or a single lifetime purchase. Prices are shown in the app for your country, and billing is handled by Apple.</dd>
+<dt>Does it block me from buying things?</dt>
+<dd>No. Every shield has a way through: <em>I need to shop now</em> opens the shop for a few minutes. Cooldown is a shield, not a wall — it asks you to notice, and then it gets out of the way.</dd>
+<dt>What happens if my subscription lapses?</dt>
+<dd>Nothing you built is taken away. Your history and your savings total stay, and the shops you already chose stay shielded. Only the ability to add more Premium content closes.</dd>
+<dt>Can I restore a purchase on a new phone?</dt>
+<dd>Yes. Open the Premium screen and tap <kbd>Restore purchases</kbd>. Premium belongs to your Apple ID, not to the phone.</dd>
+<dt>Why can't Cooldown tell me which shops I protected?</dt>
+<dd>Because it genuinely does not know. Apple's Screen Time hands Cooldown opaque tokens that are meaningless outside your phone — no app names, no identifiers. Cooldown can ask iOS to shield them; it cannot read them.</dd>
+<dt>Does it shield websites, or only apps?</dt>
+<dd>Both. A shielded shop is shielded in its app and on its website in Safari.</dd>
+<dt>I can't turn protection off. Is something broken?</dt>
+<dd>Check whether <strong>strict mode</strong> is running — the home screen says so. While it runs, your setup is held in place by design. It ends on its own at the time you chose.</dd>
+<dt>Does Cooldown see what I buy?</dt>
+<dd>No. It has no access to your bank, your orders, your browsing or your card. It records only its own events — that a shield was shown, and what you chose — and keeps those on your phone.</dd>
+<dt>What is the AI reflection, and is it on?</dt>
+<dd>It is one short question before the choices, and a few sentences about your week on Sundays. It is <strong>off until you turn it on</strong>. When it is on, it is the only thing in the app that sends anything off the phone, and the <a href="/cooldown-links/privacy/">Privacy Policy</a> lists exactly what.</dd>
+<dt>Does it work on iPad or Mac?</dt>
+<dd>Cooldown is built for iPhone. It is not offered on other devices.</dd>
+</dl>
+</section><section class="card" id="trouble"><h2 id="trouble-h">Troubleshooting</h2>
+<h3>A shop opens without a shield</h3>
+<ul>
+  <li>Check the <strong>Protection</strong> switch on the home screen.</li>
+  <li>Check that Screen Time access is still granted: <kbd>Settings</kbd> → <kbd>Screen Time</kbd> → <kbd>Apps with Screen Time access</kbd>. If it was withdrawn, Cooldown shows a recovery screen with a button to ask again.</li>
+  <li>A <strong>shopping window</strong> you opened earlier may still be running. It closes on its own, and the shield comes back.</li>
+  <li>If the shop is covered only by a <strong>rule</strong>, the shield appears only during that rule's hours.</li>
+</ul>
+<h3>The shield appears but the capture screen never opens</h3>
+<ul>
+  <li>Tapping <strong>Something caught my eye</strong> hands you to Cooldown through a notification. If notifications are off, iOS cannot deliver the hand-off — turn them on in <kbd>Settings</kbd> → <kbd>Notifications</kbd> → <kbd>Cooldown</kbd>.</li>
+  <li>Opening Cooldown directly also opens the waiting capture.</li>
+</ul>
+<h3>A website isn't shielded</h3>
+<p>Websites are shielded by domain. Make sure the domain you added matches the one you actually open, and note that a shop's app and its website are two separate things to add.</p>
+<h3>Widgets are behind</h3>
+<p>iOS refreshes widgets on its own schedule. Opening Cooldown brings them up to date immediately.</p>
+<h3>Premium isn't recognised</h3>
+<p>Tap <kbd>Restore purchases</kbd> on the Premium screen, and make sure the phone is signed into the same Apple ID that made the purchase. Refunds and billing questions are handled by Apple through <a href="https://support.apple.com/billing">Apple Support</a>.</p>
+</section><section class="card" id="contact"><h2 id="contact-h">Contact</h2>
+<p>Questions, a bug, or something that should work and doesn't — write to us and a person will reply.</p>
+<div class="callout"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><div><strong><a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a></strong><br><span class="small">Include your iPhone model, the iOS version, and what you expected to happen. Never send us your wishlist or your prices — we do not need them and would rather not hold them.</span></div></div>
+<p style="margin-top:16px" class="small">Billing, refunds and subscription changes are handled by Apple: <a href="https://apps.apple.com/account/subscriptions">manage subscriptions</a> · <a href="https://support.apple.com/billing">request a refund</a>.</p>
+</section></div></div></main>
+<footer><div class="in">
+  <div>© 2026 Cooldown · TOPSOL · All rights reserved.</div>
+  <nav aria-label="Footer"><a href="/cooldown-links/">Support</a> · <a href="/cooldown-links/about/">About</a> · <a href="/cooldown-links/privacy/">Privacy</a> · <a href="/cooldown-links/terms/">Terms</a> · <a href="/cooldown-links/delete-data/">Your data</a> · <a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a></nav>
+</div></footer>
+</body>
+</html>
