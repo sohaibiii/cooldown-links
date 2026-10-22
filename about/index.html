@@ -3,19 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Cooldown shields the shopping apps and websites you choose and asks you to sleep on it first. No bank access, no price tracking, no affiliate links.">
+<meta name="description" content="On Ice shields the shopping apps and websites you choose and asks you to sleep on it first. No bank access, no price tracking, no affiliate links.">
 <meta name="robots" content="index,follow">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F5F6FA">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0F1214">
-<meta property="og:title" content="Cooldown — One night between you and the buy button">
-<meta property="og:description" content="Cooldown shields the shopping apps and websites you choose and asks you to sleep on it first. No bank access, no price tracking, no affiliate links.">
+<meta property="og:title" content="On Ice — One night between you and the buy button">
+<meta property="og:description" content="On Ice shields the shopping apps and websites you choose and asks you to sleep on it first. No bank access, no price tracking, no affiliate links.">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="en">
 <meta property="og:url" content="https://sohaibiii.github.io/cooldown-links/about/">
 <link rel="canonical" href="https://sohaibiii.github.io/cooldown-links/about/">
+<link rel="alternate" hreflang="en" href="https://sohaibiii.github.io/cooldown-links/about/"><link rel="alternate" hreflang="de" href="https://sohaibiii.github.io/cooldown-links/de/about/"><link rel="alternate" hreflang="es" href="https://sohaibiii.github.io/cooldown-links/es/about/"><link rel="alternate" hreflang="fr" href="https://sohaibiii.github.io/cooldown-links/fr/about/"><link rel="alternate" hreflang="ja" href="https://sohaibiii.github.io/cooldown-links/ja/about/"><link rel="alternate" hreflang="ko" href="https://sohaibiii.github.io/cooldown-links/ko/about/"><link rel="alternate" hreflang="pt-BR" href="https://sohaibiii.github.io/cooldown-links/pt-BR/about/"><link rel="alternate" hreflang="zh-Hans" href="https://sohaibiii.github.io/cooldown-links/zh-Hans/about/"><link rel="alternate" hreflang="x-default" href="https://sohaibiii.github.io/cooldown-links/about/">
 <link rel="icon" href="/cooldown-links/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/cooldown-links/apple-touch-icon.png">
-<title>Cooldown — One night between you and the buy button</title>
+<title>On Ice — One night between you and the buy button</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap">
@@ -28,7 +30,7 @@
   --hero-top:#1D2347;--hero-bottom:#12152A;--hero-glow:rgba(123,140,222,.42);--hero-ink:#F2F4F7;--hero-ink-2:rgba(242,244,247,.74);--hero-stroke:rgba(255,255,255,.10);--hero-fill:rgba(255,255,255,.10);
   --moon-core:#D3DCFF;--moon-edge:#8FA0EA;--moon-glow:rgba(123,140,222,.70);
   --r-card:20px;--r-hero:28px;--r-control:14px;--r-chip:12px;--r-tile:10px;
-  --max:760px;--wide:1080px;
+  --max:760px;--wide:1080px;--anchor:112px;
   --display:"Nunito",ui-rounded,"SF Pro Rounded",-apple-system,system-ui,sans-serif;
 }
 @media (prefers-color-scheme:dark){:root{
@@ -41,13 +43,16 @@
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 html,body{overflow-x:clip}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,"Hiragino Sans","Apple SD Gothic Neo","PingFang SC","Noto Sans CJK JP","Noto Sans CJK KR","Noto Sans CJK SC",sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+:lang(ja),:lang(ko),:lang(zh-Hans){line-break:strict;word-break:normal;overflow-wrap:anywhere}
+:lang(ja) :is(h1,h2,h3,.sub,.lead){word-break:auto-phrase}
 a{color:var(--accent);text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--accent) 40%,transparent);text-underline-offset:3px;overflow-wrap:anywhere}
 a:hover{text-decoration-color:var(--accent)}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
 .skip{position:absolute;top:8px;left:8px;background:var(--surface);color:var(--ink);padding:8px 12px;z-index:20;border-radius:var(--r-chip);box-shadow:var(--card-shadow)}
 .skip:not(:focus){clip:rect(0 0 0 0);clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap;padding:0;margin:-1px}
 h1,h2,h3{margin:0;letter-spacing:-.022em;text-wrap:balance;font-family:var(--display);font-weight:800}
+:lang(ja) :is(h1,h2,h3),:lang(ko) :is(h1,h2,h3),:lang(zh-Hans) :is(h1,h2,h3){letter-spacing:0;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Apple SD Gothic Neo","PingFang SC",sans-serif;font-weight:700}
 h1{font-size:clamp(32px,4.6vw,48px);line-height:1.06}
 h2{font-size:25px;line-height:1.24}
 h3{font-weight:700;font-size:18px;line-height:1.3}
@@ -66,14 +71,25 @@ kbd{font:inherit;background:var(--fill);border-radius:8px;padding:.05em .5em;whi
 /* top bar — the one glass surface, like the app's navigation layer */
 .topbar{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
 .topbar .in{max-width:var(--wide);margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.brand{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.02em}
-.mark{width:26px;height:26px;border-radius:8px;flex:none;display:grid;place-items:center;background:linear-gradient(160deg,#252B52,#12152A);box-shadow:0 0 0 1px var(--hero-stroke),0 0 14px var(--moon-glow)}
-.mark svg{width:15px;height:15px}
+.brand{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.02em;white-space:nowrap}
+.mark{width:30px;height:30px;border-radius:9px;flex:none;display:grid;place-items:center;background:linear-gradient(160deg,#1D2347,#12152A);box-shadow:0 0 0 1px var(--hero-stroke),0 0 14px var(--moon-glow)}
+.mark img{width:22px;height:22px;display:block}
 nav.pages{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
-nav.pages a{text-decoration:none;color:var(--ink-2);font-size:15px;font-weight:500;padding:7px 12px;border-radius:999px}
+nav.pages a{text-decoration:none;color:var(--ink-2);font-size:15px;font-weight:500;padding:7px 12px;border-radius:999px;white-space:nowrap}
 nav.pages a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
 nav.pages a:hover{color:var(--ink)}
 @media (max-width:640px){nav.pages{margin-left:0;width:100%;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;padding-bottom:2px}nav.pages::-webkit-scrollbar{display:none}nav.pages a{flex:none}}
+
+/* language tabs — the same page, in the reader's own language */
+.langrow{border-top:1px solid var(--line)}
+.langrow .in{max-width:var(--wide);margin:0 auto;padding:7px 20px;display:flex;align-items:center;gap:12px}
+.langrow .lbl{flex:none;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-family:var(--display)}
+nav.langs{display:flex;gap:2px;min-width:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+nav.langs::-webkit-scrollbar{display:none}
+nav.langs a{flex:none;text-decoration:none;color:var(--ink-2);font-size:14.5px;font-weight:500;padding:6px 11px;border-radius:999px;white-space:nowrap}
+nav.langs a:hover{color:var(--ink);background:var(--fill)}
+nav.langs a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
+@media (max-width:640px){.langrow .lbl{display:none}.langrow .in{padding:6px 20px}:root{--anchor:150px}}
 
 /* hero — the app's protection island, dark in both appearances */
 .hero-wrap{max-width:var(--wide);margin:24px auto 0;padding:0 20px}
@@ -83,6 +99,7 @@ nav.pages a:hover{color:var(--ink)}
 .hero .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--hero-ink-2);margin-bottom:18px;font-family:var(--display)}
 .hero .eyebrow .dot{width:9px;height:9px;border-radius:50%;background:var(--moon-edge);box-shadow:0 0 10px var(--moon-glow)}
 .hero h1{max-width:18ch}
+:lang(ja) .hero h1,:lang(ko) .hero h1,:lang(zh-Hans) .hero h1{max-width:22ch}
 .hero .sub{margin:16px 0 0;max-width:56ch;font-size:clamp(17px,2vw,20px);color:var(--hero-ink-2)}
 .hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;align-items:center}
 .hero .ctas a,.hero .ctas span{color:var(--hero-ink)}
@@ -103,7 +120,8 @@ nav.pages a:hover{color:var(--ink)}
 main{max-width:var(--wide);margin:0 auto;padding:32px 20px 64px}
 .grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
 @media (min-width:900px){.grid.with-toc{grid-template-columns:240px minmax(0,1fr);align-items:start}}
-.toc{position:sticky;top:76px;padding:20px 22px;border-radius:var(--r-card);background:var(--surface);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge)}
+.toc{position:sticky;top:var(--anchor);padding:20px 22px;border-radius:var(--r-card);background:var(--surface);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge)}
+@media (max-width:899px){.toc{position:static}}
 .toc .lbl{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);margin-bottom:10px;font-family:var(--display)}
 .toc ol{list-style:none;padding:0;margin:0}
 .toc li{margin:0}
@@ -112,11 +130,12 @@ main{max-width:var(--wide);margin:0 auto;padding:32px 20px 64px}
 .toc a:hover{color:var(--accent)}
 .stack{display:grid;gap:20px;max-width:var(--max)}
 .grid.with-toc .stack{max-width:none}
-.card{background:var(--surface);border-radius:var(--r-card);padding:clamp(22px,3.4vw,32px);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge)}
-.card h2{margin-bottom:12px;scroll-margin-top:84px}
+.card{background:var(--surface);border-radius:var(--r-card);padding:clamp(22px,3.4vw,32px);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge);scroll-margin-top:calc(var(--anchor) + 8px)}
+.card h2{margin-bottom:12px}
 .card h3{margin:20px 0 6px}
 .card h3:first-of-type{margin-top:0}
-.card p+h3{margin-top:18px}
+.card p+h3,.card ul+h3,.card .table-wrap+h3{margin-top:18px}
+.card ul+p,.card .table-wrap+p,.card .callout+p,.card p+.callout,.card ul+.callout{margin-top:16px}
 .lead{font-size:clamp(18px,2vw,21px);line-height:1.5;color:var(--ink)}
 .stamp{font-size:14px;color:var(--ink-2);margin:0 0 4px}
 .callout{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:var(--r-control);background:var(--accent-soft)}
@@ -141,16 +160,16 @@ main{max-width:var(--wide);margin:0 auto;padding:32px 20px 64px}
 .features .tile svg{width:22px;height:22px}
 .features .card h3{margin:0}
 .features .card p{color:var(--ink-2);font-size:16px}
-.tiers{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.tiers{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:16px}
 .tier{background:var(--surface);border-radius:var(--r-card);padding:24px;box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge);display:flex;flex-direction:column;gap:10px}
+.card .tier{background:var(--fill);box-shadow:none}
 .tier .lbl{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);font-family:var(--display)}
-.tier .price{font-family:var(--display);font-size:28px;font-weight:800;letter-spacing:-.02em}
-.tier .price small{font-size:15px;font-weight:500;color:var(--ink-2)}
+.tier .price{font-family:var(--display);font-size:26px;font-weight:800;letter-spacing:-.02em;line-height:1.2}
 .tier ul{margin-top:4px;color:var(--ink-2);font-size:15.5px}
-.tier.premium{background:linear-gradient(135deg,var(--hero-top),var(--hero-bottom));color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke)}
+.card .tier.premium,.tier.premium{background:linear-gradient(135deg,var(--hero-top),var(--hero-bottom));color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke)}
 .tier.premium .lbl,.tier.premium ul{color:var(--hero-ink-2)}
 .tier.premium li::marker{color:#8FA0EA}
-.chip{display:inline-flex;align-items:center;gap:6px;background:var(--fill);color:var(--ink-2);border-radius:999px;padding:4px 10px;font-size:13.5px;font-weight:500}
+.tiers+p{margin-top:14px}
 dl.faq{margin:0}
 dl.faq dt{font-weight:600;margin-top:18px}
 dl.faq dt:first-child{margin-top:0}
@@ -158,7 +177,7 @@ dl.faq dd{margin:6px 0 0;color:var(--ink-2)}
 table{width:100%;border-collapse:collapse;font-size:15.5px}
 th,td{text-align:left;vertical-align:top;padding:10px 12px 10px 0;border-bottom:1px solid var(--line)}
 th{font-weight:700;color:var(--ink-2);font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-family:var(--display)}
-tr:last-child td{border-bottom:0}
+tr:last-child td,tr:last-child th{border-bottom:0}
 .table-wrap{overflow-x:auto}
 .steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}
 .steps li{display:grid;grid-template-columns:32px minmax(0,1fr);gap:14px;margin:0;align-items:start}
@@ -174,39 +193,32 @@ footer a:hover{color:var(--accent)}
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
-<header class="topbar"><div class="in">
-  <a class="brand" href="/cooldown-links/"><span class="mark" aria-hidden="true"><svg viewBox="0 0 100 100" aria-hidden="true"><defs><radialGradient id="mg" cx="38%" cy="32%" r="72%"><stop offset="0" stop-color="#D3DCFF"/><stop offset="1" stop-color="#8FA0EA"/></radialGradient></defs><path d="M50 6a44 44 0 1 0 40 62A36 36 0 0 1 50 6Z" fill="url(#mg)"/></svg></span>Cooldown</a>
-  <nav class="pages" aria-label="Pages"><a href="/cooldown-links/">Support</a><a href="/cooldown-links/about/" aria-current="page">About</a><a href="/cooldown-links/privacy/">Privacy</a><a href="/cooldown-links/terms/">Terms</a><a href="/cooldown-links/delete-data/">Your data</a></nav>
-</div></header>
-<div class="hero-wrap"><section class="hero"><div class="eyebrow"><span class="dot" aria-hidden="true"></span>About Cooldown</div><h1>One night between you and the buy button.</h1><p class="sub">Pick the shopping apps and websites that get you. From then on, opening one gets you a shield first — and a decision that tomorrow you gets to make.</p><div class="ctas"><span class="soon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.3 1.2 9.7.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.2-.8s1.9.8 3.2.8 2.1-1.2 2.9-2.4c.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.5-1-2.5-3.8zM14 5.5c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.2-.6 2.8-1.4z"/></svg> Coming soon to the App Store</span><a class="btn quiet" href="/cooldown-links/">Support</a></div><p class="meta">No account · no bank access · iPhone, iOS 17+</p></section></div>
-<main id="content"><div class="grid"><div class="stack">
-<section class="card"><p class="lead">Cooldown puts one night between you and the buy button. Not a lockout, not a lecture — twenty-four hours to find out whether you actually wanted it.</p></section>
-<div class="features">
-  <section class="card"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></span><h3>Sleep on it.</h3><p>Open a shop you've chosen and Cooldown steps in before the checkout does — in the app and in Safari. Ten seconds of night sky instead of one-tap buying.</p></section>
-  <section class="card"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11l4 4v12H5z"/><path d="M9 11h7M9 15h5"/></svg></span><h3>Note it, don't buy it.</h3><p>Name the thing, tap a price, tap how you feel. Fifteen seconds, one screen. The capture has to be faster than the craving.</p></section>
-  <section class="card"><span class="tile amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.5 7l17 10M20.5 7l-17 10"/></svg></span><h3>One night on ice.</h3><p>Captured items wait under a slow twenty-four-hour ring. Nothing is bought while an item cools, and tomorrow you gets the decision.</p></section>
-  <section class="card"><span class="tile green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></span><h3>Watch it add up.</h3><p>Every item you let go counts toward your estimated savings — your own guesses, by month, next to the hours of the day the shields keep meeting you.</p></section>
-  <section class="card"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/></svg></span><h3>A shield, not a wall.</h3><p>Sleep on it, walk away, or open the shop anyway for a few minutes. Nothing here scolds you for wanting things, and nothing turns red if you buy it.</p></section>
-  <section class="card"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18M10.6 10.6a2 2 0 0 0 2.8 2.8M9.9 5.1A10 10 0 0 1 12 5c5 0 8.5 4 9.5 7-.4 1.1-1.1 2.3-2 3.3M6.6 6.6C4.6 8 3.3 10 2.5 12c1 3 4.5 7 9.5 7 1.6 0 3-.4 4.3-1"/></svg></span><h3>It never sees what you buy.</h3><p>No bank linking, no purchase history, no price tracking, no affiliate links. Apple hands Cooldown codes, not names. <a href="/cooldown-links/privacy/">How that works.</a></p></section>
-</div>
-<section class="card" id="pricing"><h2>What it costs</h2>
+<header class="topbar">
+  <div class="in">
+    <a class="brand" href="/cooldown-links/"><span class="mark" aria-hidden="true"><img src="/cooldown-links/mark.svg" alt="" width="22" height="22"></span>On Ice</a>
+    <nav class="pages" aria-label="Pages"><a href="/cooldown-links/">Support</a><a href="/cooldown-links/about/" aria-current="page">About</a><a href="/cooldown-links/privacy/">Privacy</a><a href="/cooldown-links/terms/">Terms</a><a href="/cooldown-links/delete-data/">Your data</a></nav>
+  </div>
+  <div class="langrow"><div class="in">
+    <span class="lbl">Language</span>
+    <nav class="langs" aria-label="Language"><a href="/cooldown-links/about/" lang="en" hreflang="en" aria-current="page">English</a><a href="/cooldown-links/de/about/" lang="de" hreflang="de">Deutsch</a><a href="/cooldown-links/es/about/" lang="es" hreflang="es">Español</a><a href="/cooldown-links/fr/about/" lang="fr" hreflang="fr">Français</a><a href="/cooldown-links/ja/about/" lang="ja" hreflang="ja">日本語</a><a href="/cooldown-links/ko/about/" lang="ko" hreflang="ko">한국어</a><a href="/cooldown-links/pt-BR/about/" lang="pt-BR" hreflang="pt-BR">Português (Brasil)</a><a href="/cooldown-links/zh-Hans/about/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a></nav>
+  </div></div>
+</header>
+<div class="hero-wrap"><section class="hero"><div class="eyebrow"><span class="dot" aria-hidden="true"></span>About On Ice</div><h1>One night between you and the buy button.</h1><p class="sub">Pick the shopping apps and websites that get you. From then on, opening one gets you a shield first — and a decision that tomorrow you gets to make.</p><div class="ctas"><span class="soon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.3 1.2 9.7.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.2-.8s1.9.8 3.2.8 2.1-1.2 2.9-2.4c.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.5-1-2.5-3.8zM14 5.5c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.2-.6 2.8-1.4z"/></svg> Coming soon to the App Store</span><a class="btn quiet" href="/cooldown-links/">Support</a></div><p class="meta">No account · no bank access · iPhone and iPad, iOS 17+ · 8 languages</p></section></div>
+<main id="content"><div class="grid"><div class="stack"><section class="card"><p class="lead">On Ice puts one night between you and the buy button. Not a lockout, not a lecture — a short pause, and time to find out whether you actually wanted it. Nothing here scolds you for wanting things, and nothing turns red if you buy it.</p></section><div class="features"><section class="card"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></span><h3>Pause before you buy.</h3><p>Open a shop you've chosen and On Ice steps in before the checkout does — in the app and in Safari. Take a breath, type a sentence, read a reminder, or say what you came for.</p></section><section class="card"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11l4 4v12H5z"/><path d="M9 11h7M9 15h5"/></svg></span><h3>Note it, don't buy it.</h3><p>Name the thing, tap a rough price, tap how you feel. Fifteen seconds, one screen. Noting it has to be faster than the craving.</p></section><section class="card"><span class="tile amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.5 7l17 10M20.5 7l-17 10"/></svg></span><h3>One night on ice.</h3><p>Noted items wait under a countdown ring — 24 hours, or anywhere from 12 to 72. Nothing is bought while an item cools, and tomorrow you gets the decision.</p></section><section class="card"><span class="tile green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></span><h3>Watch it add up.</h3><p>Every item you let go counts toward your estimated savings — your own guesses, for today, this week and this month, next to the hours when the shields keep meeting you.</p></section><section class="card"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h11a3 3 0 1 0-3-3M3 12h15a3 3 0 1 1-3 3M3 16h8a2.5 2.5 0 1 1-2.5 2.5"/></svg></span><h3>Something else to do.</h3><p>When the craving needs somewhere to go: a walk with live steps, a book, a playlist, a call. Pick what works for you and start it in one tap.</p></section><section class="card"><span class="tile amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>Firmer when you want it.</h3><p>A daily shopping-time goal, daily limits, timed and Focus blocks, danger-hour rules for late nights, and strict mode to hold it all in place.</p></section><section class="card"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2V5z"/><path d="M4 19a2 2 0 0 0 2 2h14"/></svg></span><h3>A journal just for you.</h3><p>A question a day and a place to write. Lock it with Face ID. Nothing in it ever leaves your device.</p></section><section class="card"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18M10.6 10.6a2 2 0 0 0 2.8 2.8M9.9 5.1A10 10 0 0 1 12 5c5 0 8.5 4 9.5 7-.4 1.1-1.1 2.3-2 3.3M6.6 6.6C4.6 8 3.3 10 2.5 12c1 3 4.5 7 9.5 7 1.6 0 3-.4 4.3-1"/></svg></span><h3>It never sees what you buy.</h3><p>No bank linking, no purchase history, no price tracking, no affiliate links, no analytics. Apple hands On Ice codes, not names. <a href="/cooldown-links/privacy/">How that works.</a></p></section></div><section class="card" id="pricing"><h2>What it costs</h2>
 <p>Free is a working product, not a demo, and nothing you have already built is taken away if a subscription lapses.</p>
-<div class="tiers" style="margin-top:16px">
-  <div class="tier"><div class="lbl">Free</div><div class="price">$0</div><ul><li>One shopping app and one website, shielded</li><li>The full 24-hour cooldown list</li><li>Your estimated savings</li></ul></div>
-  <div class="tier premium"><div class="lbl">Premium</div><div class="price">Monthly · Yearly · Lifetime</div><ul><li>Every shop and website you want</li><li>Cooldowns of 12, 24, 48 or 72 hours</li><li>Danger hours, per-shop rules and strict mode</li><li>How purchases felt afterwards</li><li>Widgets, and the optional reflection</li><li>Yearly starts with a free trial</li></ul></div>
+<div class="tiers">
+  <div class="tier"><div class="lbl">Free</div><div class="price">No charge</div><ul><li>One shopping app and one website, shielded</li><li>The 24-hour wait and your list</li><li>Your estimated savings</li><li>The breathing pause and three things to do instead</li><li>The journal, a daily goal, timed and Focus blocks</li></ul></div>
+  <div class="tier premium"><div class="lbl">Premium</div><div class="price">Monthly · Yearly · Lifetime</div><ul><li>Every shop and website you want</li><li>Waits of 12, 24, 48 or 72 hours</li><li>Every kind of pause, and your own reminders</li><li>Danger hours, per-shop rules, daily limits and strict mode</li><li>Your shopping patterns, and how purchases felt afterwards</li><li>Widgets, a look back at your journal, and the optional AI reflection</li><li>Yearly starts with a free trial; yearly and lifetime also come as family plans for up to six people</li></ul></div>
 </div>
-<p class="small" style="margin-top:14px">Prices are shown in the app and on the App Store for your country. Billing is handled by Apple. <a href="/cooldown-links/terms/#subscriptions">Subscription terms.</a></p>
-</section>
-<section class="card"><h2>Built on Apple's Screen Time</h2>
-<p>Cooldown uses the same framework that powers iOS's built-in app limits. Apple grants it only to apps it has reviewed for the purpose, and Apple — not Cooldown — is what actually stands between you and the shop. That is why Cooldown can shield a shop without ever learning its name.</p>
-<p>iPhone · iOS 17 or newer · English</p>
-</section>
-<section class="card"><h2>Every figure is an estimate</h2>
-<p>Cooldown asks you what something roughly costs and remembers your answer. It connects to no bank, verifies no price, and gives no financial advice. Every number it shows carries the word <em class="est">estimated</em>, in the app, in the widgets and on this site.</p>
-</section>
-</div></div></main>
+<p class="small">Prices are shown in the app and on the App Store for your country. Billing is handled by Apple. <a href="/cooldown-links/terms/#subscriptions">Subscription terms.</a></p>
+</section><section class="card" id="platform"><h2>Built on Apple's Screen Time</h2>
+<p>On Ice uses the same framework that powers iOS's built-in app limits. Apple grants it only to apps it has reviewed for the purpose, and Apple — not On Ice — is what actually stands between you and the shop. That is why On Ice can shield an app without ever learning its name.</p>
+<p>iPhone and iPad · iOS 17 or newer · English, Deutsch, Español, Français, 日本語, 한국어, Português (Brasil), 简体中文</p>
+</section><section class="card" id="estimates"><h2>Every figure is an estimate</h2>
+<p>On Ice asks you what something roughly costs and remembers your answer. It connects to no bank, verifies no price, converts no currency and gives no financial advice. Every number it shows carries the word <em class="est">estimated</em> — in the app, in the widgets and on this site.</p>
+</section></div></div></main>
 <footer><div class="in">
-  <div>© 2026 Cooldown · TOPSOL · All rights reserved.</div>
+  <div>© 2026 On Ice · TOPSOL · All rights reserved.</div>
   <nav aria-label="Footer"><a href="/cooldown-links/">Support</a> · <a href="/cooldown-links/about/">About</a> · <a href="/cooldown-links/privacy/">Privacy</a> · <a href="/cooldown-links/terms/">Terms</a> · <a href="/cooldown-links/delete-data/">Your data</a> · <a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a></nav>
 </div></footer>
 </body>

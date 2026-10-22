@@ -3,19 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Cooldown has no bank connection, no purchase history and no analytics. This policy explains what stays on your phone, and the one optional feature that sends anything.">
+<meta name="description" content="On Ice has no account, no bank connection and no analytics. What stays on your device, and exactly what the one optional AI feature sends.">
 <meta name="robots" content="index,follow">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F5F6FA">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0F1214">
-<meta property="og:title" content="Privacy Policy — Cooldown">
-<meta property="og:description" content="Cooldown has no bank connection, no purchase history and no analytics. This policy explains what stays on your phone, and the one optional feature that sends anything.">
+<meta property="og:title" content="Privacy Policy — On Ice">
+<meta property="og:description" content="On Ice has no account, no bank connection and no analytics. What stays on your device, and exactly what the one optional AI feature sends.">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="en">
 <meta property="og:url" content="https://sohaibiii.github.io/cooldown-links/privacy/">
 <link rel="canonical" href="https://sohaibiii.github.io/cooldown-links/privacy/">
+<link rel="alternate" hreflang="en" href="https://sohaibiii.github.io/cooldown-links/privacy/"><link rel="alternate" hreflang="de" href="https://sohaibiii.github.io/cooldown-links/de/privacy/"><link rel="alternate" hreflang="es" href="https://sohaibiii.github.io/cooldown-links/es/privacy/"><link rel="alternate" hreflang="fr" href="https://sohaibiii.github.io/cooldown-links/fr/privacy/"><link rel="alternate" hreflang="ja" href="https://sohaibiii.github.io/cooldown-links/ja/privacy/"><link rel="alternate" hreflang="ko" href="https://sohaibiii.github.io/cooldown-links/ko/privacy/"><link rel="alternate" hreflang="pt-BR" href="https://sohaibiii.github.io/cooldown-links/pt-BR/privacy/"><link rel="alternate" hreflang="zh-Hans" href="https://sohaibiii.github.io/cooldown-links/zh-Hans/privacy/"><link rel="alternate" hreflang="x-default" href="https://sohaibiii.github.io/cooldown-links/privacy/">
 <link rel="icon" href="/cooldown-links/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/cooldown-links/apple-touch-icon.png">
-<title>Privacy Policy — Cooldown</title>
+<title>Privacy Policy — On Ice</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap">
@@ -28,7 +30,7 @@
   --hero-top:#1D2347;--hero-bottom:#12152A;--hero-glow:rgba(123,140,222,.42);--hero-ink:#F2F4F7;--hero-ink-2:rgba(242,244,247,.74);--hero-stroke:rgba(255,255,255,.10);--hero-fill:rgba(255,255,255,.10);
   --moon-core:#D3DCFF;--moon-edge:#8FA0EA;--moon-glow:rgba(123,140,222,.70);
   --r-card:20px;--r-hero:28px;--r-control:14px;--r-chip:12px;--r-tile:10px;
-  --max:760px;--wide:1080px;
+  --max:760px;--wide:1080px;--anchor:112px;
   --display:"Nunito",ui-rounded,"SF Pro Rounded",-apple-system,system-ui,sans-serif;
 }
 @media (prefers-color-scheme:dark){:root{
@@ -41,13 +43,16 @@
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 html,body{overflow-x:clip}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,"Hiragino Sans","Apple SD Gothic Neo","PingFang SC","Noto Sans CJK JP","Noto Sans CJK KR","Noto Sans CJK SC",sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+:lang(ja),:lang(ko),:lang(zh-Hans){line-break:strict;word-break:normal;overflow-wrap:anywhere}
+:lang(ja) :is(h1,h2,h3,.sub,.lead){word-break:auto-phrase}
 a{color:var(--accent);text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--accent) 40%,transparent);text-underline-offset:3px;overflow-wrap:anywhere}
 a:hover{text-decoration-color:var(--accent)}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
 .skip{position:absolute;top:8px;left:8px;background:var(--surface);color:var(--ink);padding:8px 12px;z-index:20;border-radius:var(--r-chip);box-shadow:var(--card-shadow)}
 .skip:not(:focus){clip:rect(0 0 0 0);clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap;padding:0;margin:-1px}
 h1,h2,h3{margin:0;letter-spacing:-.022em;text-wrap:balance;font-family:var(--display);font-weight:800}
+:lang(ja) :is(h1,h2,h3),:lang(ko) :is(h1,h2,h3),:lang(zh-Hans) :is(h1,h2,h3){letter-spacing:0;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Apple SD Gothic Neo","PingFang SC",sans-serif;font-weight:700}
 h1{font-size:clamp(32px,4.6vw,48px);line-height:1.06}
 h2{font-size:25px;line-height:1.24}
 h3{font-weight:700;font-size:18px;line-height:1.3}
@@ -66,14 +71,25 @@ kbd{font:inherit;background:var(--fill);border-radius:8px;padding:.05em .5em;whi
 /* top bar — the one glass surface, like the app's navigation layer */
 .topbar{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
 .topbar .in{max-width:var(--wide);margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.brand{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.02em}
-.mark{width:26px;height:26px;border-radius:8px;flex:none;display:grid;place-items:center;background:linear-gradient(160deg,#252B52,#12152A);box-shadow:0 0 0 1px var(--hero-stroke),0 0 14px var(--moon-glow)}
-.mark svg{width:15px;height:15px}
+.brand{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.02em;white-space:nowrap}
+.mark{width:30px;height:30px;border-radius:9px;flex:none;display:grid;place-items:center;background:linear-gradient(160deg,#1D2347,#12152A);box-shadow:0 0 0 1px var(--hero-stroke),0 0 14px var(--moon-glow)}
+.mark img{width:22px;height:22px;display:block}
 nav.pages{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
-nav.pages a{text-decoration:none;color:var(--ink-2);font-size:15px;font-weight:500;padding:7px 12px;border-radius:999px}
+nav.pages a{text-decoration:none;color:var(--ink-2);font-size:15px;font-weight:500;padding:7px 12px;border-radius:999px;white-space:nowrap}
 nav.pages a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
 nav.pages a:hover{color:var(--ink)}
 @media (max-width:640px){nav.pages{margin-left:0;width:100%;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;padding-bottom:2px}nav.pages::-webkit-scrollbar{display:none}nav.pages a{flex:none}}
+
+/* language tabs — the same page, in the reader's own language */
+.langrow{border-top:1px solid var(--line)}
+.langrow .in{max-width:var(--wide);margin:0 auto;padding:7px 20px;display:flex;align-items:center;gap:12px}
+.langrow .lbl{flex:none;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-family:var(--display)}
+nav.langs{display:flex;gap:2px;min-width:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+nav.langs::-webkit-scrollbar{display:none}
+nav.langs a{flex:none;text-decoration:none;color:var(--ink-2);font-size:14.5px;font-weight:500;padding:6px 11px;border-radius:999px;white-space:nowrap}
+nav.langs a:hover{color:var(--ink);background:var(--fill)}
+nav.langs a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
+@media (max-width:640px){.langrow .lbl{display:none}.langrow .in{padding:6px 20px}:root{--anchor:150px}}
 
 /* hero — the app's protection island, dark in both appearances */
 .hero-wrap{max-width:var(--wide);margin:24px auto 0;padding:0 20px}
@@ -83,6 +99,7 @@ nav.pages a:hover{color:var(--ink)}
 .hero .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--hero-ink-2);margin-bottom:18px;font-family:var(--display)}
 .hero .eyebrow .dot{width:9px;height:9px;border-radius:50%;background:var(--moon-edge);box-shadow:0 0 10px var(--moon-glow)}
 .hero h1{max-width:18ch}
+:lang(ja) .hero h1,:lang(ko) .hero h1,:lang(zh-Hans) .hero h1{max-width:22ch}
 .hero .sub{margin:16px 0 0;max-width:56ch;font-size:clamp(17px,2vw,20px);color:var(--hero-ink-2)}
 .hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;align-items:center}
 .hero .ctas a,.hero .ctas span{color:var(--hero-ink)}
@@ -103,7 +120,8 @@ nav.pages a:hover{color:var(--ink)}
 main{max-width:var(--wide);margin:0 auto;padding:32px 20px 64px}
 .grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
 @media (min-width:900px){.grid.with-toc{grid-template-columns:240px minmax(0,1fr);align-items:start}}
-.toc{position:sticky;top:76px;padding:20px 22px;border-radius:var(--r-card);background:var(--surface);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge)}
+.toc{position:sticky;top:var(--anchor);padding:20px 22px;border-radius:var(--r-card);background:var(--surface);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge)}
+@media (max-width:899px){.toc{position:static}}
 .toc .lbl{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);margin-bottom:10px;font-family:var(--display)}
 .toc ol{list-style:none;padding:0;margin:0}
 .toc li{margin:0}
@@ -112,11 +130,12 @@ main{max-width:var(--wide);margin:0 auto;padding:32px 20px 64px}
 .toc a:hover{color:var(--accent)}
 .stack{display:grid;gap:20px;max-width:var(--max)}
 .grid.with-toc .stack{max-width:none}
-.card{background:var(--surface);border-radius:var(--r-card);padding:clamp(22px,3.4vw,32px);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge)}
-.card h2{margin-bottom:12px;scroll-margin-top:84px}
+.card{background:var(--surface);border-radius:var(--r-card);padding:clamp(22px,3.4vw,32px);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge);scroll-margin-top:calc(var(--anchor) + 8px)}
+.card h2{margin-bottom:12px}
 .card h3{margin:20px 0 6px}
 .card h3:first-of-type{margin-top:0}
-.card p+h3{margin-top:18px}
+.card p+h3,.card ul+h3,.card .table-wrap+h3{margin-top:18px}
+.card ul+p,.card .table-wrap+p,.card .callout+p,.card p+.callout,.card ul+.callout{margin-top:16px}
 .lead{font-size:clamp(18px,2vw,21px);line-height:1.5;color:var(--ink)}
 .stamp{font-size:14px;color:var(--ink-2);margin:0 0 4px}
 .callout{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:var(--r-control);background:var(--accent-soft)}
@@ -141,16 +160,16 @@ main{max-width:var(--wide);margin:0 auto;padding:32px 20px 64px}
 .features .tile svg{width:22px;height:22px}
 .features .card h3{margin:0}
 .features .card p{color:var(--ink-2);font-size:16px}
-.tiers{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.tiers{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:16px}
 .tier{background:var(--surface);border-radius:var(--r-card);padding:24px;box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge);display:flex;flex-direction:column;gap:10px}
+.card .tier{background:var(--fill);box-shadow:none}
 .tier .lbl{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);font-family:var(--display)}
-.tier .price{font-family:var(--display);font-size:28px;font-weight:800;letter-spacing:-.02em}
-.tier .price small{font-size:15px;font-weight:500;color:var(--ink-2)}
+.tier .price{font-family:var(--display);font-size:26px;font-weight:800;letter-spacing:-.02em;line-height:1.2}
 .tier ul{margin-top:4px;color:var(--ink-2);font-size:15.5px}
-.tier.premium{background:linear-gradient(135deg,var(--hero-top),var(--hero-bottom));color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke)}
+.card .tier.premium,.tier.premium{background:linear-gradient(135deg,var(--hero-top),var(--hero-bottom));color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke)}
 .tier.premium .lbl,.tier.premium ul{color:var(--hero-ink-2)}
 .tier.premium li::marker{color:#8FA0EA}
-.chip{display:inline-flex;align-items:center;gap:6px;background:var(--fill);color:var(--ink-2);border-radius:999px;padding:4px 10px;font-size:13.5px;font-weight:500}
+.tiers+p{margin-top:14px}
 dl.faq{margin:0}
 dl.faq dt{font-weight:600;margin-top:18px}
 dl.faq dt:first-child{margin-top:0}
@@ -158,7 +177,7 @@ dl.faq dd{margin:6px 0 0;color:var(--ink-2)}
 table{width:100%;border-collapse:collapse;font-size:15.5px}
 th,td{text-align:left;vertical-align:top;padding:10px 12px 10px 0;border-bottom:1px solid var(--line)}
 th{font-weight:700;color:var(--ink-2);font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-family:var(--display)}
-tr:last-child td{border-bottom:0}
+tr:last-child td,tr:last-child th{border-bottom:0}
 .table-wrap{overflow-x:auto}
 .steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}
 .steps li{display:grid;grid-template-columns:32px minmax(0,1fr);gap:14px;margin:0;align-items:start}
@@ -174,96 +193,140 @@ footer a:hover{color:var(--accent)}
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
-<header class="topbar"><div class="in">
-  <a class="brand" href="/cooldown-links/"><span class="mark" aria-hidden="true"><svg viewBox="0 0 100 100" aria-hidden="true"><defs><radialGradient id="mg" cx="38%" cy="32%" r="72%"><stop offset="0" stop-color="#D3DCFF"/><stop offset="1" stop-color="#8FA0EA"/></radialGradient></defs><path d="M50 6a44 44 0 1 0 40 62A36 36 0 0 1 50 6Z" fill="url(#mg)"/></svg></span>Cooldown</a>
-  <nav class="pages" aria-label="Pages"><a href="/cooldown-links/">Support</a><a href="/cooldown-links/about/">About</a><a href="/cooldown-links/privacy/" aria-current="page">Privacy</a><a href="/cooldown-links/terms/">Terms</a><a href="/cooldown-links/delete-data/">Your data</a></nav>
-</div></header>
-<div class="hero-wrap"><section class="hero"><div class="eyebrow"><span class="dot" aria-hidden="true"></span>Privacy Policy</div><h1>It never sees what you buy.</h1><p class="sub">No bank linking, no purchase history, no price tracking, no affiliate links. Apple hands Cooldown codes, not names — and this page explains why that is not a slogan.</p><p class="meta">Effective 27 August 2026 · applies to the Cooldown app for iPhone and to this site</p></section></div>
-<main id="content"><div class="grid with-toc"><aside class="toc" aria-label="On this page"><div class="lbl">On this page</div><ol><li><a href="#summary">The short version</a></li><li><a href="#collect">What we collect</a></li><li><a href="#device">What stays on your phone</a></li><li><a href="#screentime">Screen Time and your shops</a></li><li><a href="#ai">The one thing that can leave the phone</a></li><li><a href="#purchases">Purchases</a></li><li><a href="#notifications">Notifications, widgets and the Lock Screen</a></li><li><a href="#third">Third parties</a></li><li><a href="#delete">Deleting your data</a></li><li><a href="#rights">Your rights</a></li><li><a href="#children">Children</a></li><li><a href="#changes">Changes to this policy</a></li><li><a href="#contact">Contact</a></li></ol></aside><div class="stack"><p class="stamp">Last updated: 27 August 2026</p><section class="card" id="summary"><h2 id="summary-h">The short version</h2>
-<p class="lead"><strong>Cooldown has no account, no analytics, no advertising and no third-party SDKs.</strong> There is no bank connection, no purchase history, no price tracking and no affiliate link anywhere in it. Everything it knows is written to your iPhone and stays there.</p>
-<div class="callout"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18M10.6 10.6a2 2 0 0 0 2.8 2.8M9.9 5.1A10 10 0 0 1 12 5c5 0 8.5 4 9.5 7-.4 1.1-1.1 2.3-2 3.3M6.6 6.6C4.6 8 3.3 10 2.5 12c1 3 4.5 7 9.5 7 1.6 0 3-.4 4.3-1"/></svg></span><div>Cooldown does not even know which shops you chose to shield. Apple's Screen Time gives it opaque tokens that only your phone can interpret. There is no app name, no domain, no identifier, and nothing to send.</div></div>
-<p style="margin-top:16px">There is exactly one exception, and it is off until you switch it on: the optional <strong>AI reflection</strong>. What it sends is listed in full <a href="#ai">below</a> — and switching it off returns the app to making no network calls of its own at all.</p>
-<p>This policy applies to the Cooldown app for iPhone, published by TOPSOL, and to this website.</p>
-</section><section class="card" id="collect"><h2 id="collect-h">What we collect</h2>
-<p>With the AI reflection off — the state the app ships in — nothing. In Apple's terms, "collecting" means transmitting data off the device and storing it somewhere that is not transient. Cooldown has no channel through which that could happen.</p>
+<header class="topbar">
+  <div class="in">
+    <a class="brand" href="/cooldown-links/"><span class="mark" aria-hidden="true"><img src="/cooldown-links/mark.svg" alt="" width="22" height="22"></span>On Ice</a>
+    <nav class="pages" aria-label="Pages"><a href="/cooldown-links/">Support</a><a href="/cooldown-links/about/">About</a><a href="/cooldown-links/privacy/" aria-current="page">Privacy</a><a href="/cooldown-links/terms/">Terms</a><a href="/cooldown-links/delete-data/">Your data</a></nav>
+  </div>
+  <div class="langrow"><div class="in">
+    <span class="lbl">Language</span>
+    <nav class="langs" aria-label="Language"><a href="/cooldown-links/privacy/" lang="en" hreflang="en" aria-current="page">English</a><a href="/cooldown-links/de/privacy/" lang="de" hreflang="de">Deutsch</a><a href="/cooldown-links/es/privacy/" lang="es" hreflang="es">Español</a><a href="/cooldown-links/fr/privacy/" lang="fr" hreflang="fr">Français</a><a href="/cooldown-links/ja/privacy/" lang="ja" hreflang="ja">日本語</a><a href="/cooldown-links/ko/privacy/" lang="ko" hreflang="ko">한국어</a><a href="/cooldown-links/pt-BR/privacy/" lang="pt-BR" hreflang="pt-BR">Português (Brasil)</a><a href="/cooldown-links/zh-Hans/privacy/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a></nav>
+  </div></div>
+</header>
+<div class="hero-wrap"><section class="hero"><div class="eyebrow"><span class="dot" aria-hidden="true"></span>Privacy Policy</div><h1>It never sees what you buy.</h1><p class="sub">No account, no bank linking, no purchase history, no price tracking and no analytics. What On Ice knows stays on your device — with one optional feature, off until you switch it on, whose exact contents are listed below.</p><p class="meta">Effective 22 October 2026 · applies to the On Ice app for iPhone and iPad, and to this site</p></section></div>
+<main id="content"><div class="grid with-toc"><aside class="toc" aria-label="On this page"><div class="lbl">On this page</div><ol><li><a href="#summary">The short version</a></li><li><a href="#collect">What we collect</a></li><li><a href="#device">What stays on your device</a></li><li><a href="#journal">Your journal</a></li><li><a href="#permissions">What On Ice asks to use</a></li><li><a href="#screentime">Screen Time and your shops</a></li><li><a href="#ai">The AI reflection — the one thing that can leave</a></li><li><a href="#purchases">Purchases and family plans</a></li><li><a href="#notifications">Notifications, widgets and the Lock Screen</a></li><li><a href="#third">Third parties</a></li><li><a href="#delete">Deleting your data</a></li><li><a href="#rights">Your rights</a></li><li><a href="#children">Children</a></li><li><a href="#changes">Changes to this policy</a></li><li><a href="#contact">Contact</a></li></ol></aside><div class="stack"><p class="stamp">Last updated: 22 October 2026</p><section class="card" id="summary"><h2>The short version</h2>
+<p class="lead"><strong>On Ice has no account, no analytics, no advertising and no third-party code.</strong> There is no bank connection, no purchase history, no price tracking and no affiliate link anywhere in it. Everything it knows is written to your iPhone or iPad and stays there.</p>
+<div class="callout"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18M10.6 10.6a2 2 0 0 0 2.8 2.8M9.9 5.1A10 10 0 0 1 12 5c5 0 8.5 4 9.5 7-.4 1.1-1.1 2.3-2 3.3M6.6 6.6C4.6 8 3.3 10 2.5 12c1 3 4.5 7 9.5 7 1.6 0 3-.4 4.3-1"/></svg></span><div>The apps you pick in Apple's Screen Time picker reach On Ice as opaque tokens that only your device can interpret. There is no app name, no identifier, and nothing to send.</div></div>
+<p>There is exactly one exception, and it is off until you switch it on: the optional <strong>AI reflection</strong>. With <strong>Apple Intelligence</strong> as its writer it runs on your device and nothing leaves. With <strong>OpenAI</strong> as its writer, a short, fixed list of details leaves — listed in full <a href="#ai">below</a>. Your journal never leaves the device, whichever writer you choose.</p>
+<p>This policy applies to the On Ice app for iPhone and iPad, published by TOPSOL, and to this website.</p>
+</section><section class="card" id="collect"><h2>What we collect</h2>
+<p>“Collect”, in Apple's sense and in ours, means sending data off the device and keeping it somewhere that is not transient. With the AI reflection off — how every install starts — On Ice sends nothing about you anywhere. The table shows what changes if you switch it on with OpenAI as the writer.</p>
 <div class="table-wrap"><table>
-<tr><th>Category</th><th>Collected?</th><th>Why not</th></tr>
-<tr><td>Financial info</td><td>No</td><td>No bank connection, no card, no transaction access, no purchase history. Every price in the app is a figure you typed and it never leaves the phone.</td></tr>
+<tr><th>Category</th><th>Sent?</th><th>What that means</th></tr>
+<tr><td>Financial info</td><td>Only with OpenAI reflections on</td><td>No bank connection, no card, no transaction access, no purchase history. With OpenAI reflections on, a <em>price band</em> for the item in front of you and a rounded weekly estimated-savings total are sent — never an exact price, an account or a balance.</td></tr>
 <tr><td>Contact info</td><td>No</td><td>There is no account, no sign-in and no email field anywhere in the app.</td></tr>
-<tr><td>Identifiers</td><td>No</td><td>No user ID, no device ID, no advertising identifier. Cooldown never asks for App Tracking Transparency because it has nothing to ask about.</td></tr>
-<tr><td>Usage data</td><td>No</td><td>No analytics SDK and no product-interaction events. Shields met, items cooled and items let go are counted on your phone, for your own screens.</td></tr>
-<tr><td>Browsing history</td><td>No</td><td>Cooldown cannot see what you browse. It learns only that its own shield was shown, and what you chose on it.</td></tr>
-<tr><td>User content</td><td>Only if you switch on the AI reflection</td><td>Your wishlist, prices, feelings and spend log live on the device. The one exception is described in <a href="#ai">the section below</a>.</td></tr>
-<tr><td>Location, health, contacts, search, diagnostics</td><td>No</td><td>Cooldown does not link the frameworks that would read them and has no crash or performance reporter of its own.</td></tr>
+<tr><td>Identifiers</td><td>Only with OpenAI reflections on</td><td>No user ID, no advertising identifier, and On Ice never asks to track you. Our AI service sees a random App Attest key identifier, used only to count requests per device per day and deleted after two days.</td></tr>
+<tr><td>Usage data</td><td>Only with OpenAI reflections on</td><td>No analytics and no product-interaction events. Shields, pauses and decisions are counted on your device, for your own screens. A reflection carries today's count of shields; the weekly write-up carries the week's counts.</td></tr>
+<tr><td>User content</td><td>Only with OpenAI reflections on</td><td>Your list, prices, journal, spend log and reminders stay on the device. With OpenAI as the writer, the name of the item in front of you and what you type in answer to the question are sent.</td></tr>
+<tr><td>Browsing history</td><td>No</td><td>On Ice cannot see what you browse. It learns only that its own shield was shown, and what you chose on it.</td></tr>
+<tr><td>Location, health, fitness, contacts, search, diagnostics</td><td>No</td><td>Steps during a walk are shown live and never stored or sent. On Ice has no crash or performance reporter of its own.</td></tr>
 </table></div>
-<p style="margin-top:14px"><strong>Tracking:</strong> none. Cooldown does not link anything about you with data from other companies' apps or websites, and shares nothing with data brokers or advertisers. There are <strong>no affiliate links</strong>: Cooldown earns nothing when you buy something, which is the only arrangement compatible with an app whose job is to help you buy less.</p>
-</section><section class="card" id="device"><h2 id="device-h">What stays on your phone</h2>
-<p>Cooldown stores the following in its own private storage on your iPhone, protected by your device's passcode and encryption. None of it is uploaded, backed up by us, or visible to us.</p>
+<p><strong>Tracking:</strong> none. On Ice does not link anything about you with data from other companies' apps or websites, and shares nothing with data brokers or advertisers. There are <strong>no affiliate links</strong>: On Ice earns nothing when you buy something, which is the only arrangement compatible with an app whose job is to help you buy less.</p>
+</section><section class="card" id="device"><h2>What stays on your device</h2>
+<p>On Ice keeps the following in its own private storage on your iPhone or iPad, protected by your device's passcode and encryption. None of it is uploaded, synced to iCloud, backed up by us, or visible to us.</p>
 <ul>
-  <li><strong>Your shop selection</strong> — as opaque Screen Time tokens Cooldown cannot read (see below).</li>
-  <li><strong>Your wishlist</strong> — the item names you typed, the prices you estimated, the feeling you tapped, and when each item was captured.</li>
-  <li><strong>What you decided</strong> — that a shield was shown, and whether you walked away, cooled the item, let it go or kept it. This is what your savings total and charts are made of.</li>
-  <li><strong>Your spend log and any follow-up answers</strong> — how a purchase felt afterwards, if you chose to say.</li>
-  <li><strong>Your rules</strong> — danger hours, per-shop rules, cooldown lengths and strict-mode state.</li>
-  <li><strong>Your Premium entitlement</strong> — a tier and an expiry date, so the app knows what to unlock.</li>
+  <li><strong>Your shops</strong> — apps and categories as opaque Screen Time tokens On Ice cannot read, and websites you added by address as that address (see below).</li>
+  <li><strong>Your list</strong> — the item names you typed, the prices you estimated, the feeling you tapped, and when each item was noted and decided.</li>
+  <li><strong>What happened at each shield</strong> — that it was shown, when, and whether you walked away, waited, opened the shop, let the item go or kept it, and what you said you came for. Your estimated savings, streaks and patterns are made of this.</li>
+  <li><strong>What you add yourself</strong> — the spend log, how a purchase felt afterwards, your journal, your own reminders, and the things you chose to do instead, including any app link or web address you gave one.</li>
+  <li><strong>Your rules and settings</strong> — danger hours, per-shop rules, your daily goal and limits, blocks, strict-mode state, your pause, your day start, your language and the AI writer you chose. If someone holds your strict-mode key, only a salted one-way hash of their PIN is stored, never the PIN.</li>
+  <li><strong>Usage steps</strong> — the highest time step iOS has reported for your protected shops today, for your goal and limits (see below).</li>
+  <li><strong>Your Premium status</strong> — the plan and when it renews or ends, so the app knows what to unlock.</li>
+  <li><strong>The latest weekly write-up</strong> — only while the AI reflection is on.</li>
 </ul>
-<p>If you use iCloud Backup or an encrypted local backup, Apple may include Cooldown's data in that backup under your own Apple ID and Apple's privacy terms. We have no access to it.</p>
-</section><section class="card" id="screentime"><h2 id="screentime-h">Screen Time and your shops</h2>
-<p>Cooldown is built on Apple's Screen Time framework (Family Controls, Managed Settings and Device Activity). You grant it access once, through Apple's own prompt, and can withdraw it at any time in <kbd>Settings</kbd> → <kbd>Screen Time</kbd>.</p>
-<p>When you pick shops, Apple's picker returns <strong>tokens</strong>: values that identify the app or website to iOS but mean nothing to Cooldown and nothing outside your phone. Cooldown stores those tokens so it can ask iOS to shield what you chose. It never receives a bundle identifier, an app name or a domain, and it could not report one if it wanted to. Where its own components need to compare tokens, they compare one-way hashes of them, never the tokens themselves — and those hashes never leave the phone either.</p>
-<p>Cooldown does not observe your browsing, your messages or what you do inside any app. iOS itself draws the shield and enforces it. Cooldown learns only that its own shield was shown and what you chose on it.</p>
-</section><section class="card" id="ai"><h2 id="ai-h">The one thing that can leave the phone</h2>
-<p>The <strong>AI reflection</strong> is an optional Premium feature that asks one short question before the choices, and writes a few sentences about your week on Sundays. It ships <strong>off</strong>, and stays off until you switch it on.</p>
-<h3>What is sent, when it is on</h3>
+<p>If you use iCloud Backup or an encrypted backup to a computer, Apple may include On Ice's data in that backup under your own Apple Account and Apple's privacy terms. We have no access to it.</p>
+</section><section class="card" id="journal"><h2>Your journal</h2>
+<p>The journal is the one place in On Ice you write for nobody. Entries — and the mood, item or feeling attached to one — are stored on your device and <strong>never leave it</strong>: not with the AI reflection, not with OpenAI, not with any setting.</p>
+<ul>
+  <li><kbd>Lock journal</kbd> asks for Face ID, Touch ID or your device passcode before the journal opens, and closes it again when you leave the app. iOS performs the check; On Ice never sees your face, fingerprint or passcode. The lock guards the screen; the entries themselves are protected by your device's own encryption, like the rest of On Ice's data.</li>
+  <li><kbd>Reflect on my week</kbd> summarises your recent entries with Apple Intelligence, <em>on your device</em>. There is no server version of it.</li>
+  <li><kbd>Export journal</kbd> makes a plain-text file and hands it to iOS, so you choose where to save it. On Ice sends it nowhere.</li>
+  <li>The journal widget shows only the day's question. It never reads an entry.</li>
+</ul>
+</section><section class="card" id="permissions"><h2>What On Ice asks to use</h2>
+<p>iOS asks for each of these in its own words, and each can be changed in <kbd>Settings</kbd> at any time.</p>
+<div class="table-wrap"><table>
+<tr><th>Permission</th><th>Why</th><th>Needed?</th></tr>
+<tr><td>Screen Time</td><td>To shield the shops you choose, run your blocks, rules and limits, and receive usage steps.</td><td>Yes — On Ice cannot work without it.</td></tr>
+<tr><td>Notifications</td><td>To hand you from the shield into the app, to say when an item's wait is over or nearly over, and for follow-up questions, activity timers and suggestions you leave on.</td><td>No</td></tr>
+<tr><td>Motion &amp; Fitness</td><td>To show your steps live during a walk. The motion sensor is used only while a walk is on screen, and steps are never stored or sent.</td><td>No — only if you start a walk</td></tr>
+<tr><td>Face ID or Touch ID</td><td>To unlock the journal, if you lock it.</td><td>No</td></tr>
+</table></div>
+<p>When you choose what a “thing to do instead” opens, On Ice asks iOS whether a short list of apps is installed — Books, Kindle, Audible, Podcasts, Music, Spotify, Duolingo, Headspace, Calm, Notes, Messages and Shortcuts — so it can offer the ones you have. The answer is used on the spot to build that list; it is neither stored nor sent.</p>
+</section><section class="card" id="screentime"><h2>Screen Time and your shops</h2>
+<p>On Ice is built on Apple's Screen Time framework (Family Controls, Managed Settings and Device Activity). You grant it access once, through Apple's own prompt, and can withdraw it at any time in <kbd>Settings</kbd> → <kbd>Screen Time</kbd>.</p>
+<p>When you pick apps, categories or websites in Apple's picker, it returns <strong>tokens</strong>: values that identify them to iOS but mean nothing to On Ice and nothing outside your device. On Ice stores those tokens so it can ask iOS to shield what you chose; iOS draws their names and icons for you. On Ice never receives a bundle identifier or an app name. Where its own components need to compare tokens, they compare one-way hashes of them, never the tokens themselves.</p>
+<p><strong>Websites you add by address are different.</strong> A site you type, or pick from On Ice's suggestions, is stored as that address — <code>example.com</code> — because iOS needs it to shield the site. It stays on your device with everything else and is never sent.</p>
+<p><strong>Usage is reported in steps.</strong> iOS never gives On Ice a total of your screen time. It only tells On Ice when time in your protected shops passes a step registered in advance — five minutes, ten, fifteen… — which is enough for a daily goal and a limit, and nothing more.</p>
+<p>On Ice does not observe your browsing, your messages or what you do inside any app. iOS itself draws the shield and enforces it. On Ice learns only that its own shield was shown and what you chose on it.</p>
+</section><section class="card" id="ai"><h2>The AI reflection — the one thing that can leave</h2>
+<p class="lead">The AI reflection is an optional Premium feature. <strong>It is off when you install On Ice and stays off until you switch it on</strong> in <kbd>Settings</kbd> → <kbd>AI reflection</kbd>.</p>
+<p>With it on, some noted items get one short question before you choose — not every item, only when there is a reason: a feeling you have often regretted, a danger hour, or a larger price. On Sundays it can also write a few sentences about your week.</p>
+<h3>Two writers, and only one of them leaves the device</h3>
+<ul>
+  <li><strong>Apple Intelligence</strong> writes on your device. Nothing is sent anywhere. If Apple Intelligence becomes unavailable, On Ice shows you the ordinary choices instead — <strong>it never falls back to a server</strong>.</li>
+  <li><strong>OpenAI</strong> writes on OpenAI's servers, through On Ice's own service. Only what is listed below is sent.</li>
+</ul>
+<p>You choose under <kbd>Reflection writer</kbd>. If you switch the AI reflection on without choosing, On Ice uses Apple Intelligence where your device and language support it, and OpenAI where they do not.</p>
+<h3>What is sent, with OpenAI as the writer</h3>
+<p>For a question:</p>
 <ul>
   <li>The <strong>name of the item</strong> you just typed, and anything you write in answer to the question.</li>
-  <li>A <strong>price band</strong> — a range, never the amount you actually typed — and your currency.</li>
+  <li>A <strong>price band</strong> — a range such as “250 to 500”, never the amount you typed — and your currency.</li>
   <li>The <strong>feeling</strong> you tapped, if you tapped one.</li>
   <li>The <strong>hour and minute</strong> on your clock. No date, no time zone.</li>
-  <li><strong>How many shops you have opened today.</strong></li>
-  <li>Your own <strong>regret rate for that one feeling</strong>, once you have rated enough purchases for it to mean anything.</li>
+  <li><strong>How many shopping shields you have met today.</strong></li>
+  <li>Your own <strong>regret rate for that one feeling</strong>, as a percentage — only once you have rated at least five purchases.</li>
+  <li>Your <strong>language</strong>, such as “English (UK)”, so the question comes back in it.</li>
 </ul>
-<p>The Sunday write-up carries none of the above and <strong>no item names at all</strong> — only counts and totals.</p>
+<p>For the weekly write-up, <strong>counts and totals only</strong>: shields met, items you waited on, let go, kept or walked away from, how often you opened a shop, your current and best streak, your busiest hour, the share of items you let go, your estimated savings for the week rounded to a whole number with its currency, the date the week began, and your language. <strong>No item names and no individual prices.</strong></p>
 <h3>What is never sent</h3>
 <ul>
-  <li>Screen Time tokens or their hashes, bundle identifiers or domains.</li>
+  <li>Screen Time tokens or their hashes, bundle identifiers, or website addresses.</li>
   <li>Which shops or websites you protect, or how many.</li>
   <li>The exact price you typed.</li>
-  <li>Anything else on your wishlist — no names, no prices.</li>
-  <li>Your estimated savings total, or anything in your spend log.</li>
+  <li>Anything else on your list — no names, no prices.</li>
+  <li>Your spend log, or any individual purchase price.</li>
   <li>How you rated any individual purchase.</li>
-  <li>Your rules, danger hours or strict-mode state.</li>
-  <li>Any name, account, email or device identifier. Nothing sent is linked to you.</li>
+  <li>Your journal, rules, limits, blocks, danger hours or strict-mode state.</li>
+  <li>Any name, account, email or advertising identifier — nothing that identifies you as a person.</li>
 </ul>
-<h3>Where it goes</h3>
-<p>To Cooldown's own service, and on to Google's Gemini model on Vertex AI. <strong>Cooldown's service stores none of it</strong> — it keeps no copy of the question, your answer, or anything in the list above, only that a request happened, how long it took and whether it worked. Google does not use it to train its models; Google may keep it for up to 24 hours to speed things up and may log it to check for abuse, under their standard cloud terms. The model is served from Google's global endpoint, so we cannot promise your text is processed in any particular country.</p>
-<div class="callout"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M18 16l.8 2.2L21 19l-2.2.8L18 22l-.8-2.2L15 19l2.2-.8z"/></svg></span><div>Switching AI reflection off stops all of it immediately, deletes the weekly write-up from the phone, and takes the Sunday reminder out of your notifications. Cooldown goes back to making no network calls of its own at all.</div></div>
-</section><section class="card" id="purchases"><h2 id="purchases-h">Purchases</h2>
-<p>Premium is sold through Apple's App Store using StoreKit. The transaction is between you and Apple, under <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>. Apple tells Cooldown whether a purchase is active — nothing else — and Cooldown tells Apple nothing about how you use the app. No wishlist, no savings total, no shop selection and no identifier of ours travels with a purchase. We never see a card.</p>
-</section><section class="card" id="notifications"><h2 id="notifications-h">Notifications, widgets and the Lock Screen</h2>
-<p><strong>Notifications</strong> are optional and are generated on your phone. Cooldown uses them to hand you from the shield into the capture screen, and to tell you when an item's cooldown is over. None is sent from a server.</p>
-<p><strong>Widgets and the Live Activity</strong> read a small snapshot of counts and dates — this month's estimated savings, how many items are on ice, how long one has left. They deliberately have no Screen Time access and never see which shops you shielded. Anything that can appear on a Lock Screen is written to be readable by whoever is holding the phone.</p>
-</section><section class="card" id="third"><h2 id="third-h">Third parties</h2>
-<p>Cooldown contains no analytics, no advertising, no attribution and no crash reporter. Two other parties are involved, both narrowly:</p>
+<h3>Where it goes, and how long it is kept</h3>
+<p>Requests go to <strong>On Ice's own service, hosted on Cloudflare</strong>, and on to <strong>OpenAI</strong>, which runs the model. There is no API key inside the app to be extracted, and the app never calls OpenAI directly.</p>
+<p>Before answering, the service uses <strong>Apple's App Attest</strong> to check that the request comes from a genuine copy of On Ice. That check rests on a key created on your device — not on your name or your Apple Account. <strong>The service stores no question, answer or item detail.</strong> It keeps a count of requests per device per day, under that random key identifier, and deletes it after two days; daily totals of requests and model usage for the whole service, which name no device, for about 90 days; and a record of each one-time App Attest challenge until it expires. Its logs record a request's status, how long it took and how many tokens it used — never its contents.</p>
+<p><strong>OpenAI does not use this data to train its models.</strong> We switch off OpenAI's stored responses; OpenAI may still keep inputs and outputs in its abuse-monitoring logs, normally for up to 30 days, with exceptions under its own terms. We do not promise that your text is processed in any particular country.</p>
+<p><strong>Earlier versions of On Ice</strong> send the same kinds of details to <strong>Google's Gemini model on Vertex AI</strong> instead, through an earlier On Ice service on Google Cloud that also stores no content. Google does not use them to train its models, may keep them for up to 24 hours, and may log them to check for abuse.</p>
+<div class="callout"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M18 16l.8 2.2L21 19l-2.2.8L18 22l-.8-2.2L15 19l2.2-.8z"/></svg></span><div>Switching the AI reflection off stops every future request at once, deletes the weekly write-up from your device, and removes the Sunday reminder. On Ice goes back to making no network calls of its own. <kbd>Settings</kbd> → <kbd>AI reflection</kbd> → <kbd>What gets sent</kbd> shows the same list inside the app.</div></div>
+</section><section class="card" id="purchases"><h2>Purchases and family plans</h2>
+<p>Premium is sold through Apple's App Store using StoreKit. The transaction is between you and Apple, under <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>. Apple tells On Ice which plan is active and when it renews or ends — nothing else — and On Ice tells Apple nothing about how you use the app. We never see a card.</p>
+<p>With a <strong>family plan</strong>, Apple's Family Sharing gives each member Premium in their own copy of On Ice. Nothing passes between those copies — no shops, list, journal, savings or settings — and On Ice learns only that Premium was shared, not who shared it.</p>
+</section><section class="card" id="notifications"><h2>Notifications, widgets and the Lock Screen</h2>
+<p><strong>Notifications</strong> are optional and are all scheduled on your device. None is sent from a server, and there is no push service. On Ice uses them to hand you from the shield into the app, to say when an item's wait is over or nearly over, for follow-up questions you can switch off in <kbd>Settings</kbd> → <kbd>Follow-up questions</kbd>, for activity timers and suggestions you choose, and — only with the AI reflection on — for the Sunday write-up. A notification about an item names the item.</p>
+<p><strong>Widgets, Live Activities and Control Center controls</strong> read a small snapshot on your device: totals, counts, your streak, and the names and times of up to three of the soonest items. They have no Screen Time access and never see which shops you chose. <strong>The “On ice” widget and an item's Live Activity show the item's name</strong>, so on a Lock Screen anyone holding the device can read it. Money amounts are hidden there while the device is locked. Put them where you are comfortable seeing them.</p>
+</section><section class="card" id="third"><h2>Third parties</h2>
+<p>On Ice contains <strong>no third-party code</strong>: no analytics, no advertising, no attribution, no crash reporter, no SDKs. Only these parties are involved, and only as described here:</p>
 <ul>
-  <li><strong>Apple</strong> — operates the App Store, processes purchases, enforces the Screen Time shield, and verifies through App Attest that a request comes from a genuine copy of the app. If you have opted in to sharing with developers, Apple may share crash logs with us under its own policy.</li>
-  <li><strong>Google Cloud (Vertex AI)</strong> — only if you switch on the AI reflection, and only for what is listed <a href="#ai">above</a>.</li>
+  <li><strong>Apple</strong> — operates the App Store and Family Sharing, processes purchases, enforces the Screen Time shield, runs Apple Intelligence on your device, and provides App Attest. If you have opted in to sharing with developers, Apple may share crash logs with us under its own policy.</li>
+  <li><strong>Cloudflare</strong> — hosts On Ice's AI service. When the AI reflection uses OpenAI, requests pass through it, and it stores none of their content.</li>
+  <li><strong>OpenAI</strong> — runs the model behind OpenAI reflections, only while that writer is in use, and receives only what is listed <a href="#ai">above</a>.</li>
+  <li><strong>Google Cloud</strong> — plays that part for earlier versions of the app only.</li>
 </ul>
-<p>We do not sell, rent or share personal data with anyone.</p>
-</section><section class="card" id="delete"><h2 id="delete-h">Deleting your data</h2>
-<p>Everything Cooldown holds is on your phone, so removing it does not require asking us. The <a href="/cooldown-links/delete-data/">Your data</a> page walks through it: items leave your list as you decide about them, switching the AI reflection off deletes the weekly write-up, and deleting the app removes everything at once.</p>
-<p>There is nothing on our side to delete — but you are welcome to write to us anyway.</p>
-</section><section class="card" id="rights"><h2 id="rights-h">Your rights</h2>
-<p>Wherever you live — including under the GDPR, the UK GDPR and the CCPA/CPRA — you have rights to access, correct, export, restrict and erase personal data a company holds about you, and to complain to a supervisory authority. Because Cooldown holds no personal data about you on any server, there is nothing for us to produce or delete; the data on your phone is already in your hands. If you believe otherwise, write to <a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a> and we will respond.</p>
-</section><section class="card" id="children"><h2 id="children-h">Children</h2>
-<p>Cooldown is a self-directed tool for the person using the phone. It is not a parental-control product and does not manage another person's device. It is not directed at children under 13 (or the age of digital consent where you live), and we do not knowingly collect personal information from anyone — of any age.</p>
-</section><section class="card" id="changes"><h2 id="changes-h">Changes to this policy</h2>
-<p>We may update this policy as the app changes. The date at the top moves when we do, and material changes will be noted in the app's release notes. Continued use of Cooldown after a change means you accept the revised policy.</p>
-</section><section class="card" id="contact"><h2 id="contact-h">Contact</h2>
-<p>TOPSOL, the publisher of Cooldown, is the controller for anything covered here. Questions about privacy: <a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a>.</p>
+<p>We do not sell, rent or share personal data with anyone, and we share nothing with data brokers or advertisers. A link you give a “thing to do instead” opens the app or website you chose, under that app's or site's own policy.</p>
+</section><section class="card" id="delete"><h2>Deleting your data</h2>
+<p>Everything On Ice holds is on your device, so removing it does not require asking us. You can delete journal entries, spend-log entries, rules, limits, reminders and activities one by one in the app; switching the AI reflection off deletes the weekly write-up; and <strong>deleting the app removes everything at once</strong>. There is no single button inside the app that erases your whole history, so deleting the app is the way to start fresh. The <a href="/cooldown-links/delete-data/">Your data</a> page walks through each.</p>
+<p>On our side there is nothing to delete: the AI service keeps no content, and its per-device count disappears on its own after two days.</p>
+</section><section class="card" id="rights"><h2>Your rights</h2>
+<p>Wherever you live — including under the GDPR, the UK GDPR and the CCPA/CPRA — you have rights to access, correct, export and erase personal data a company holds about you, to restrict or object to its processing, and to complain to a supervisory authority. On Ice keeps no profile of you on any server, so there is nothing on our side to produce or delete; the data on your device is already in your hands. Using OpenAI reflections is your choice, and switching the AI reflection off withdraws it at once. If you believe we hold something about you, write to <a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a> and we will respond.</p>
+</section><section class="card" id="children"><h2>Children</h2>
+<p>On Ice is a self-directed tool for the person using the device. It is not a parental-control product and does not manage another person's device; a family plan shares Premium, never control or data. It is not directed at children under 13 (or the age of digital consent where you live), and we do not knowingly collect personal information from anyone, of any age.</p>
+</section><section class="card" id="changes"><h2>Changes to this policy</h2>
+<p>We may update this policy as the app changes. The date at the top moves when we do, and material changes are noted in the app's release notes. This version describes the choice between Apple Intelligence and OpenAI for the AI reflection, the journal, walking steps, usage steps, family plans, iPad, and seven more languages. Continued use of On Ice after a change means you accept the revised policy.</p>
+<p>This policy is published in eight languages. If a translation and the English differ, the English applies.</p>
+</section><section class="card" id="contact"><h2>Contact</h2>
+<p>TOPSOL, the publisher of On Ice, is the controller for anything covered here. Questions about privacy: <a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a>.</p>
 </section></div></div></main>
 <footer><div class="in">
-  <div>© 2026 Cooldown · TOPSOL · All rights reserved.</div>
+  <div>© 2026 On Ice · TOPSOL · All rights reserved.</div>
   <nav aria-label="Footer"><a href="/cooldown-links/">Support</a> · <a href="/cooldown-links/about/">About</a> · <a href="/cooldown-links/privacy/">Privacy</a> · <a href="/cooldown-links/terms/">Terms</a> · <a href="/cooldown-links/delete-data/">Your data</a> · <a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a></nav>
 </div></footer>
 </body>

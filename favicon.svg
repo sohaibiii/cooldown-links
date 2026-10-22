@@ -1,1 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><radialGradient id="g" cx="38%" cy="32%" r="72%"><stop offset="0" stop-color="#D3DCFF"/><stop offset="1" stop-color="#8FA0EA"/></radialGradient></defs><rect width="64" height="64" rx="16" fill="#12152A"/><path d="M34 10a24 24 0 1 0 21.8 33.8A19.6 19.6 0 0 1 34 10Z" fill="url(#g)"/><circle cx="50" cy="17" r="2.4" fill="#D3DCFF" opacity=".85"/><circle cx="15" cy="46" r="1.8" fill="#D3DCFF" opacity=".6"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1D2347"/><stop offset="1" stop-color="#12152A"/></linearGradient></defs><rect width="64" height="64" rx="15" fill="url(#bg)"/><svg x="6" y="6" width="52" height="52" viewBox="182 208 660 660">
+<defs>
+  <linearGradient id="top" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7F8FE"/><stop offset="1" stop-color="#DBE0F8"/></linearGradient>
+  <linearGradient id="left" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#CDD4F4"/><stop offset="1" stop-color="#ACB7EB"/></linearGradient>
+  <linearGradient id="right" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A7B2EA"/><stop offset="1" stop-color="#7B8CDE"/></linearGradient>
+  <linearGradient id="frost" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0.34"/><stop offset="0.6" stop-color="#FFFFFF" stop-opacity="0.06"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0.2"/></linearGradient>
+</defs>
+<polygon points="512,250 786,388 786,688 512,826 238,688 238,388" fill="#C7CFF2" stroke="#C7CFF2" stroke-width="64" stroke-linejoin="round"/>
+<polygon points="238,388 512,526 512,826 238,688" fill="url(#left)"/>
+<polygon points="512,526 786,388 786,688 512,826" fill="url(#right)"/>
+<g transform="rotate(-7 512 676)">
+  <path d="M441.3 590.0L582.7 590.0Q601.4 590.0 603.7 608.7L616.0 767.3Q618.0 786.0 597.3 786.0L426.7 786.0Q406.0 786.0 408.0 767.3L420.3 608.7Q422.6 590.0 441.3 590.0Z" fill="#E8C170" fill-opacity="0.95" stroke="#FFFFFF" stroke-opacity="0.95" stroke-width="16" stroke-linejoin="round"/>
+  <path d="M472.5 615.5V578.2C472.5 531.2 551.5 531.2 551.5 578.2V615.5" stroke="#E8C170" stroke-opacity="0.95" stroke-width="21" stroke-linecap="round" fill="none"/>
+</g>
+<polygon points="238,388 512,526 512,826 238,688" fill="url(#frost)"/>
+<polygon points="512,526 786,388 786,688 512,826" fill="url(#frost)"/>
+<polygon points="512,250 786,388 512,526 238,388" fill="url(#top)"/>
+<path d="M268 386L506 278" stroke="#FFFFFF" stroke-opacity="0.95" stroke-width="16" stroke-linecap="round"/>
+<path d="M512 550V796" stroke="#FFFFFF" stroke-opacity="0.28" stroke-width="6" stroke-linecap="round"/>
+<circle cx="300" cy="610" r="10" fill="#FFFFFF" fill-opacity="0.6"/>
+<circle cx="322" cy="572" r="6" fill="#FFFFFF" fill-opacity="0.5"/>
+<circle cx="716" cy="500" r="7" fill="#FFFFFF" fill-opacity="0.45"/>
+</svg></svg>

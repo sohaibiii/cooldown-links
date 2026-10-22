@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="구매 버튼과 나 사이에 하룻밤을 놓는 iPhone·iPad 앱, On Ice의 공식 도움말. 작동 방식, 필요 조건, 자주 묻는 질문, 문의처.">
+<meta name="robots" content="index,follow">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F5F6FA">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0F1214">
+<meta property="og:title" content="On Ice — 도움말">
+<meta property="og:description" content="구매 버튼과 나 사이에 하룻밤을 놓는 iPhone·iPad 앱, On Ice의 공식 도움말. 작동 방식, 필요 조건, 자주 묻는 질문, 문의처.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko">
+<meta property="og:url" content="https://sohaibiii.github.io/cooldown-links/ko/">
+<link rel="canonical" href="https://sohaibiii.github.io/cooldown-links/ko/">
+<link rel="alternate" hreflang="en" href="https://sohaibiii.github.io/cooldown-links/"><link rel="alternate" hreflang="de" href="https://sohaibiii.github.io/cooldown-links/de/"><link rel="alternate" hreflang="es" href="https://sohaibiii.github.io/cooldown-links/es/"><link rel="alternate" hreflang="fr" href="https://sohaibiii.github.io/cooldown-links/fr/"><link rel="alternate" hreflang="ja" href="https://sohaibiii.github.io/cooldown-links/ja/"><link rel="alternate" hreflang="ko" href="https://sohaibiii.github.io/cooldown-links/ko/"><link rel="alternate" hreflang="pt-BR" href="https://sohaibiii.github.io/cooldown-links/pt-BR/"><link rel="alternate" hreflang="zh-Hans" href="https://sohaibiii.github.io/cooldown-links/zh-Hans/"><link rel="alternate" hreflang="x-default" href="https://sohaibiii.github.io/cooldown-links/">
+<link rel="icon" href="/cooldown-links/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/cooldown-links/apple-touch-icon.png">
+<title>On Ice — 도움말</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  --bg:#F5F6FA;--surface:#FFFFFF;--fill:#EAECF4;--ink:#12151B;--ink-2:#5A6070;--ink-3:#6B7180;
+  --line:rgba(0,0,0,.06);--accent:#4A5AC4;--accent-strong:#3F4EB2;--accent-soft:rgba(74,90,196,.12);--on-accent:#FFFFFF;
+  --glow:transparent;--card-shadow:0 10px 30px rgba(18,21,27,.07);--card-edge:transparent;
+  --savings:#2E7D4F;--savings-soft:rgba(46,125,79,.13);--cooling:#8A5D0A;--cooling-soft:rgba(138,93,10,.13);
+  --hero-top:#1D2347;--hero-bottom:#12152A;--hero-glow:rgba(123,140,222,.42);--hero-ink:#F2F4F7;--hero-ink-2:rgba(242,244,247,.74);--hero-stroke:rgba(255,255,255,.10);--hero-fill:rgba(255,255,255,.10);
+  --moon-core:#D3DCFF;--moon-edge:#8FA0EA;--moon-glow:rgba(123,140,222,.70);
+  --r-card:20px;--r-hero:28px;--r-control:14px;--r-chip:12px;--r-tile:10px;
+  --max:760px;--wide:1080px;--anchor:112px;
+  --display:"Nunito",ui-rounded,"SF Pro Rounded",-apple-system,system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0F1214;--surface:#181D20;--fill:#222931;--ink:#F2F4F7;--ink-2:#9AA3AF;--ink-3:#7C8594;
+  --line:rgba(255,255,255,.08);--accent:#8FA0EA;--accent-strong:#A3B2F2;--accent-soft:rgba(123,140,222,.16);--on-accent:#0F1214;
+  --glow:rgba(123,140,222,.35);--card-shadow:none;--card-edge:rgba(255,255,255,.07);
+  --savings:#7FC98F;--savings-soft:rgba(127,201,143,.16);--cooling:#E8C170;--cooling-soft:rgba(232,193,112,.16);
+}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,"Hiragino Sans","Apple SD Gothic Neo","PingFang SC","Noto Sans CJK JP","Noto Sans CJK KR","Noto Sans CJK SC",sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+:lang(ja),:lang(ko),:lang(zh-Hans){line-break:strict;word-break:normal;overflow-wrap:anywhere}
+:lang(ja) :is(h1,h2,h3,.sub,.lead){word-break:auto-phrase}
+a{color:var(--accent);text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--accent) 40%,transparent);text-underline-offset:3px;overflow-wrap:anywhere}
+a:hover{text-decoration-color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;top:8px;left:8px;background:var(--surface);color:var(--ink);padding:8px 12px;z-index:20;border-radius:var(--r-chip);box-shadow:var(--card-shadow)}
+.skip:not(:focus){clip:rect(0 0 0 0);clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap;padding:0;margin:-1px}
+h1,h2,h3{margin:0;letter-spacing:-.022em;text-wrap:balance;font-family:var(--display);font-weight:800}
+:lang(ja) :is(h1,h2,h3),:lang(ko) :is(h1,h2,h3),:lang(zh-Hans) :is(h1,h2,h3){letter-spacing:0;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Apple SD Gothic Neo","PingFang SC",sans-serif;font-weight:700}
+h1{font-size:clamp(32px,4.6vw,48px);line-height:1.06}
+h2{font-size:25px;line-height:1.24}
+h3{font-weight:700;font-size:18px;line-height:1.3}
+p{margin:0 0 1em}
+p:last-child{margin-bottom:0}
+ul,ol{margin:0;padding-left:1.3em}
+li{margin:.45em 0}
+li::marker{color:var(--accent)}
+strong{font-weight:600}
+.muted{color:var(--ink-2)}
+small,.small{font-size:14px;color:var(--ink-2)}
+code{font:.92em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--fill);padding:.1em .4em;border-radius:6px}
+kbd{font:inherit;background:var(--fill);border-radius:8px;padding:.05em .5em;white-space:nowrap}
+.est{font-style:normal;color:var(--ink-2);font-size:.86em;font-weight:500}
+
+/* top bar — the one glass surface, like the app's navigation layer */
+.topbar{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
+.topbar .in{max-width:var(--wide);margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.02em;white-space:nowrap}
+.mark{width:30px;height:30px;border-radius:9px;flex:none;display:grid;place-items:center;background:linear-gradient(160deg,#1D2347,#12152A);box-shadow:0 0 0 1px var(--hero-stroke),0 0 14px var(--moon-glow)}
+.mark img{width:22px;height:22px;display:block}
+nav.pages{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+nav.pages a{text-decoration:none;color:var(--ink-2);font-size:15px;font-weight:500;padding:7px 12px;border-radius:999px;white-space:nowrap}
+nav.pages a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
+nav.pages a:hover{color:var(--ink)}
+@media (max-width:640px){nav.pages{margin-left:0;width:100%;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;padding-bottom:2px}nav.pages::-webkit-scrollbar{display:none}nav.pages a{flex:none}}
+
+/* language tabs — the same page, in the reader's own language */
+.langrow{border-top:1px solid var(--line)}
+.langrow .in{max-width:var(--wide);margin:0 auto;padding:7px 20px;display:flex;align-items:center;gap:12px}
+.langrow .lbl{flex:none;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-family:var(--display)}
+nav.langs{display:flex;gap:2px;min-width:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+nav.langs::-webkit-scrollbar{display:none}
+nav.langs a{flex:none;text-decoration:none;color:var(--ink-2);font-size:14.5px;font-weight:500;padding:6px 11px;border-radius:999px;white-space:nowrap}
+nav.langs a:hover{color:var(--ink);background:var(--fill)}
+nav.langs a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
+@media (max-width:640px){.langrow .lbl{display:none}.langrow .in{padding:6px 20px}:root{--anchor:150px}}
+
+/* hero — the app's protection island, dark in both appearances */
+.hero-wrap{max-width:var(--wide);margin:24px auto 0;padding:0 20px}
+.hero{position:relative;overflow:hidden;border-radius:var(--r-hero);background:linear-gradient(135deg,var(--hero-top),var(--hero-bottom));color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke),0 24px 60px rgba(15,18,20,.20);padding:clamp(36px,6vw,64px) clamp(24px,5vw,56px)}
+.hero::before{content:"";position:absolute;inset:-40% -18% auto auto;width:62%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--hero-glow) 0,transparent 62%);pointer-events:none}
+.hero>*{position:relative}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--hero-ink-2);margin-bottom:18px;font-family:var(--display)}
+.hero .eyebrow .dot{width:9px;height:9px;border-radius:50%;background:var(--moon-edge);box-shadow:0 0 10px var(--moon-glow)}
+.hero h1{max-width:18ch}
+:lang(ja) .hero h1,:lang(ko) .hero h1,:lang(zh-Hans) .hero h1{max-width:22ch}
+.hero .sub{margin:16px 0 0;max-width:56ch;font-size:clamp(17px,2vw,20px);color:var(--hero-ink-2)}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;align-items:center}
+.hero .ctas a,.hero .ctas span{color:var(--hero-ink)}
+.hero .ctas .btn.primary{background:linear-gradient(to bottom,#8FA0EA,#7B8CDE);color:#0F1214;box-shadow:0 8px 24px rgba(123,140,222,.34)}
+.hero .ctas .btn.quiet{background:var(--hero-fill);color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke)}
+.hero .meta{margin-top:22px;font-size:14px;color:var(--hero-ink-2)}
+.hero .meta a{color:var(--hero-ink);text-decoration-color:rgba(255,255,255,.4)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:16px;line-height:1;padding:14px 20px;border-radius:var(--r-control);text-decoration:none;white-space:nowrap}
+.btn.primary{background:var(--accent);color:var(--on-accent);box-shadow:0 8px 24px var(--glow)}
+.btn.quiet{background:var(--fill);color:var(--ink)}
+.btn svg{width:18px;height:18px;flex:none}
+.soon{display:inline-flex;align-items:center;gap:8px;font-size:15px;color:var(--hero-ink-2);padding:12px 4px}
+.soon svg{width:18px;height:18px;flex:none}
+
+/* content */
+main{max-width:var(--wide);margin:0 auto;padding:32px 20px 64px}
+.grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
+@media (min-width:900px){.grid.with-toc{grid-template-columns:240px minmax(0,1fr);align-items:start}}
+.toc{position:sticky;top:var(--anchor);padding:20px 22px;border-radius:var(--r-card);background:var(--surface);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge)}
+@media (max-width:899px){.toc{position:static}}
+.toc .lbl{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);margin-bottom:10px;font-family:var(--display)}
+.toc ol{list-style:none;padding:0;margin:0}
+.toc li{margin:0}
+.toc a{display:block;padding:6px 0;font-size:15px;color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--line)}
+.toc li:last-child a{border-bottom:0}
+.toc a:hover{color:var(--accent)}
+.stack{display:grid;gap:20px;max-width:var(--max)}
+.grid.with-toc .stack{max-width:none}
+.card{background:var(--surface);border-radius:var(--r-card);padding:clamp(22px,3.4vw,32px);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge);scroll-margin-top:calc(var(--anchor) + 8px)}
+.card h2{margin-bottom:12px}
+.card h3{margin:20px 0 6px}
+.card h3:first-of-type{margin-top:0}
+.card p+h3,.card ul+h3,.card .table-wrap+h3{margin-top:18px}
+.card ul+p,.card .table-wrap+p,.card .callout+p,.card p+.callout,.card ul+.callout{margin-top:16px}
+.lead{font-size:clamp(18px,2vw,21px);line-height:1.5;color:var(--ink)}
+.stamp{font-size:14px;color:var(--ink-2);margin:0 0 4px}
+.callout{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:var(--r-control);background:var(--accent-soft)}
+.callout .tile{flex:none;width:32px;height:32px;border-radius:var(--r-tile);display:grid;place-items:center;background:var(--accent);color:var(--on-accent)}
+.callout .tile svg{width:18px;height:18px}
+.callout.amber{background:var(--cooling-soft)}.callout.amber .tile{background:var(--cooling);color:var(--bg)}
+.callout.green{background:var(--savings-soft)}.callout.green .tile{background:var(--savings);color:var(--bg)}
+.rows{list-style:none;padding:0;margin:0;display:grid;gap:2px}
+.rows li{display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px;padding:12px 0;margin:0;border-bottom:1px solid var(--line);align-items:start}
+.rows li:last-child{border-bottom:0}
+.rows .tile{width:40px;height:40px;border-radius:var(--r-tile);display:grid;place-items:center;background:var(--accent-soft);color:var(--accent)}
+.rows .tile.amber{background:var(--cooling-soft);color:var(--cooling)}
+.rows .tile.green{background:var(--savings-soft);color:var(--savings)}
+.rows .tile svg{width:20px;height:20px}
+.rows b{display:block;font-weight:600}
+.rows span{color:var(--ink-2);font-size:15.5px}
+.features{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.features .card{display:flex;flex-direction:column;gap:10px}
+.features .tile{width:44px;height:44px;border-radius:var(--r-chip);display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);margin-bottom:6px}
+.features .tile.amber{background:var(--cooling-soft);color:var(--cooling)}
+.features .tile.green{background:var(--savings-soft);color:var(--savings)}
+.features .tile svg{width:22px;height:22px}
+.features .card h3{margin:0}
+.features .card p{color:var(--ink-2);font-size:16px}
+.tiers{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:16px}
+.tier{background:var(--surface);border-radius:var(--r-card);padding:24px;box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge);display:flex;flex-direction:column;gap:10px}
+.card .tier{background:var(--fill);box-shadow:none}
+.tier .lbl{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);font-family:var(--display)}
+.tier .price{font-family:var(--display);font-size:26px;font-weight:800;letter-spacing:-.02em;line-height:1.2}
+.tier ul{margin-top:4px;color:var(--ink-2);font-size:15.5px}
+.card .tier.premium,.tier.premium{background:linear-gradient(135deg,var(--hero-top),var(--hero-bottom));color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke)}
+.tier.premium .lbl,.tier.premium ul{color:var(--hero-ink-2)}
+.tier.premium li::marker{color:#8FA0EA}
+.tiers+p{margin-top:14px}
+dl.faq{margin:0}
+dl.faq dt{font-weight:600;margin-top:18px}
+dl.faq dt:first-child{margin-top:0}
+dl.faq dd{margin:6px 0 0;color:var(--ink-2)}
+table{width:100%;border-collapse:collapse;font-size:15.5px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px 10px 0;border-bottom:1px solid var(--line)}
+th{font-weight:700;color:var(--ink-2);font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-family:var(--display)}
+tr:last-child td,tr:last-child th{border-bottom:0}
+.table-wrap{overflow-x:auto}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.steps li{display:grid;grid-template-columns:32px minmax(0,1fr);gap:14px;margin:0;align-items:start}
+.steps li::before{counter-increment:s;content:counter(s);width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--on-accent);font-weight:800;font-size:14px;font-family:var(--display)}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:28px 20px 44px;color:var(--ink-2);font-size:14.5px}
+footer .in{max-width:var(--wide);margin:0 auto;display:flex;gap:10px 22px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+footer nav{display:flex;gap:6px 16px;flex-wrap:wrap}
+footer a{color:var(--ink-2)}
+footer a:hover{color:var(--accent)}
+</style>
+</head>
+<body>
+<a class="skip" href="#content">본문으로 건너뛰기</a>
+<header class="topbar">
+  <div class="in">
+    <a class="brand" href="/cooldown-links/ko/"><span class="mark" aria-hidden="true"><img src="/cooldown-links/mark.svg" alt="" width="22" height="22"></span>On Ice</a>
+    <nav class="pages" aria-label="페이지"><a href="/cooldown-links/ko/" aria-current="page">도움말</a><a href="/cooldown-links/ko/about/">소개</a><a href="/cooldown-links/ko/privacy/">개인정보</a><a href="/cooldown-links/ko/terms/">약관</a><a href="/cooldown-links/ko/delete-data/">내 데이터</a></nav>
+  </div>
+  <div class="langrow"><div class="in">
+    <span class="lbl">언어</span>
+    <nav class="langs" aria-label="언어"><a href="/cooldown-links/" lang="en" hreflang="en">English</a><a href="/cooldown-links/de/" lang="de" hreflang="de">Deutsch</a><a href="/cooldown-links/es/" lang="es" hreflang="es">Español</a><a href="/cooldown-links/fr/" lang="fr" hreflang="fr">Français</a><a href="/cooldown-links/ja/" lang="ja" hreflang="ja">日本語</a><a href="/cooldown-links/ko/" lang="ko" hreflang="ko" aria-current="page">한국어</a><a href="/cooldown-links/pt-BR/" lang="pt-BR" hreflang="pt-BR">Português (Brasil)</a><a href="/cooldown-links/zh-Hans/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a></nav>
+  </div></div>
+</header>
+<div class="hero-wrap"><section class="hero"><div class="eyebrow"><span class="dot" aria-hidden="true"></span>도움말</div><h1>On Ice 도움말</h1><p class="sub">구매 버튼과 나 사이에, 하룻밤. On Ice는 내가 고른 쇼핑 앱과 웹사이트를 차단하고, 먼저 하룻밤 생각해 보자고 해요. 이 페이지에서는 작동 방식과 필요한 것, 그리고 저희에게 연락하는 방법을 알려 드려요.</p><div class="ctas"><span class="soon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.3 1.2 9.7.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.2-.8s1.9.8 3.2.8 2.1-1.2 2.9-2.4c.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.5-1-2.5-3.8zM14 5.5c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.2-.6 2.8-1.4z"/></svg> App Store에 곧 출시</span><a class="btn quiet" href="#faq">자주 묻는 질문 보기</a></div><p class="meta">계정 없음 · 은행 접근 없음 · <a href="/cooldown-links/ko/privacy/">개인정보 처리방침</a></p></section></div>
+<main id="content"><div class="grid with-toc"><aside class="toc" aria-label="이 페이지의 내용"><div class="lbl">이 페이지의 내용</div><ol><li><a href="#how">On Ice 작동 방식</a></li><li><a href="#requirements">필요 조건</a></li><li><a href="#start">시작하기</a></li><li><a href="#money">절약액 숫자에 대해</a></li><li><a href="#faq">자주 묻는 질문</a></li><li><a href="#trouble">문제 해결</a></li><li><a href="#contact">문의</a></li></ol></aside><div class="stack"><section class="card" id="how"><h2>On Ice 작동 방식</h2>
+<p class="lead">On Ice는 구매 버튼과 나 사이에 하룻밤을 놓아요.</p>
+<p>자꾸 마음을 흔드는 쇼핑 앱과 웹사이트를 직접 고르세요. 그 뒤로는 그중 하나를 열어도 곧장 결제 화면으로 가지 않아요. On Ice의 차단 화면이 먼저 나와요: <em>사기 전에 잠깐 멈춰요.</em> <kbd>적어 두기</kbd>를 탭해 그 물건을 적어 두거나, <kbd>괜찮아요</kbd>를 탭해 돌아서세요. On Ice가 나 대신 무언가를 사거나 취소하는 일은 절대 없어요.</p>
+<p>적어 둔 것은 목록에서 기다려요. 다른 길이를 고르지 않았다면 24시간이에요. 기다림이 끝나면 On Ice가 한 가지만 물어요: 아직 갖고 싶어요? 대부분의 바람은 하룻밤을 넘기지 못하고, 넘긴 것은 진짜였던 거예요. 어느 쪽으로 답해도 좋은 답이에요.</p>
+<ul class="rows">
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/></svg></span><div><b>보호</b><span>홈 화면에 스위치 하나, 쇼핑몰마다 스위치 하나. 켜져 있는 동안 고른 쇼핑몰은 열리는 대신 On Ice의 차단 화면을 보여 줘요 — 앱은 물론 <em>웹사이트도</em>, Safari에서도요.</span></div></li>
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></span><div><b>짧은 멈춤</b><span>무엇보다 먼저, 숨을 고르거나, 한 문장을 입력하거나, 알림 문구를 읽거나, 무엇을 사러 왔는지 말하는 잠깐의 시간. 어떤 방식으로, 얼마나 길게 할지는 직접 정해요.</span></div></li>
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11l4 4v12H5z"/><path d="M9 11h7M9 15h5"/></svg></span><div><b>적어 두기</b><span>물건 이름을 적고, 대략적인 가격을 탭하고, 지금 기분을 탭하세요 — 지루함, 스트레스, 축하, 할인 놓칠까 봐, 또는 “필요해요”. 화면 하나, 15초.</span></div></li>
+  <li><span class="tile amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.5 7l17 10M20.5 7l-17 10"/></svg></span><div><b>보류 중</b><span>적어 둔 물건은 카운트다운 링 아래에서 기다려요. 물건이 식는 동안에는 아무것도 구매되지 않아요. 지금 꼭 쇼핑몰이 필요하다면 몇 분 동안 열리고, 차단 화면은 저절로 다시 돌아와요.</span></div></li>
+  <li><span class="tile green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.6" y="6" width="18.8" height="12" rx="2.6"/><circle cx="12" cy="12" r="2.7"/></svg></span><div><b>추정 절약액</b><span>놓아준 물건 하나하나가 누적 합계에 더해져요. 합계는 전부 직접 입력한 가격으로만 만들어지고, 오늘·이번 주·이번 달로 볼 수 있어요.</span></div></li>
+  <li><span class="tile amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>목표, 한도, 차단</b><span>하루 쇼핑 시간 목표, 하루 한도, 예약 차단, 집중 모드 차단, 그리고 유독 흔들리는 시간대를 위한 규칙. 엄격 모드는 이 설정을 그대로 붙들어 둬요.</span></div></li>
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2V5z"/><path d="M4 19a2 2 0 0 0 2 2h14"/></svg></span><div><b>다른 할 일</b><span>나만 보는 일기, 그리고 쇼핑 대신 할 몇 가지 — 산책, 책, 전화 — 충동이 향할 곳이 필요할 때를 위해서요.</span></div></li>
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg></span><div><b>위젯, 실시간 현황, 단축어</b><span>홈 화면과 잠금 화면에 보이는 추정 절약액과 보류 중인 물건, 쇼핑몰이 열려 있는 동안의 카운트다운, 그리고 차단을 시작하는 Siri 및 단축어 동작.</span></div></li>
+</ul>
+</section><section class="card" id="requirements"><h2>필요 조건</h2>
+<div class="table-wrap"><table>
+<tr><th>기기</th><td><strong>iOS 17 이상</strong>을 실행하는 iPhone 또는 iPad. 몇 가지 추가 기능은 조건이 더 있어요: 제어 센터 제어 항목은 iOS 18이 필요하고, Apple Intelligence로 작성하려면 이를 지원하는 기기와 언어가 필요해요.</td></tr>
+<tr><th>권한</th><td><strong>스크린 타임</strong> 접근 권한. 설정 중에 Apple의 요청 화면을 통해 한 번 허용해요. On Ice는 Apple의 스크린 타임 프레임워크 — iOS에 내장된 앱 시간 제한과 같은 시스템 — 를 사용하고, 실제로 쇼핑몰 앞을 가로막는 것은 On Ice가 아니라 Apple이에요.</td></tr>
+<tr><th>계정</th><td>없어요. 앱 어디에도 가입, 이메일 입력란, 비밀번호가 없어요.</td></tr>
+<tr><th>인터넷</th><td>필요 없어요. 모든 차단 화면, 멈춤, 목록, 타이머, 합계가 오프라인에서 작동해요. 네트워크 통신은 Premium을 구매하거나 복원할 때의 Apple 통신뿐이에요. 그리고 선택 기능인 AI 리플렉션을 켜고 OpenAI를 작성자로 고른 경우의 통신도요.</td></tr>
+<tr><th>언어</th><td>English, Deutsch, Español, Français, 日本語, 한국어, Português (Brasil), 简体中文. On Ice는 기기의 언어를 따르거나, <kbd>설정</kbd> → <kbd>언어</kbd>에서 고른 언어를 따라요.</td></tr>
+<tr><th>선택 사항</th><td>기기에서 만들어지는 <strong>알림</strong> — 차단 화면에서 앱으로 넘겨주고, 물건의 대기 시간이 끝났을 때 알려 주기 위해서요. <strong>동작 및 피트니스</strong> — 산책 중 실시간 걸음 수를 보여 줄 때만. <strong>Face ID 또는 Touch ID</strong> — 일기를 잠글 때만.</td></tr>
+</table></div>
+</section><section class="card" id="start"><h2>시작하기</h2>
+<p>설정은 화면 몇 개면 끝나고, 끝날 때는 보호가 이미 켜져 있어요.</p>
+<ol class="steps">
+  <li><div><b>10초 멈춤을 해 보세요</b> — 나중에 차단 화면이 건넬 바로 그 순간이에요.</div></li>
+  <li><div>Apple이 물으면 <b>스크린 타임 접근 권한을 허용하세요</b>. 이것 없이는 On Ice가 작동할 수 없고, <kbd>설정</kbd> → <kbd>스크린 타임</kbd>에서 언제든 철회할 수 있어요.</div></li>
+  <li><div>Apple의 선택 화면에서 <b>쇼핑몰을 고르고</b>, 차단하고 싶은 쇼핑 웹사이트를 추가하세요. On Ice는 고른 앱의 이름을 절대 알지 못해요 — <a href="/cooldown-links/ko/privacy/#screentime">개인정보</a>를 참고하세요.</div></li>
+  <li><div>원한다면 <b>위험 시간대를 정하세요</b> — 쇼핑이 뜻대로 되지 않는 늦은 시간대예요. 선택 사항이고, 나중에 바꿀 수 있어요.</div></li>
+  <li><div><b>끝!</b> 고른 쇼핑몰 하나를 열어 차단 화면을 만나 보세요.</div></li>
+</ol>
+<div class="callout"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg></span><div>첫 차단 화면은 갑작스럽게 느껴질 수 있어요. 바로 그 순간을 위해 이 앱이 있어요 — <kbd>적어 두기</kbd>를 탭하고 15초만 써 보세요.</div></div>
+</section><section class="card" id="money"><h2>절약액 숫자에 대해</h2>
+<p>On Ice의 모든 가격은 직접 입력한 것이고, 앱이 보여 주는 모든 금액에는 <strong>추정</strong>이라는 표시가 붙어요. 나중에 덧붙인 면책 문구가 아니에요 — 설계 그 자체예요.</p>
+<ul>
+  <li>On Ice는 <strong>은행에 연결하지 않고</strong>, 구매 내역을 읽지 않고, 실제 가격을 확인하지 않고, 통화를 환산하지도 않아요.</li>
+  <li>물건은 대기 시간이 끝난 뒤 놓아줄 때 <strong>한 번</strong> 합계에 더해져요.</li>
+  <li>물건을 다시 확인하지 않으면 On Ice가 알려 드리고, 대기 시간이 끝나고 48시간이 지나면 그 물건을 놓아준 것으로 세요. 그 전에는 언제든 결정할 수 있어요.</li>
+  <li>간직한 물건은 합계에 영향을 주지 않아요 — 나중에 예상보다 싸게 샀다고 알려 주면, 그 차액만큼은 더해져요.</li>
+  <li><strong>지출 기록</strong>은 On Ice가 보지 못한 충동구매를 위한 곳이에요. 절약액과는 따로 보관돼요.</li>
+</ul>
+<div class="callout green"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.6" y="6" width="18.8" height="12" rx="2.6"/><circle cx="12" cy="12" r="2.7"/></svg></span><div>이 숫자는 내가 예상한 가격으로, 사지 않기로 한 것들을 기록한 거예요. 자랑스러워하기엔 좋은 숫자고, 스프레드시트에 넣기엔 맞지 않는 숫자예요.</div></div>
+</section><section class="card" id="faq"><h2>자주 묻는 질문</h2>
+<dl class="faq">
+<dt>On Ice는 무료인가요?</dt>
+<dd>네. 무료 버전도 체험판이 아니라 제대로 작동하는 제품이에요: <strong>쇼핑 앱 1개와 웹사이트 1개</strong> 차단, 24시간 대기와 목록, 추정 절약액, 호흡 멈춤, 대신 할 일 세 가지, 일기, 하루 쇼핑 시간 목표, 그리고 예약 차단과 집중 모드 차단까지요.</dd>
+<dt>Premium은 무엇을 더해 주나요?</dt>
+<dd>차단하고 싶은 모든 쇼핑몰과 웹사이트, 12·24·48·72시간 대기, 모든 종류의 멈춤과 반복해서 시도할수록 길어지는 멈춤, 나만의 알림 문구, 위험 시간대 규칙과 쇼핑몰별 규칙, 하루 한도, 엄격 모드, 쇼핑 패턴과 구매 후 느낌, 일기 돌아보기, 대신 할 일 여섯 가지, 위젯, 그리고 선택 기능인 AI 리플렉션이에요. Premium은 월간 또는 연간 구독 — 연간은 제공되는 경우 <strong>무료 체험</strong>으로 시작해요 — 이거나 한 번만 결제하는 평생 이용 구매이고, 연간과 평생 이용은 <strong>가족 요금제</strong>로도 있어요. 가격은 앱에서 거주 국가 기준으로 표시되고, 결제는 Apple이 처리해요.</dd>
+<dt>가족 요금제는 어떻게 작동하나요?</dt>
+<dd>Premium 가족 연간과 Premium 가족 평생 이용은 Apple의 가족 공유를 통해 가족 그룹의 다른 구성원 최대 5명과 공유돼요 — 모두 합쳐 6명이에요. 각자 자기 기기의 자기 On Ice에서 Premium을 쓰게 돼요. 다른 사람의 쇼핑몰, 목록, 일기, 절약액은 아무도 볼 수 없어요.</dd>
+<dt>물건을 사지 못하게 막나요?</dt>
+<dd>아니요. 일반 차단 화면은 벽이 아니라 멈춤이에요. <kbd>적어 두기</kbd>를 탭하고 무엇이 눈에 띄었는지 말하면, <kbd>지금 쇼핑해야 해요</kbd>를 탭해 몇 분 동안 쇼핑몰을 열 수 있어요. <kbd>다 됐어요 — 다시 차단해 주세요</kbd>를 탭하면 일찍 다시 닫혀요. 통과할 방법이 없는 것은 직접 설정한 것뿐이에요 — 완전 차단 규칙, 이미 도달한 하루 한도, 예약 차단, 집중 모드 차단 — 그리고 모두 저절로 끝나요.</dd>
+<dt>구독이 만료되면 어떻게 되나요?</dt>
+<dd>만들어 둔 것은 아무것도 사라지지 않아요. 목록, 기록, 추정 절약액은 그대로 남고, 고른 쇼핑몰은 계속 차단되며, 규칙과 한도, 진행 중인 엄격 모드도 계속 유지돼요. 대기 시간은 24시간으로 돌아가고, AI 리플렉션은 꺼지며, 위젯과 패턴 화면은 Premium이 돌아올 때까지 기다려요. Premium 기능을 더 추가할 수 없을 뿐이에요.</dd>
+<dt>새 기기에서 구매를 복원할 수 있나요?</dt>
+<dd>네. <kbd>설정</kbd>을 열고 <kbd>구매 복원</kbd>을 탭하세요. Premium은 기기가 아니라 Apple 계정에 속해요. 목록, 일기, 기록은 함께 옮겨지지 않아요 — 만들어진 기기에 남아 있고, 기기 전체를 백업했을 때만 새 기기로 옮겨져요.</dd>
+<dt>iPad에서도 되나요?</dt>
+<dd>네 — iPhone과 iPad, iOS 17 이상에서 돼요. 기기마다 쇼핑몰, 목록, 기록을 따로 갖고 있고, 기기 사이에 동기화되는 것은 없어요.</dd>
+<dt>On Ice는 왜 내가 어떤 앱을 보호했는지 알려 주지 못하나요?</dt>
+<dd>정말로 모르기 때문이에요. Apple의 스크린 타임은 기기 밖에서는 아무 의미가 없는 불투명한 토큰을 On Ice에 건네요 — 앱 이름도, 식별자도 없어요. On Ice는 iOS에 그것들을 차단해 달라고 요청할 수 있고, 이름과 아이콘은 iOS가 대신 그려서 보여 줘요. On Ice는 그것을 읽을 수 없어요. 예외는 주소를 입력해 추가한 웹사이트예요: iOS가 차단할 수 있도록 On Ice가 그 주소를 기기에 보관해요.</dd>
+<dt>웹사이트도 차단하나요, 앱만 하나요?</dt>
+<dd>둘 다요. 쇼핑몰의 앱과 웹사이트를 따로 추가하면 각각 차단돼요 — 웹사이트는 Safari에서요.</dd>
+<dt>On Ice가 내가 사는 것을 보나요?</dt>
+<dd>아니요. 은행, 주문, 웹 사용 기록, 카드에 접근하지 않아요. 기록하는 것은 자체 이벤트 — 차단 화면이 표시되었다는 것과 무엇을 골랐는지 — 뿐이고, 그것도 기기에 보관해요.</dd>
+<dt>일기가 기기 밖으로 나가나요?</dt>
+<dd>절대 나가지 않아요. 저희에게도, OpenAI에도, 어떤 설정으로도요. Face ID, Touch ID 또는 암호로 잠글 수 있고, 선택 기능인 주간 요약은 기기에서 Apple Intelligence가 작성해요.</dd>
+<dt>걸음 수는 어디로 가나요?</dt>
+<dd>어디로도 가지 않아요. 산책하는 동안 On Ice는 걸음 수를 실시간으로 보여 주고, 산책이 끝나면 잊어버려요. Apple 건강 앱에서 읽지도, 거기에 쓰지도 않아요.</dd>
+<dt>AI 리플렉션은 무엇이고, 켜져 있나요?</dt>
+<dd>가끔 선택지 전에 짧은 질문 하나를 하고, 일요일마다 한 주에 대해 몇 문장을 써 주는 기능이에요. <strong>직접 켜기 전까지는 꺼져 있어요</strong>. 누가 작성할지는 직접 골라요: 기기에서 작동하는 <strong>Apple Intelligence</strong>, 또는 <strong>OpenAI</strong> — 앱에서 기기 밖으로 무언가를 보내는 유일한 기능이에요. 정확히 무엇을 보내는지는 <a href="/cooldown-links/ko/privacy/#ai">개인정보 처리방침</a>에 나와 있어요.</dd>
+</dl>
+</section><section class="card" id="trouble"><h2>문제 해결</h2>
+<h3>차단 화면 없이 쇼핑몰이 열려요</h3>
+<ul>
+  <li>홈 화면 맨 위에서 보호가 켜져 있는지, 그 쇼핑몰의 스위치도 켜져 있는지 확인하세요.</li>
+  <li>스크린 타임 접근 권한이 아직 허용되어 있는지 확인하세요: <kbd>설정</kbd> → <kbd>스크린 타임</kbd> → <kbd>스크린 타임 접근 권한이 있는 앱</kbd>. 권한이 철회되었다면 On Ice가 다시 요청할 수 있는 화면을 보여 줘요.</li>
+  <li>앞서 연 <strong>쇼핑 시간</strong>이 아직 남아 있을 수 있어요. 저절로 닫히거나 <kbd>다 됐어요 — 다시 차단해 주세요</kbd>를 탭하면 닫히고, 차단 화면이 다시 돌아와요.</li>
+  <li>그 쇼핑몰이 <strong>규칙</strong>에만 들어 있다면, 차단 화면은 그 규칙의 시간대에만 나타나요.</li>
+  <li>그래도 안 되나요? <kbd>설정</kbd> → <kbd>보호 도구</kbd> → <kbd>보호 복구</kbd>로 모든 차단과 일정을 다시 적용할 수 있어요.</li>
+</ul>
+<h3>“적어 두기”를 탭해도 On Ice가 열리지 않아요</h3>
+<ul>
+  <li>일부 iOS 버전에서는 차단 화면이 알림을 통해 앱으로 넘겨줘요. 알림이 꺼져 있으면 iOS가 그 알림을 전달할 수 없어요 — <kbd>설정</kbd> → <kbd>알림</kbd> → On Ice에서 켜 주세요.</li>
+  <li>On Ice를 직접 열면 적어 두려던 물건을 이어서 적을 수 있어요.</li>
+</ul>
+<h3>웹사이트가 차단되지 않아요</h3>
+<p>웹사이트는 주소로 차단돼요. 추가한 주소가 실제로 여는 주소와 같은지 확인하고, 쇼핑몰의 앱과 웹사이트는 따로 추가해야 하는 별개라는 점을 기억하세요.</p>
+<h3>하루 목표나 한도가 예상보다 적은 시간을 보여 줘요</h3>
+<p>iOS는 다른 앱에서 얼마나 시간을 보냈는지 앱에 알려 주지 않아요. 보호 중인 쇼핑몰에서 보낸 시간이 일정 단계를 넘을 때 — 처음에는 5분마다 — On Ice에 알려 줄 뿐이라서, On Ice는 “최소” 그만큼의 시간을 보여 줘요. 실제 시간은 조금 더 길 수 있어요.</p>
+<h3>보호를 끄거나 쇼핑몰을 삭제할 수 없어요</h3>
+<p><strong>엄격 모드</strong>, <strong>예약 차단</strong>, <strong>집중 모드 차단</strong> 중 진행 중인 것이 있는지 확인하세요 — 홈 화면에 표시돼요. 엄격 모드가 진행되는 동안에는 설계상 설정이 그대로 유지되고, 직접 정한 시각에 저절로 끝나요. <kbd>누군가 키를 보관합니다</kbd>를 설정했다면, PIN을 가진 사람이 일찍 끝낼 수 있어요.</p>
+<h3>AI 질문이 나타나지 않아요</h3>
+<p>Premium이 필요하고, <kbd>설정</kbd> → <kbd>AI 리플렉션</kbd>에서 켜기 전까지는 꺼져 있어요. 켠 뒤에도 이유가 있을 때만 질문해요 — 자주 후회했던 기분, 위험 시간대, 또는 더 큰 금액. OpenAI를 작성자로 쓰면 인터넷 연결이 필요해요. 문제가 생기면 조용히 일반 선택지를 대신 보여 줘요.</p>
+<h3>위젯이 최신 상태가 아니에요</h3>
+<p>iOS는 자체 일정에 따라 위젯을 새로 고쳐요. On Ice를 열면 최신 상태로 바뀌어요. 절약액 위젯과 “보류 중” 위젯은 Premium에서 쓸 수 있어요.</p>
+<h3>Premium이 인식되지 않아요</h3>
+<p><kbd>설정</kbd>에서 <kbd>구매 복원</kbd>을 탭하고, 기기가 구매할 때 쓴 것과 같은 Apple 계정으로 로그인되어 있는지 확인하세요 — 가족 요금제라면 구매자의 가족 공유 그룹에 속해 있는지 확인하세요. 환불과 결제 문의는 <a href="https://support.apple.com/billing">Apple 지원</a>을 통해 Apple이 처리해요.</p>
+<h3>앱 언어가 잘못되어 있어요</h3>
+<p><kbd>설정</kbd> → <kbd>언어</kbd>에서 언어를 고르세요. Apple의 앱 선택 화면은 다음에 On Ice를 열 때 반영돼요.</p>
+</section><section class="card" id="contact"><h2>문의</h2>
+<p>궁금한 점, 버그, 되어야 하는데 안 되는 것 — 메일을 보내 주시면 사람이 직접 답해 드려요. 가장 빠른 방법은 <kbd>설정</kbd> → <kbd>도움말 및 개인정보</kbd> → <kbd>지원팀에 이메일 보내기</kbd>를 이용하는 거예요. On Ice 버전, iOS 버전, 기기 모델이 자동으로 들어가요.</p>
+<div class="callout"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><div><strong><a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a></strong><br><span class="small">기기 모델, iOS 버전, 그리고 어떻게 되기를 기대했는지 함께 적어 주세요. 목록, 가격, 일기는 절대 보내지 마세요 — 저희에게 필요하지 않고, 갖고 있지 않는 편이 좋아요.</span></div></div>
+<p class="small">결제, 환불, 구독 변경은 Apple이 처리해요: <a href="https://apps.apple.com/account/subscriptions">구독 관리</a> · <a href="https://support.apple.com/billing">환불 요청</a>.</p>
+</section></div></div></main>
+<footer><div class="in">
+  <div>© 2026 On Ice · TOPSOL · 모든 권리 보유.</div>
+  <nav aria-label="푸터"><a href="/cooldown-links/ko/">도움말</a> · <a href="/cooldown-links/ko/about/">소개</a> · <a href="/cooldown-links/ko/privacy/">개인정보</a> · <a href="/cooldown-links/ko/terms/">약관</a> · <a href="/cooldown-links/ko/delete-data/">내 데이터</a> · <a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a></nav>
+</div></footer>
+</body>
+</html>

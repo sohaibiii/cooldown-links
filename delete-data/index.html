@@ -3,19 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="How to remove everything Cooldown holds — all of it on your phone — and what happens to your subscription.">
+<meta name="description" content="How to remove what On Ice holds — all of it on your device — and what happens to your subscription.">
 <meta name="robots" content="index,follow">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F5F6FA">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0F1214">
-<meta property="og:title" content="Delete your data — Cooldown">
-<meta property="og:description" content="How to remove everything Cooldown holds — all of it on your phone — and what happens to your subscription.">
+<meta property="og:title" content="Delete your data — On Ice">
+<meta property="og:description" content="How to remove what On Ice holds — all of it on your device — and what happens to your subscription.">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="en">
 <meta property="og:url" content="https://sohaibiii.github.io/cooldown-links/delete-data/">
 <link rel="canonical" href="https://sohaibiii.github.io/cooldown-links/delete-data/">
+<link rel="alternate" hreflang="en" href="https://sohaibiii.github.io/cooldown-links/delete-data/"><link rel="alternate" hreflang="de" href="https://sohaibiii.github.io/cooldown-links/de/delete-data/"><link rel="alternate" hreflang="es" href="https://sohaibiii.github.io/cooldown-links/es/delete-data/"><link rel="alternate" hreflang="fr" href="https://sohaibiii.github.io/cooldown-links/fr/delete-data/"><link rel="alternate" hreflang="ja" href="https://sohaibiii.github.io/cooldown-links/ja/delete-data/"><link rel="alternate" hreflang="ko" href="https://sohaibiii.github.io/cooldown-links/ko/delete-data/"><link rel="alternate" hreflang="pt-BR" href="https://sohaibiii.github.io/cooldown-links/pt-BR/delete-data/"><link rel="alternate" hreflang="zh-Hans" href="https://sohaibiii.github.io/cooldown-links/zh-Hans/delete-data/"><link rel="alternate" hreflang="x-default" href="https://sohaibiii.github.io/cooldown-links/delete-data/">
 <link rel="icon" href="/cooldown-links/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/cooldown-links/apple-touch-icon.png">
-<title>Delete your data — Cooldown</title>
+<title>Delete your data — On Ice</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap">
@@ -28,7 +30,7 @@
   --hero-top:#1D2347;--hero-bottom:#12152A;--hero-glow:rgba(123,140,222,.42);--hero-ink:#F2F4F7;--hero-ink-2:rgba(242,244,247,.74);--hero-stroke:rgba(255,255,255,.10);--hero-fill:rgba(255,255,255,.10);
   --moon-core:#D3DCFF;--moon-edge:#8FA0EA;--moon-glow:rgba(123,140,222,.70);
   --r-card:20px;--r-hero:28px;--r-control:14px;--r-chip:12px;--r-tile:10px;
-  --max:760px;--wide:1080px;
+  --max:760px;--wide:1080px;--anchor:112px;
   --display:"Nunito",ui-rounded,"SF Pro Rounded",-apple-system,system-ui,sans-serif;
 }
 @media (prefers-color-scheme:dark){:root{
@@ -41,13 +43,16 @@
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 html,body{overflow-x:clip}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,"Hiragino Sans","Apple SD Gothic Neo","PingFang SC","Noto Sans CJK JP","Noto Sans CJK KR","Noto Sans CJK SC",sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+:lang(ja),:lang(ko),:lang(zh-Hans){line-break:strict;word-break:normal;overflow-wrap:anywhere}
+:lang(ja) :is(h1,h2,h3,.sub,.lead){word-break:auto-phrase}
 a{color:var(--accent);text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--accent) 40%,transparent);text-underline-offset:3px;overflow-wrap:anywhere}
 a:hover{text-decoration-color:var(--accent)}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
 .skip{position:absolute;top:8px;left:8px;background:var(--surface);color:var(--ink);padding:8px 12px;z-index:20;border-radius:var(--r-chip);box-shadow:var(--card-shadow)}
 .skip:not(:focus){clip:rect(0 0 0 0);clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap;padding:0;margin:-1px}
 h1,h2,h3{margin:0;letter-spacing:-.022em;text-wrap:balance;font-family:var(--display);font-weight:800}
+:lang(ja) :is(h1,h2,h3),:lang(ko) :is(h1,h2,h3),:lang(zh-Hans) :is(h1,h2,h3){letter-spacing:0;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Apple SD Gothic Neo","PingFang SC",sans-serif;font-weight:700}
 h1{font-size:clamp(32px,4.6vw,48px);line-height:1.06}
 h2{font-size:25px;line-height:1.24}
 h3{font-weight:700;font-size:18px;line-height:1.3}
@@ -66,14 +71,25 @@ kbd{font:inherit;background:var(--fill);border-radius:8px;padding:.05em .5em;whi
 /* top bar — the one glass surface, like the app's navigation layer */
 .topbar{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
 .topbar .in{max-width:var(--wide);margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.brand{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.02em}
-.mark{width:26px;height:26px;border-radius:8px;flex:none;display:grid;place-items:center;background:linear-gradient(160deg,#252B52,#12152A);box-shadow:0 0 0 1px var(--hero-stroke),0 0 14px var(--moon-glow)}
-.mark svg{width:15px;height:15px}
+.brand{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.02em;white-space:nowrap}
+.mark{width:30px;height:30px;border-radius:9px;flex:none;display:grid;place-items:center;background:linear-gradient(160deg,#1D2347,#12152A);box-shadow:0 0 0 1px var(--hero-stroke),0 0 14px var(--moon-glow)}
+.mark img{width:22px;height:22px;display:block}
 nav.pages{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
-nav.pages a{text-decoration:none;color:var(--ink-2);font-size:15px;font-weight:500;padding:7px 12px;border-radius:999px}
+nav.pages a{text-decoration:none;color:var(--ink-2);font-size:15px;font-weight:500;padding:7px 12px;border-radius:999px;white-space:nowrap}
 nav.pages a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
 nav.pages a:hover{color:var(--ink)}
 @media (max-width:640px){nav.pages{margin-left:0;width:100%;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;padding-bottom:2px}nav.pages::-webkit-scrollbar{display:none}nav.pages a{flex:none}}
+
+/* language tabs — the same page, in the reader's own language */
+.langrow{border-top:1px solid var(--line)}
+.langrow .in{max-width:var(--wide);margin:0 auto;padding:7px 20px;display:flex;align-items:center;gap:12px}
+.langrow .lbl{flex:none;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-family:var(--display)}
+nav.langs{display:flex;gap:2px;min-width:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+nav.langs::-webkit-scrollbar{display:none}
+nav.langs a{flex:none;text-decoration:none;color:var(--ink-2);font-size:14.5px;font-weight:500;padding:6px 11px;border-radius:999px;white-space:nowrap}
+nav.langs a:hover{color:var(--ink);background:var(--fill)}
+nav.langs a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
+@media (max-width:640px){.langrow .lbl{display:none}.langrow .in{padding:6px 20px}:root{--anchor:150px}}
 
 /* hero — the app's protection island, dark in both appearances */
 .hero-wrap{max-width:var(--wide);margin:24px auto 0;padding:0 20px}
@@ -83,6 +99,7 @@ nav.pages a:hover{color:var(--ink)}
 .hero .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--hero-ink-2);margin-bottom:18px;font-family:var(--display)}
 .hero .eyebrow .dot{width:9px;height:9px;border-radius:50%;background:var(--moon-edge);box-shadow:0 0 10px var(--moon-glow)}
 .hero h1{max-width:18ch}
+:lang(ja) .hero h1,:lang(ko) .hero h1,:lang(zh-Hans) .hero h1{max-width:22ch}
 .hero .sub{margin:16px 0 0;max-width:56ch;font-size:clamp(17px,2vw,20px);color:var(--hero-ink-2)}
 .hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;align-items:center}
 .hero .ctas a,.hero .ctas span{color:var(--hero-ink)}
@@ -103,7 +120,8 @@ nav.pages a:hover{color:var(--ink)}
 main{max-width:var(--wide);margin:0 auto;padding:32px 20px 64px}
 .grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
 @media (min-width:900px){.grid.with-toc{grid-template-columns:240px minmax(0,1fr);align-items:start}}
-.toc{position:sticky;top:76px;padding:20px 22px;border-radius:var(--r-card);background:var(--surface);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge)}
+.toc{position:sticky;top:var(--anchor);padding:20px 22px;border-radius:var(--r-card);background:var(--surface);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge)}
+@media (max-width:899px){.toc{position:static}}
 .toc .lbl{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);margin-bottom:10px;font-family:var(--display)}
 .toc ol{list-style:none;padding:0;margin:0}
 .toc li{margin:0}
@@ -112,11 +130,12 @@ main{max-width:var(--wide);margin:0 auto;padding:32px 20px 64px}
 .toc a:hover{color:var(--accent)}
 .stack{display:grid;gap:20px;max-width:var(--max)}
 .grid.with-toc .stack{max-width:none}
-.card{background:var(--surface);border-radius:var(--r-card);padding:clamp(22px,3.4vw,32px);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge)}
-.card h2{margin-bottom:12px;scroll-margin-top:84px}
+.card{background:var(--surface);border-radius:var(--r-card);padding:clamp(22px,3.4vw,32px);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge);scroll-margin-top:calc(var(--anchor) + 8px)}
+.card h2{margin-bottom:12px}
 .card h3{margin:20px 0 6px}
 .card h3:first-of-type{margin-top:0}
-.card p+h3{margin-top:18px}
+.card p+h3,.card ul+h3,.card .table-wrap+h3{margin-top:18px}
+.card ul+p,.card .table-wrap+p,.card .callout+p,.card p+.callout,.card ul+.callout{margin-top:16px}
 .lead{font-size:clamp(18px,2vw,21px);line-height:1.5;color:var(--ink)}
 .stamp{font-size:14px;color:var(--ink-2);margin:0 0 4px}
 .callout{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:var(--r-control);background:var(--accent-soft)}
@@ -141,16 +160,16 @@ main{max-width:var(--wide);margin:0 auto;padding:32px 20px 64px}
 .features .tile svg{width:22px;height:22px}
 .features .card h3{margin:0}
 .features .card p{color:var(--ink-2);font-size:16px}
-.tiers{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.tiers{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:16px}
 .tier{background:var(--surface);border-radius:var(--r-card);padding:24px;box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge);display:flex;flex-direction:column;gap:10px}
+.card .tier{background:var(--fill);box-shadow:none}
 .tier .lbl{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);font-family:var(--display)}
-.tier .price{font-family:var(--display);font-size:28px;font-weight:800;letter-spacing:-.02em}
-.tier .price small{font-size:15px;font-weight:500;color:var(--ink-2)}
+.tier .price{font-family:var(--display);font-size:26px;font-weight:800;letter-spacing:-.02em;line-height:1.2}
 .tier ul{margin-top:4px;color:var(--ink-2);font-size:15.5px}
-.tier.premium{background:linear-gradient(135deg,var(--hero-top),var(--hero-bottom));color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke)}
+.card .tier.premium,.tier.premium{background:linear-gradient(135deg,var(--hero-top),var(--hero-bottom));color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke)}
 .tier.premium .lbl,.tier.premium ul{color:var(--hero-ink-2)}
 .tier.premium li::marker{color:#8FA0EA}
-.chip{display:inline-flex;align-items:center;gap:6px;background:var(--fill);color:var(--ink-2);border-radius:999px;padding:4px 10px;font-size:13.5px;font-weight:500}
+.tiers+p{margin-top:14px}
 dl.faq{margin:0}
 dl.faq dt{font-weight:600;margin-top:18px}
 dl.faq dt:first-child{margin-top:0}
@@ -158,7 +177,7 @@ dl.faq dd{margin:6px 0 0;color:var(--ink-2)}
 table{width:100%;border-collapse:collapse;font-size:15.5px}
 th,td{text-align:left;vertical-align:top;padding:10px 12px 10px 0;border-bottom:1px solid var(--line)}
 th{font-weight:700;color:var(--ink-2);font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-family:var(--display)}
-tr:last-child td{border-bottom:0}
+tr:last-child td,tr:last-child th{border-bottom:0}
 .table-wrap{overflow-x:auto}
 .steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}
 .steps li{display:grid;grid-template-columns:32px minmax(0,1fr);gap:14px;margin:0;align-items:start}
@@ -174,42 +193,55 @@ footer a:hover{color:var(--accent)}
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
-<header class="topbar"><div class="in">
-  <a class="brand" href="/cooldown-links/"><span class="mark" aria-hidden="true"><svg viewBox="0 0 100 100" aria-hidden="true"><defs><radialGradient id="mg" cx="38%" cy="32%" r="72%"><stop offset="0" stop-color="#D3DCFF"/><stop offset="1" stop-color="#8FA0EA"/></radialGradient></defs><path d="M50 6a44 44 0 1 0 40 62A36 36 0 0 1 50 6Z" fill="url(#mg)"/></svg></span>Cooldown</a>
-  <nav class="pages" aria-label="Pages"><a href="/cooldown-links/">Support</a><a href="/cooldown-links/about/">About</a><a href="/cooldown-links/privacy/">Privacy</a><a href="/cooldown-links/terms/">Terms</a><a href="/cooldown-links/delete-data/" aria-current="page">Your data</a></nav>
-</div></header>
-<div class="hero-wrap"><section class="hero"><div class="eyebrow"><span class="dot" aria-hidden="true"></span>Your data</div><h1>Delete your data</h1><p class="sub">Everything Cooldown knows is on your phone. Here is how to remove it, what happens to your subscription, and what — nothing — is left on our side.</p><p class="meta">See also the <a href="/cooldown-links/privacy/">Privacy Policy</a></p></section></div>
-<main id="content"><div class="grid with-toc"><aside class="toc" aria-label="On this page"><div class="lbl">On this page</div><ol><li><a href="#where">What is stored where</a></li><li><a href="#inapp">Remove it in the app</a></li><li><a href="#ai">The weekly write-up</a></li><li><a href="#uninstall">Delete the app</a></li><li><a href="#subscription">Your subscription</a></li><li><a href="#email">Ask us</a></li></ol></aside><div class="stack"><section class="card" id="where"><h2 id="where-h">What is stored where</h2>
-<p class="lead">Cooldown has no account and keeps nothing about you on a server, so there is nothing to request from us. Everything it holds is on your iPhone.</p>
+<header class="topbar">
+  <div class="in">
+    <a class="brand" href="/cooldown-links/"><span class="mark" aria-hidden="true"><img src="/cooldown-links/mark.svg" alt="" width="22" height="22"></span>On Ice</a>
+    <nav class="pages" aria-label="Pages"><a href="/cooldown-links/">Support</a><a href="/cooldown-links/about/">About</a><a href="/cooldown-links/privacy/">Privacy</a><a href="/cooldown-links/terms/">Terms</a><a href="/cooldown-links/delete-data/" aria-current="page">Your data</a></nav>
+  </div>
+  <div class="langrow"><div class="in">
+    <span class="lbl">Language</span>
+    <nav class="langs" aria-label="Language"><a href="/cooldown-links/delete-data/" lang="en" hreflang="en" aria-current="page">English</a><a href="/cooldown-links/de/delete-data/" lang="de" hreflang="de">Deutsch</a><a href="/cooldown-links/es/delete-data/" lang="es" hreflang="es">Español</a><a href="/cooldown-links/fr/delete-data/" lang="fr" hreflang="fr">Français</a><a href="/cooldown-links/ja/delete-data/" lang="ja" hreflang="ja">日本語</a><a href="/cooldown-links/ko/delete-data/" lang="ko" hreflang="ko">한국어</a><a href="/cooldown-links/pt-BR/delete-data/" lang="pt-BR" hreflang="pt-BR">Português (Brasil)</a><a href="/cooldown-links/zh-Hans/delete-data/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a></nav>
+  </div></div>
+</header>
+<div class="hero-wrap"><section class="hero"><div class="eyebrow"><span class="dot" aria-hidden="true"></span>Your data</div><h1>Delete your data</h1><p class="sub">Everything On Ice knows is on your device. Here is how to remove it, piece by piece or all at once, what happens to your subscription, and why there is nothing on our side to ask for.</p><p class="meta">See also the <a href="/cooldown-links/privacy/">Privacy Policy</a></p></section></div>
+<main id="content"><div class="grid with-toc"><aside class="toc" aria-label="On this page"><div class="lbl">On this page</div><ol><li><a href="#where">What is stored where</a></li><li><a href="#inapp">Remove it in the app</a></li><li><a href="#journal">Your journal</a></li><li><a href="#ai">The AI reflection</a></li><li><a href="#uninstall">Delete the app</a></li><li><a href="#subscription">Your subscription</a></li><li><a href="#email">Ask us</a></li></ol></aside><div class="stack"><section class="card" id="where"><h2>What is stored where</h2>
+<p class="lead">On Ice has no account and keeps no profile of anyone on a server. Everything it holds is on your device, and you can remove it without asking us.</p>
 <div class="table-wrap"><table>
 <tr><th>Data</th><th>Where it lives</th><th>How to remove it</th></tr>
-<tr><td>Wishlist, prices, feelings, spend log, savings history, rules</td><td>The app's private storage on your phone</td><td>Delete the app, or restore the phone</td></tr>
-<tr><td>Your shop selection</td><td>Opaque Screen Time tokens in the app's private storage</td><td>Change it in the app; withdrawing Screen Time access in iOS Settings also ends every shield</td></tr>
-<tr><td>Widget and Live Activity snapshot</td><td>A small file of counts and dates on your phone</td><td>Removed with the app</td></tr>
-<tr><td>The weekly write-up</td><td>On your phone, only if the AI reflection is on</td><td>Switching AI reflection off deletes it</td></tr>
-<tr><td>Premium entitlement</td><td>Your Apple ID (Apple), and a copy of its status on your phone</td><td>Managed in your App Store settings — see below</td></tr>
-<tr><td>Anything on our servers</td><td>—</td><td>There is none. Our service keeps no copy of anything the app sends it.</td></tr>
+<tr><td>Your list, decisions, estimated savings history, streaks and patterns</td><td>The app's private storage on your device</td><td>Delete the app. Your history is what the savings total is made of, so it is not erased item by item.</td></tr>
+<tr><td>Journal entries</td><td>On your device</td><td><kbd>Delete entry</kbd> on any entry, or delete the app</td></tr>
+<tr><td>Spend log, rules, limits, reminders, activities</td><td>On your device</td><td>Remove each one in the app, or delete the app</td></tr>
+<tr><td>Your shops</td><td>Screen Time tokens and website addresses on your device</td><td>Change them in the app; withdrawing Screen Time access in iOS Settings also ends every shield</td></tr>
+<tr><td>Widget and Live Activity snapshot</td><td>A small file on your device</td><td>Removed with the app</td></tr>
+<tr><td>The weekly write-up</td><td>On your device, only while the AI reflection is on</td><td>Switch the AI reflection off</td></tr>
+<tr><td>Premium status</td><td>Your Apple Account (Apple), and a copy of its status on your device</td><td>Managed in your App Store settings — see below</td></tr>
+<tr><td>What an OpenAI reflection sent</td><td>Not on our service, which keeps no content. OpenAI may keep it in abuse-monitoring logs, normally for up to 30 days (Google, for earlier versions: up to 24 hours)</td><td>Nothing for you to delete. Switch the AI reflection off and nothing more is sent</td></tr>
+<tr><td>A count of AI requests per device</td><td>On Ice's AI service, under a random key identifier</td><td>Deleted automatically after two days</td></tr>
+<tr><td>An account, a profile, anything with your name on it</td><td>—</td><td>There is none. We never had one to delete.</td></tr>
 </table></div>
-</section><section class="card" id="inapp"><h2 id="inapp-h">Remove it in the app</h2>
-<p>Cooldown is built so that your own data thins out as you use it, rather than piling up:</p>
+</section><section class="card" id="inapp"><h2>Remove it in the app</h2>
 <ul>
-  <li>An item leaves your list the moment you decide about it — let it go, or keep it.</li>
-  <li>Changing your shops replaces the stored tokens; there is no history of shops you used to protect.</li>
-  <li>Turning <strong>Protection</strong> off takes every shield down immediately.</li>
+  <li><strong>Journal entries:</strong> open an entry and tap <kbd>Delete entry</kbd>.</li>
+  <li><strong>Spend log:</strong> tap <kbd>Remove</kbd> on an entry.</li>
+  <li><strong>Rules, limits, reminders and activities:</strong> each has its own delete or remove button.</li>
+  <li><strong>Shops:</strong> change your selection, or switch a shop off on the home screen. Turning protection off takes every shield down at once.</li>
+  <li><strong>Decided items stay in your history</strong> — that is what your estimated savings and patterns are made of. To remove that history, delete the app.</li>
 </ul>
-<div class="callout amber"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><div>While <strong>strict mode</strong> is running, your setup is held in place — that is the one commitment you asked the app to keep for you. It ends on its own at the time you chose.</div></div>
-</section><section class="card" id="ai"><h2 id="ai-h">The weekly write-up</h2>
-<p>If you switched on the AI reflection, Cooldown keeps the latest Sunday write-up on your phone so you can read it again. Switching AI reflection off in Settings deletes it, removes the Sunday reminder from your notifications, and returns the app to making no network calls of its own.</p>
-<p>Our service never held a copy to begin with — it keeps only that a request happened, how long it took and whether it worked. There is nothing there to delete.</p>
-</section><section class="card" id="uninstall"><h2 id="uninstall-h">Delete the app</h2>
-<p>Deleting Cooldown from your iPhone removes all of its data with it, including the Screen Time tokens, and ends every shield immediately. If the app is included in an iCloud or encrypted local backup, that copy belongs to your Apple ID and is governed by Apple's terms; we have no access to it.</p>
-</section><section class="card" id="subscription"><h2 id="subscription-h">Your subscription</h2>
-<p>Deleting the app does not cancel a subscription — it belongs to your Apple ID, not to the app. Cancel it in <a href="https://apps.apple.com/account/subscriptions">App Store subscription settings</a>; it stays active until the end of the current period. Refunds are handled by <a href="https://support.apple.com/billing">Apple Support</a>. A lifetime purchase does not renew and needs nothing cancelled.</p>
-</section><section class="card" id="email"><h2 id="email-h">Ask us</h2>
-<p>If you would like written confirmation that we hold nothing about you, or you believe we do, write to <a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a> from any address. We will reply within 30 days. Please do not send us your wishlist, your prices or screenshots of them — we do not need them to answer.</p>
+<div class="callout amber"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><div>While <strong>strict mode</strong> is running, your setup is held in place — shops can't be removed, and rules and limits can't be deleted. That is the one commitment you asked the app to keep for you. It ends on its own at the time you chose.</div></div>
+</section><section class="card" id="journal"><h2>Your journal</h2>
+<p>Journal entries live only on your device, and On Ice never sent them anywhere, so there is nothing to remove elsewhere. Delete them one at a time with <kbd>Delete entry</kbd>. To keep a copy before you delete the app, use <kbd>Export journal</kbd>: it makes a plain-text file that you save wherever you choose.</p>
+</section><section class="card" id="ai"><h2>The AI reflection</h2>
+<p>If you switched on the AI reflection, On Ice keeps the latest weekly write-up on your device so you can read it again. Switching the AI reflection off in <kbd>Settings</kbd> → <kbd>AI reflection</kbd> deletes it, removes the Sunday reminder, ends the app's session with the service, and returns On Ice to making no network calls of its own.</p>
+<p>The service never held a copy of what you sent. It keeps only a per-device count under a random key, which it deletes after two days, and daily totals that name no device.</p>
+</section><section class="card" id="uninstall"><h2>Delete the app</h2>
+<p>Deleting On Ice from your iPhone or iPad removes all of its data with it — your list, history, journal, settings and Screen Time tokens — and ends every shield, block and limit immediately. It is the way to erase everything at once. If the app is included in an iCloud or computer backup, that copy belongs to your Apple Account and is governed by Apple's terms; we have no access to it.</p>
+</section><section class="card" id="subscription"><h2>Your subscription</h2>
+<p>Deleting the app does not cancel a subscription — it belongs to your Apple Account, not to the app. Cancel it in <a href="https://apps.apple.com/account/subscriptions">App Store subscription settings</a>; it stays active until the end of the current period. Refunds are handled by <a href="https://support.apple.com/billing">Apple Support</a>. A lifetime purchase does not renew and needs nothing cancelled. If you belong to a family plan, the purchaser manages it.</p>
+</section><section class="card" id="email"><h2>Ask us</h2>
+<p>If you would like written confirmation that we hold nothing about you, or you believe we do, write to <a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a> from any address. We will reply within 30 days. Please do not send us your list, your prices, your journal or screenshots of them — we do not need them to answer.</p>
 </section></div></div></main>
 <footer><div class="in">
-  <div>© 2026 Cooldown · TOPSOL · All rights reserved.</div>
+  <div>© 2026 On Ice · TOPSOL · All rights reserved.</div>
   <nav aria-label="Footer"><a href="/cooldown-links/">Support</a> · <a href="/cooldown-links/about/">About</a> · <a href="/cooldown-links/privacy/">Privacy</a> · <a href="/cooldown-links/terms/">Terms</a> · <a href="/cooldown-links/delete-data/">Your data</a> · <a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a></nav>
 </div></footer>
 </body>
