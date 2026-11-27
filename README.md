@@ -9,14 +9,45 @@ if "Cooldown" reaches any page.
 
 | Page | URL | App Store Connect field |
 |---|---|---|
-| Support | `/` | Support URL |
+| Home | `/` | Marketing URL (once the domain is live) |
+| How it works | `/how-it-works/` | |
+| Pricing | `/pricing/` | |
+| Guides | `/guides/` and `/guides/<slug>/` | |
+| Support | `/support/` in English, `/<lang>/` in the seven other languages | Support URL |
 | About | `/about/` | Marketing URL |
 | Privacy Policy | `/privacy/` | Privacy Policy URL |
 | Terms of Use (EULA) | `/terms/` | EULA / linked from the paywall |
 | Your data | `/delete-data/` | — (linked from Privacy) |
 
-The app links to `/#faq` and `/privacy/`; both anchors, and `/privacy/#ai`, `/terms/#subscriptions`
+The app links to `/#faq` (now the home page's FAQ) and `/privacy/`; both anchors, and `/privacy/#ai`, `/terms/#subscriptions`
 and `/about/#pricing`, must keep their names.
+
+## The home page and the guides
+
+English's front door is the home page. It, How it works, Pricing and the guides are English only
+for now and are built by `_src/site_pages.py` (pages) and `_src/guides.py` (one guide per entry),
+styled by `assets/site.css`. `gen.py` calls them at the end of its run, so the two commands under
+**Editing** still rebuild everything. English support moved from `/` to `/support/`; the home page
+keeps a `#faq` section, because shipped builds of the app open `/#faq`.
+
+- **Screens** in `assets/img/` are the app's own captures
+  (`Marketing/AppStore/screenshots-0.2.0/captures/en/` in the app repo), resized to 660 px wide.
+  Replace them from there when the app's screens change. No mock-ups of screens the app lacks.
+- **Prices** on `/pricing/` are the US base prices from `Cooldown.storekit`. Check them against
+  App Store Connect before each release.
+- **To add a guide**, add an entry to `GUIDES` in `_src/guides.py` and run `gen.py`. The home page
+  lists the first five, the sitemap picks it up, and the build fails on a long dash or on the
+  codebase's name.
+- **Moving to the domain:** set `DOMAIN` at the top of `_src/gen.py` (for example
+  `"getonice.com"`), run `gen.py` and commit. Every link, canonical and sitemap entry follows and
+  a `CNAME` file is written. Then add the domain under the repository's Settings, Pages. GitHub
+  redirects the old `sohaibiii.github.io/cooldown-links/` addresses, so links in shipped builds
+  keep working.
+- **Download tracking:** set `PROVIDER_TOKEN` in `_src/site_pages.py` to the `pt=` value from an
+  App Store Connect campaign link. Each button then carries its own campaign name
+  (`home-hero`, `guide-block-amazon`, and so on), and App Analytics shows downloads per page.
+- The serif is Newsreader (SIL Open Font License, `assets/fonts/OFL.txt`), served from this
+  repository, so these pages load nothing from a third party.
 
 ## Languages
 
@@ -66,8 +97,8 @@ amber for items still on ice. The mark (`mark.svg`, and inside `favicon.svg`) is
 want" — `BrandMark.svg` from the app's asset catalogue, copied verbatim into `MARK` in `gen.py`;
 `apple-touch-icon.png` is the app icon at 180 px. If the app's mark changes, copy it again here.
 
-Once App Store Connect has assigned the app its Apple ID, set `APP_STORE_URL` at the top of
-`_src/gen.py` and regenerate — every "App Store" button turns from *coming soon* into a link.
+`APP_STORE_ID` at the top of `_src/gen.py` is the app's Apple ID; every "App Store" button links
+to it.
 
 ## What the copy promises
 
