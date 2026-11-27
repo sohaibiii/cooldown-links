@@ -15,6 +15,7 @@ import json
 import os
 import shutil
 
+import art
 import gen
 from gen import APP, APP_STORE_ID, APP_STORE_URL, BASE, COMPANY, E, EMAIL, SITE, YEAR
 
@@ -220,55 +221,25 @@ def home():
   <ol class="how3">
     <li>
       <div class="n"><span>1 · Tonight</span><i></i></div>
-      <div class="pic" role="img" aria-label="A drawing of the On Ice shield: Pause before you buy. Buttons: Note it, Never mind.">
-        <div class="mini m-shield"><img src="{BASE}/mark.svg" alt="" width="36" height="36"><b>Pause before you buy.</b><div class="btns"><span>Note it</span><span>Never mind</span></div></div>
-      </div>
+      <div class="pic art" role="img" aria-label="A drawing of a small shop at night with a pause sign on its door.">{art.scene_shop()}</div>
       <h3>You open a shop</h3>
       <p>On Ice steps in first, in the app and in Safari, and asks you to pause.</p>
     </li>
     <li>
       <div class="n"><span>2 · Still tonight</span><i></i></div>
-      <div class="pic" role="img" aria-label="A drawing of a list with one item: Linen shirt, about 45 dollars, waiting 24 hours.">
-        <div class="mini m-item"><div class="ring"><span>24h</span></div><div class="t"><small>On your list</small><b>Linen shirt</b><span>≈ $45 · decide tomorrow</span></div></div>
-      </div>
+      <div class="pic art" role="img" aria-label="A drawing of a shirt frozen inside an ice cube, with a 24 hour dial around it.">{art.scene_ice()}</div>
       <h3>You note what you wanted</h3>
       <p>Type its name. It waits on your list for 24 hours. Nothing is bought.</p>
     </li>
     <li>
       <div class="n"><span>3 · Tomorrow</span><i></i></div>
-      <div class="pic" role="img" aria-label="A drawing of the question: Still want the linen shirt? Buttons: Don't want it anymore, Still want it.">
-        <div class="mini m-ask"><b>Still want the linen shirt?</b><div class="btns2"><span>Don't want it anymore</span><span>Still want it</span></div></div>
-      </div>
+      <div class="pic art day" role="img" aria-label="A drawing of the shirt at sunrise with two paths. One leads to a savings jar, labelled Don't want it anymore. The other leads to a shopping bag, labelled Still want it.">{art.scene_decide()}</div>
       <h3>You decide</h3>
       <p>Let it go and its price joins your estimated savings. Still want it and the shop opens. Either answer is a good one.</p>
     </li>
   </ol>
   <p class="fine">Really need to buy something now? The shop opens for 1, 5 or 15 minutes.</p>
-</div></section>
-
-<section class="sec"><div class="wrap screens">
-  <div>
-    <h2>The real app, <em>on your iPhone.</em></h2>
-    <p class="intro">The same three steps, as they look in On Ice.</p>
-    <p><a class="more" href="{BASE}/how-it-works/">See every step</a></p>
-  </div>
-  <div>
-    <ol class="night-strip three">
-      <li>
-        {phone("note-it", "The capture screen: What caught your eye? A name field, rough price chips, and feelings such as Bored and Deal FOMO.")}
-        <h3>Note it</h3>
-      </li>
-      <li>
-        {phone("on-ice-countdown", "On Ice showing a 24 hour countdown ring over the words: It's on your list. A linen shirt.")}
-        <h3>Wait 24 hours</h3>
-      </li>
-      <li>
-        {phone("still-want-it", "The decision screen: Still want the linen shirt? Buttons: Don't want it anymore, Still want it. Either answer is a good one.")}
-        <h3>Decide</h3>
-      </li>
-    </ol>
-    <p class="strip-hint">Swipe to see all three.</p>
-  </div>
+  <p class="after-steps"><a class="more" href="{BASE}/how-it-works/">See the real screens, step by step</a></p>
 </div></section>
 
 <section class="sec"><div class="wrap split">
