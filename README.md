@@ -71,6 +71,17 @@ catalogue (`Cooldown/Resources/Localizable.xcstrings`), and iOS's own labels (Sc
 Screen Time Access) are copied from the app's strings that quote them. A page never tells somebody
 to tap a button whose label is written differently on their screen.
 
+## Hosting
+
+The pages are served at https://getonice.com by a Cloudflare Worker named `onice-site`. Cloudflare
+is connected to this repository and publishes `main` after every push, with no build step: it
+uploads the committed files as they are. `wrangler.jsonc` names the Worker and its settings, and
+`.assetsignore` lists the files that are not part of the website (`_src`, this README and so on).
+
+GitHub Pages stays switched on, and the `CNAME` file stays, for one reason: shipped builds of the
+app open `https://sohaibiii.github.io/cooldown-links/...`, and GitHub forwards those addresses to
+getonice.com only while both are in place. Do not turn Pages off or delete `CNAME`.
+
 ## Editing
 
 `_src/gen.py` owns the markup; `_src/words/<lang>.py` owns the words. English is the fallback behind
