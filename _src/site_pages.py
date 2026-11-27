@@ -15,6 +15,8 @@ import json
 import os
 import shutil
 
+import art
+import demo
 import gen
 from gen import APP, APP_STORE_ID, APP_STORE_URL, BASE, COMPANY, E, EMAIL, SITE, YEAR
 
@@ -66,7 +68,7 @@ NAV = [("how-it-works", "How it works", "/how-it-works/"), ("pricing", "Pricing"
        ("guides", "Guides", "/guides/"), ("support", "Support", "/support/")]
 
 
-def layout(key, path, title, description, body, *, ct, dark_top=False, jsonld=(), og_type="website"):
+def layout(key, path, title, description, body, *, ct, dark_top=False, jsonld=(), og_type="website", head=""):
     """One page. `path` is its address under the site root, `ct` its campaign name."""
     url = SITE + path
     current = ' aria-current="page"'
@@ -105,7 +107,7 @@ def layout(key, path, title, description, body, *, ct, dark_top=False, jsonld=()
 <link rel="apple-touch-icon" href="{BASE}/apple-touch-icon.png">
 <link rel="preload" href="{ASSETS}/fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{ASSETS}/site.css">
-{ld}
+{head}{ld}
 </head>
 <body class="{'' if dark_top else 'on-paper'}">
 <a class="skip" href="#content">Skip to content</a>
@@ -132,7 +134,7 @@ def layout(key, path, title, description, body, *, ct, dark_top=False, jsonld=()
     <li><a href="{BASE}/terms/">Terms of Use</a></li>
     <li><a href="{BASE}/delete-data/">Your data</a></li>
   </ul></div>
-  <p class="legal">© {YEAR} {APP} · {COMPANY}. Money figures on this site are sample estimates. On Ice does not connect to a bank and does not give financial advice. Apple, iPhone, iPad, Safari and App Store are trademarks of Apple Inc. Support in other languages: {languages}</p>
+  <p class="legal">© {YEAR} {APP} · {COMPANY}. Money figures on this site are sample estimates. On Ice does not connect to a bank and does not give financial advice. Apple, iPhone, iPad, Safari and App Store are trademarks of Apple Inc. Amazon is a trademark of Amazon.com, Inc. or its affiliates, and On Ice is not affiliated with it. Support in other languages: {languages}</p>
 </div></footer>
 </body>
 </html>
@@ -205,12 +207,7 @@ def home():
       <p class="cta-note">Free to start. No account.<br>No bank linking.</p>
     </div>
   </div>
-  <div class="hero-art">
-    <div class="phone hero-phone"><div class="inner">
-      <div class="shopbg" aria-hidden="true"><i></i><i></i><i></i><i></i><b>Buy now</b></div>
-      {SHIELD}
-    </div></div>
-  </div>
+  {demo.html(BASE)}
 </div>
 </div>
 
@@ -220,55 +217,25 @@ def home():
   <ol class="how3">
     <li>
       <div class="n"><span>1 · Tonight</span><i></i></div>
-      <div class="pic" role="img" aria-label="A drawing of the On Ice shield: Pause before you buy. Buttons: Note it, Never mind.">
-        <div class="mini m-shield"><img src="{BASE}/mark.svg" alt="" width="36" height="36"><b>Pause before you buy.</b><div class="btns"><span>Note it</span><span>Never mind</span></div></div>
-      </div>
-      <h3>You open a shop</h3>
-      <p>On Ice steps in first, in the app and in Safari, and asks you to pause.</p>
+      <div class="pic art" role="img" aria-label="A drawing of a shopping bag with a pause button on it, and the words: Pause before you buy.">{art.scene_pause()}</div>
+      <h3>On Ice pauses you</h3>
+      <p>Open a shopping app or website and On Ice steps in before you can buy.</p>
     </li>
     <li>
       <div class="n"><span>2 · Still tonight</span><i></i></div>
-      <div class="pic" role="img" aria-label="A drawing of a list with one item: Linen shirt, about 45 dollars, waiting 24 hours.">
-        <div class="mini m-item"><div class="ring"><span>24h</span></div><div class="t"><small>On your list</small><b>Linen shirt</b><span>≈ $45 · decide tomorrow</span></div></div>
-      </div>
-      <h3>You note what you wanted</h3>
-      <p>Type its name. It waits on your list for 24 hours. Nothing is bought.</p>
+      <div class="pic art" role="img" aria-label="A drawing of a shirt frozen inside an ice cube. Under it, a line from tonight's moon to tomorrow's sun, marked 24 hours.">{art.scene_ice()}</div>
+      <h3>You wait one night</h3>
+      <p>Write down what you wanted. It waits on your list for 24 hours. Nothing is bought.</p>
     </li>
     <li>
       <div class="n"><span>3 · Tomorrow</span><i></i></div>
-      <div class="pic" role="img" aria-label="A drawing of the question: Still want the linen shirt? Buttons: Don't want it anymore, Still want it.">
-        <div class="mini m-ask"><b>Still want the linen shirt?</b><div class="btns2"><span>Don't want it anymore</span><span>Still want it</span></div></div>
-      </div>
+      <div class="pic art day" role="img" aria-label="A drawing of two answers. Don't want it anymore, with a savings jar: you keep the money. Or, Still want it, with a shopping bag: the shop opens.">{art.scene_decide()}</div>
       <h3>You decide</h3>
-      <p>Let it go and its price joins your estimated savings. Still want it and the shop opens. Either answer is a good one.</p>
+      <p>Don't want it anymore? Its price joins your estimated savings. Still want it? The shop opens. Either answer is a good one.</p>
     </li>
   </ol>
   <p class="fine">Really need to buy something now? The shop opens for 1, 5 or 15 minutes.</p>
-</div></section>
-
-<section class="sec"><div class="wrap screens">
-  <div>
-    <h2>The real app, <em>on your iPhone.</em></h2>
-    <p class="intro">The same three steps, as they look in On Ice.</p>
-    <p><a class="more" href="{BASE}/how-it-works/">See every step</a></p>
-  </div>
-  <div>
-    <ol class="night-strip three">
-      <li>
-        {phone("note-it", "The capture screen: What caught your eye? A name field, rough price chips, and feelings such as Bored and Deal FOMO.")}
-        <h3>Note it</h3>
-      </li>
-      <li>
-        {phone("on-ice-countdown", "On Ice showing a 24 hour countdown ring over the words: It's on your list. A linen shirt.")}
-        <h3>Wait 24 hours</h3>
-      </li>
-      <li>
-        {phone("still-want-it", "The decision screen: Still want the linen shirt? Buttons: Don't want it anymore, Still want it. Either answer is a good one.")}
-        <h3>Decide</h3>
-      </li>
-    </ol>
-    <p class="strip-hint">Swipe to see all three.</p>
-  </div>
+  <p class="after-steps"><a class="more" href="{BASE}/how-it-works/">See the real screens, step by step</a></p>
 </div></section>
 
 <section class="sec"><div class="wrap split">
@@ -348,7 +315,7 @@ def home():
     return layout("home", "/", "Stop Impulse Buying: On Ice, the Shopping Blocker for iPhone",
                   "On Ice shields the shopping apps and websites you choose, holds each want for 24 hours, and "
                   "adds up what you didn't spend. Free to start. No account, no bank linking.",
-                  body, ct="home", dark_top=True, jsonld=ld)
+                  body, ct="home", dark_top=True, jsonld=ld, head=f"<style>{demo.css()}</style>\n")
 
 
 # ---------------------------------------------------------------------------
