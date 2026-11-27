@@ -16,6 +16,7 @@ import os
 import shutil
 
 import art
+import demo
 import gen
 from gen import APP, APP_STORE_ID, APP_STORE_URL, BASE, COMPANY, E, EMAIL, SITE, YEAR
 
@@ -67,7 +68,7 @@ NAV = [("how-it-works", "How it works", "/how-it-works/"), ("pricing", "Pricing"
        ("guides", "Guides", "/guides/"), ("support", "Support", "/support/")]
 
 
-def layout(key, path, title, description, body, *, ct, dark_top=False, jsonld=(), og_type="website"):
+def layout(key, path, title, description, body, *, ct, dark_top=False, jsonld=(), og_type="website", head=""):
     """One page. `path` is its address under the site root, `ct` its campaign name."""
     url = SITE + path
     current = ' aria-current="page"'
@@ -106,7 +107,7 @@ def layout(key, path, title, description, body, *, ct, dark_top=False, jsonld=()
 <link rel="apple-touch-icon" href="{BASE}/apple-touch-icon.png">
 <link rel="preload" href="{ASSETS}/fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{ASSETS}/site.css">
-{ld}
+{head}{ld}
 </head>
 <body class="{'' if dark_top else 'on-paper'}">
 <a class="skip" href="#content">Skip to content</a>
@@ -133,7 +134,7 @@ def layout(key, path, title, description, body, *, ct, dark_top=False, jsonld=()
     <li><a href="{BASE}/terms/">Terms of Use</a></li>
     <li><a href="{BASE}/delete-data/">Your data</a></li>
   </ul></div>
-  <p class="legal">© {YEAR} {APP} · {COMPANY}. Money figures on this site are sample estimates. On Ice does not connect to a bank and does not give financial advice. Apple, iPhone, iPad, Safari and App Store are trademarks of Apple Inc. Support in other languages: {languages}</p>
+  <p class="legal">© {YEAR} {APP} · {COMPANY}. Money figures on this site are sample estimates. On Ice does not connect to a bank and does not give financial advice. Apple, iPhone, iPad, Safari and App Store are trademarks of Apple Inc. Amazon is a trademark of Amazon.com, Inc. or its affiliates, and On Ice is not affiliated with it. Support in other languages: {languages}</p>
 </div></footer>
 </body>
 </html>
@@ -206,12 +207,7 @@ def home():
       <p class="cta-note">Free to start. No account.<br>No bank linking.</p>
     </div>
   </div>
-  <div class="hero-art">
-    <div class="phone hero-phone"><div class="inner">
-      <div class="shopbg" aria-hidden="true"><i></i><i></i><i></i><i></i><b>Buy now</b></div>
-      {SHIELD}
-    </div></div>
-  </div>
+  {demo.html(BASE)}
 </div>
 </div>
 
@@ -319,7 +315,7 @@ def home():
     return layout("home", "/", "Stop Impulse Buying: On Ice, the Shopping Blocker for iPhone",
                   "On Ice shields the shopping apps and websites you choose, holds each want for 24 hours, and "
                   "adds up what you didn't spend. Free to start. No account, no bank linking.",
-                  body, ct="home", dark_top=True, jsonld=ld)
+                  body, ct="home", dark_top=True, jsonld=ld, head=f"<style>{demo.css()}</style>\n")
 
 
 # ---------------------------------------------------------------------------
