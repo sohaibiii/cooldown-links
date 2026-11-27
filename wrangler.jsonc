@@ -1,0 +1,11 @@
+{
+	// Cloudflare serves the built pages in this repository as they are.
+	// There is no build step: _src/gen.py is run by hand and its output is committed.
+	"name": "onice-site",
+	"compatibility_date": "2026-11-20",
+	"assets": {
+		"directory": ".",
+		"html_handling": "auto-trailing-slash",
+		"not_found_handling": "404-page"
+	}
+}
