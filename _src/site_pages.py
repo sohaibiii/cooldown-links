@@ -221,21 +221,21 @@ def home():
   <ol class="how3">
     <li>
       <div class="n"><span>1 · Tonight</span><i></i></div>
-      <div class="pic art" role="img" aria-label="A drawing of a small shop at night with a pause sign on its door.">{art.scene_shop()}</div>
-      <h3>You open a shop</h3>
-      <p>On Ice steps in first, in the app and in Safari, and asks you to pause.</p>
+      <div class="pic art" role="img" aria-label="A drawing of a shopping bag with a pause button on it, and the words: Pause before you buy.">{art.scene_pause()}</div>
+      <h3>On Ice pauses you</h3>
+      <p>Open a shopping app or website and On Ice steps in before you can buy.</p>
     </li>
     <li>
       <div class="n"><span>2 · Still tonight</span><i></i></div>
-      <div class="pic art" role="img" aria-label="A drawing of a shirt frozen inside an ice cube, with a 24 hour dial around it.">{art.scene_ice()}</div>
-      <h3>You note what you wanted</h3>
-      <p>Type its name. It waits on your list for 24 hours. Nothing is bought.</p>
+      <div class="pic art" role="img" aria-label="A drawing of a shirt frozen inside an ice cube. Under it, a line from tonight's moon to tomorrow's sun, marked 24 hours.">{art.scene_ice()}</div>
+      <h3>You wait one night</h3>
+      <p>Write down what you wanted. It waits on your list for 24 hours. Nothing is bought.</p>
     </li>
     <li>
       <div class="n"><span>3 · Tomorrow</span><i></i></div>
-      <div class="pic art day" role="img" aria-label="A drawing of the shirt at sunrise with two paths. One leads to a savings jar, labelled Don't want it anymore. The other leads to a shopping bag, labelled Still want it.">{art.scene_decide()}</div>
+      <div class="pic art day" role="img" aria-label="A drawing of two answers. Don't want it anymore, with a savings jar: you keep the money. Or, Still want it, with a shopping bag: the shop opens.">{art.scene_decide()}</div>
       <h3>You decide</h3>
-      <p>Let it go and its price joins your estimated savings. Still want it and the shop opens. Either answer is a good one.</p>
+      <p>Don't want it anymore? Its price joins your estimated savings. Still want it? The shop opens. Either answer is a good one.</p>
     </li>
   </ol>
   <p class="fine">Really need to buy something now? The shop opens for 1, 5 or 15 minutes.</p>
