@@ -186,10 +186,11 @@ def strip_tags(s):
 
 def home():
     from guides import GUIDES
-    faq_html = "".join(f"<details><summary>{q}</summary><div><p>{a}</p></div></details>" for q, a in FAQ)
+    faq = [(q, a) for q, a in FAQ if not q.startswith(("What does Premium add", "How is this different"))]
+    faq_html = "".join(f"<details><summary>{q}</summary><div><p>{a}</p></div></details>" for q, a in faq)
     guide_rows = "".join(
         f'<li><a href="{BASE}/guides/{g["slug"]}/"><b>{g["title"]}</b><i>{g["minutes"]} min read</i>'
-        f'<span>{g["blurb"]}</span></a></li>' for g in GUIDES[:5]
+        f'<span>{g["blurb"]}</span></a></li>' for g in GUIDES[:3]
     )
     body = f"""<div class="night hero">
 <!--TOP-->
@@ -198,114 +199,101 @@ def home():
   <div class="hero-copy">
     <p class="kicker">Shopping blocker for iPhone and iPad</p>
     <h1>Stop impulse buying. <em>Sleep on it first.</em></h1>
-    <p class="lede">On Ice puts one night between you and the buy button. It shields the shopping apps and websites that get you, holds the thing you wanted for 24 hours, then asks once: still want it?</p>
+    <p class="lede">On Ice pauses you when you open a shopping app or website. Note what you wanted, wait one night, then decide.</p>
     <div class="cta-row">
       {store("home-hero")}
       <p class="cta-note">Free to start. No account.<br>No bank linking.</p>
     </div>
   </div>
   <div class="hero-art">
-    {phone("on-ice-countdown", "On Ice showing a 24 hour countdown ring over the words: It's on your list. A linen shirt.", lazy=False)}
-    {SHIELD}
+    <div class="phone hero-phone"><div class="inner">
+      <div class="shopbg" aria-hidden="true"><i></i><i></i><i></i><i></i><b>Buy now</b></div>
+      {SHIELD}
+    </div></div>
   </div>
 </div>
 </div>
 
 <div class="paper">
-<section class="sec first"><div class="wrap statement">
-  <p class="big">It's 1 a.m. There are three things in the cart. <em>You wanted none of them at dinner.</em></p>
-  <div class="side">
-    <p>Shops are built to be fastest at the exact moment you are least sure. Saved cards, one tap, a timer on the deal.</p>
-    <p>On Ice gives back the one thing checkout took away: <strong>a night to think.</strong> Most wants don't survive it. The ones that do were real.</p>
-  </div>
-</div></section>
-
 <section class="sec" id="how"><div class="wrap">
-  <h2>One night, <em>four screens.</em></h2>
-  <p class="intro">You don't delete anything, and nothing is locked away. Here is the whole app, shown with a linen shirt.</p>
-  <ol class="night-strip">
+  <h2>Three steps. <em>One night.</em></h2>
+  <ol class="how3">
     <li>
-      <div class="when">Tonight</div>
-      <div class="phone frame-shield"><div class="inner">{SHIELD}</div></div>
-      <h3>A shield, not a wall</h3>
-      <p>Open a shop you chose and the shield comes first, in the app and in Safari. Note the thing, or never mind.</p>
+      <div class="n"><span>1 · Tonight</span><i></i></div>
+      <div class="pic" role="img" aria-label="A drawing of the On Ice shield: Pause before you buy. Buttons: Note it, Never mind.">
+        <div class="mini m-shield"><img src="{BASE}/mark.svg" alt="" width="36" height="36"><b>Pause before you buy.</b><div class="btns"><span>Note it</span><span>Never mind</span></div></div>
+      </div>
+      <h3>You open a shop</h3>
+      <p>On Ice steps in first, in the app and in Safari, and asks you to pause.</p>
     </li>
     <li>
-      <div class="when">15 seconds</div>
-      {phone("note-it", "The capture screen: What caught your eye? A name field, rough price chips, and feelings such as Bored and Deal FOMO.")}
-      <h3>Note it</h3>
-      <p>Name it, tap a rough price, tap how you feel: bored, stressed, celebrating, deal FOMO, or “I need it”.</p>
+      <div class="n"><span>2 · Still tonight</span><i></i></div>
+      <div class="pic" role="img" aria-label="A drawing of a list with one item: Linen shirt, about 45 dollars, waiting 24 hours.">
+        <div class="mini m-item"><div class="ring"><span>24h</span></div><div class="t"><small>On your list</small><b>Linen shirt</b><span>≈ $45 · decide tomorrow</span></div></div>
+      </div>
+      <h3>You note what you wanted</h3>
+      <p>Type its name. It waits on your list for 24 hours. Nothing is bought.</p>
     </li>
     <li>
-      <div class="when">Then</div>
-      {phone("decide-later", "The choice screen: Decide later? Wait 24h, then decide. Or: I need to shop now, for 1, 5 or 15 minutes.")}
-      <h3>Put it on ice</h3>
-      <p>Nothing is bought. The shirt goes on your list and the shop shields itself again. Really need the shop? It opens for a few minutes.</p>
-    </li>
-    <li>
-      <div class="when">Tomorrow</div>
-      {phone("still-want-it", "The decision screen: Still want the linen shirt? Buttons: Don't want it anymore, Still want it. Either answer is a good one.")}
-      <h3>One question</h3>
-      <p>Still want it? If you do, the shop opens for you. If you don't, the price you guessed joins your savings.</p>
+      <div class="n"><span>3 · Tomorrow</span><i></i></div>
+      <div class="pic" role="img" aria-label="A drawing of the question: Still want the linen shirt? Buttons: Don't want it anymore, Still want it.">
+        <div class="mini m-ask"><b>Still want the linen shirt?</b><div class="btns2"><span>Don't want it anymore</span><span>Still want it</span></div></div>
+      </div>
+      <h3>You decide</h3>
+      <p>Let it go and its price joins your estimated savings. Still want it and the shop opens. Either answer is a good one.</p>
     </li>
   </ol>
-  <p class="strip-hint">Swipe to follow the night.</p>
-  <p><a class="more" href="{BASE}/how-it-works/">The longer walkthrough</a></p>
+  <p class="fine">Really need to buy something now? The shop opens for 1, 5 or 15 minutes.</p>
+</div></section>
+
+<section class="sec"><div class="wrap screens">
+  <div>
+    <h2>The real app, <em>on your iPhone.</em></h2>
+    <p class="intro">The same three steps, as they look in On Ice.</p>
+    <p><a class="more" href="{BASE}/how-it-works/">See every step</a></p>
+  </div>
+  <div>
+    <ol class="night-strip three">
+      <li>
+        {phone("note-it", "The capture screen: What caught your eye? A name field, rough price chips, and feelings such as Bored and Deal FOMO.")}
+        <h3>Note it</h3>
+      </li>
+      <li>
+        {phone("on-ice-countdown", "On Ice showing a 24 hour countdown ring over the words: It's on your list. A linen shirt.")}
+        <h3>Wait 24 hours</h3>
+      </li>
+      <li>
+        {phone("still-want-it", "The decision screen: Still want the linen shirt? Buttons: Don't want it anymore, Still want it. Either answer is a good one.")}
+        <h3>Decide</h3>
+      </li>
+    </ol>
+    <p class="strip-hint">Swipe to see all three.</p>
+  </div>
 </div></section>
 
 <section class="sec"><div class="wrap split">
   <div>
     <h2>See what you <em>didn't</em> spend.</h2>
-    <p class="intro">Every item you let go adds to a running total for today, this week and this month. It is built entirely from prices you typed yourself, and it always says estimated.</p>
-    <p class="pull">A good number to be proud of, and a bad number to put in a spreadsheet.</p>
+    <p class="intro">Every item you let go adds to a running total. It is built from prices you typed yourself, and it always says estimated.</p>
     <ul class="facts">
       <li><b>No bank linking</b><span>On Ice never connects to an account or reads a transaction.</span></li>
-      <li><b>No price tracking</b><span>It doesn't check what anything costs, and carries no affiliate links.</span></li>
-      <li><b>No account</b><span>No sign up, no email field. Your list and journal stay on your device.</span></li>
+      <li><b>No account</b><span>No sign up, no email field.</span></li>
+      <li><b>Private</b><span>Your list stays on your device.</span></li>
     </ul>
     <p class="fine"><a href="{BASE}/privacy/">How the privacy works, in full</a></p>
   </div>
   <div class="receipt" aria-label="A sample receipt of things not bought this month">
     <div class="head">ON ICE</div>
     <div class="sub">THINGS YOU DIDN'T BUY</div>
-    <div class="row"><span>Linen shirt</span><i></i><span>≈ $50</span></div>
-    <div class="row"><span>Running shoes</span><i></i><span>≈ $130</span></div>
+    <div class="row"><span>Linen shirt</span><i></i><span>≈ $45</span></div>
+    <div class="row"><span>Running shoes</span><i></i><span>≈ $135</span></div>
     <hr>
     <div class="row total"><span>LET GO THIS MONTH</span><i></i><span>≈ $180</span></div>
     <div class="row"><span></span><i style="border:0"></i><span class="est">estimated</span></div>
-    <div class="foot">“That's about a nice dinner out for two.”<br>Sample figures. Every amount is your own estimate.</div>
+    <div class="foot">Sample figures. Every amount is your own estimate.</div>
   </div>
 </div></section>
 
-<section class="sec"><div class="wrap">
-  <h2>Firmer, <em>when you want it.</em></h2>
-  <p class="intro">Some nights a pause is enough. Some weeks you want a boundary that holds. You choose how strict On Ice is, and you can change your mind.</p>
-  <div class="tools">
-    <div class="shots">
-      {phone("breathe", "The breathing pause: A moment before you choose. Follow the circle at a comfortable pace.")}
-      {phone("do-something-else", "The Instead screen: Make room for something else. Walk 10 minutes, Read 10 minutes, Breathe 2 minutes.")}
-    </div>
-    <dl class="tool-list">
-      <div><dt>A breath first</dt><dd>Before the choices, a moment to follow a slow circle. You can skip it whenever you prefer.</dd></div>
-      <div><dt>Something else to do</dt><dd>A walk, a page, a call. Pick the small things you would enjoy and start one in a tap.</dd></div>
-      <div><dt>Timed blocks</dt><dd>Close your shops for the next 30 minutes, or until a time you set.</dd></div>
-      <div><dt>A daily goal</dt><dd>A gentle target for shopping time each day. It counts, it doesn't block.</dd></div>
-      <div><dt>Daily limits <span class="prem">Premium</span></dt><dd>When the day's allowance is used, those shops rest until tomorrow.</dd></div>
-      <div><dt>Danger hours <span class="prem">Premium</span></dt><dd>Make late nights stricter, or close one shop's door entirely.</dd></div>
-      <div><dt>Strict mode <span class="prem">Premium</span></dt><dd>So your setup can't be undone in the moment.</dd></div>
-      <div><dt>A private journal</dt><dd>A question a day and a place to write. Lock it with Face ID. It never leaves your device.</dd></div>
-      <div><dt>Widgets <span class="prem">Premium</span></dt><dd>Your estimated savings and what's on ice, on the Home Screen and Lock Screen.</dd></div>
-    </dl>
-  </div>
-</div></section>
-</div>
-
-<section class="band"><div class="wrap">
-  <blockquote>Nothing here scolds you for wanting things, and <em>nothing turns red if you buy it.</em></blockquote>
-  <p>No streaks to break, no lecture at the end. Wins are celebrated and purchases are neutral. If you keep the shirt, you get a calm screen and the shop opens. Both answers are good ones.</p>
-</div></section>
-
-<div class="paper">
 <section class="sec" id="pricing"><div class="wrap">
   <h2>Free to start. <em>Premium if you want more.</em></h2>
   <div class="plans">
@@ -313,15 +301,11 @@ def home():
       <li>One shopping app and one website, shielded</li>
       <li>The 24 hour wait and your list</li>
       <li>Your estimated savings</li>
-      <li>The breathing pause and three things to do instead</li>
-      <li>The journal, a daily goal and timed blocks</li>
     </ul></div>
     <div><h3>Premium</h3><p class="price">Monthly · Yearly · Lifetime · Family</p><ul>
       <li>Every shop and website you want</li>
       <li>Waits of 12, 24, 48 or 72 hours</li>
-      <li>Danger hours, daily limits and strict mode</li>
-      <li>Your shopping patterns, and how purchases felt afterwards</li>
-      <li>Widgets and the optional AI reflection</li>
+      <li>Daily limits, danger hours and strict mode</li>
     </ul></div>
   </div>
   <p class="fine">Nothing you built is taken away if a subscription lapses. <a href="{BASE}/pricing/">Plans and prices</a></p>
@@ -359,7 +343,7 @@ def home():
          "publisher": {"@type": "Organization", "name": COMPANY}},
         {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": strip_tags(a)}}
-            for q, a in FAQ]},
+            for q, a in faq]},
     ]
     return layout("home", "/", "Stop Impulse Buying: On Ice, the Shopping Blocker for iPhone",
                   "On Ice shields the shopping apps and websites you choose, holds each want for 24 hours, and "
@@ -419,6 +403,28 @@ def how_it_works():
 <div class="wrap"><ol class="steps">{steps}</ol></div>
 
 <section class="sec" style="border-top:1px solid var(--line)"><div class="wrap">
+  <h2>Firmer, <em>when you want it.</em></h2>
+  <p class="intro">Some nights a pause is enough. Some weeks you want a boundary that holds. You choose how strict On Ice is, and you can change your mind.</p>
+  <div class="tools">
+    <div class="shots">
+      {phone("do-something-else", "The Instead screen: Make room for something else. Walk 10 minutes, Read 10 minutes, Breathe 2 minutes.")}
+      {phone("protection-tools", "The Protection tools screen: Block now, for 30 minutes, with a Start block button, plus a daily goal and daily limits.")}
+    </div>
+    <dl class="tool-list">
+      <div><dt>A breath first</dt><dd>Before the choices, a moment to follow a slow circle. You can skip it whenever you prefer.</dd></div>
+      <div><dt>Something else to do</dt><dd>A walk, a page, a call. Pick the small things you would enjoy and start one in a tap.</dd></div>
+      <div><dt>Timed blocks</dt><dd>Close your shops for the next 30 minutes, or until a time you set.</dd></div>
+      <div><dt>A daily goal</dt><dd>A gentle target for shopping time each day. It counts, it doesn't block.</dd></div>
+      <div><dt>Daily limits <span class="prem">Premium</span></dt><dd>When the day's allowance is used, those shops rest until tomorrow.</dd></div>
+      <div><dt>Danger hours <span class="prem">Premium</span></dt><dd>Make late nights stricter, or close one shop's door entirely.</dd></div>
+      <div><dt>Strict mode <span class="prem">Premium</span></dt><dd>So your setup can't be undone in the moment.</dd></div>
+      <div><dt>A private journal</dt><dd>A question a day and a place to write. Lock it with Face ID. It never leaves your device.</dd></div>
+      <div><dt>Widgets <span class="prem">Premium</span></dt><dd>Your estimated savings and what's on ice, on the Home Screen and Lock Screen.</dd></div>
+    </dl>
+  </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
   <h2>Setting it up takes <em>about two minutes.</em></h2>
   <ol class="setup">
     <li><span><b>Try a ten second pause.</b> The same moment the shield will give you later.</span></li>
