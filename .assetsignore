@@ -9,3 +9,6 @@ wrangler.jsonc
 CNAME
 README.md
 _src
+
+# claude-seo skills: tooling for Claude, never part of the website
+.claude
