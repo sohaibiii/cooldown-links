@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schluss mit Impulskäufen: On Ice, der Shopping-Blocker fürs iPhone</title>
+<meta name="description" content="On Ice sperrt die Shopping-Apps und -Websites, die du auswählst, hält jeden Wunsch 24 Stunden zurück und rechnet zusammen, was du nicht ausgegeben hast. Kostenlos starten, kein Konto.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<link rel="canonical" href="https://getonice.com/de/home/">
+<link rel="alternate" hreflang="en" href="https://getonice.com/">
+<link rel="alternate" hreflang="de" href="https://getonice.com/de/home/">
+<link rel="alternate" hreflang="es" href="https://getonice.com/es/home/">
+<link rel="alternate" hreflang="ja" href="https://getonice.com/ja/home/">
+<link rel="alternate" hreflang="x-default" href="https://getonice.com/">
+<meta name="apple-itunes-app" content="app-id=6805130834">
+<meta name="theme-color" content="#1D2347">
+<meta property="og:site_name" content="On Ice">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Schluss mit Impulskäufen: On Ice, der Shopping-Blocker fürs iPhone">
+<meta property="og:description" content="On Ice sperrt die Shopping-Apps und -Websites, die du auswählst, hält jeden Wunsch 24 Stunden zurück und rechnet zusammen, was du nicht ausgegeben hast. Kostenlos starten, kein Konto.">
+<meta property="og:url" content="https://getonice.com/de/home/">
+<meta property="og:locale" content="de_DE">
+<meta property="og:image" content="https://getonice.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="On Ice: Schluss mit Impulskäufen. Erst mal drüber schlafen.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css?v=7d2cfe65cc">
+<style>
+/* hero demo: one loop of the app, drawn in HTML. Timeline lives in _src/demo.py. */
+.hero-art.demo{height:auto;overflow:visible;padding:0 0 clamp(28px,5vw,56px);width:auto;display:grid;justify-items:center;align-self:center;position:relative}
+.demo .dphone{width:290px;height:596px;border-radius:46px;flex:none}
+.demo .dscreen{position:relative;width:276px;height:582px;overflow:hidden;border-radius:39px;background:#0b0e1a;font-family:var(--sans);color:#F2F4F7;line-height:1.3;text-align:left}
+.demo .dscreen *,.demo .dcap span{animation-duration:23s;animation-iteration-count:infinite;animation-timing-function:ease-in-out;animation-fill-mode:both}
+.demo .sc{position:absolute;inset:0;opacity:0}
+.demo .s-home{animation-name:d-home}.demo .s-shop{animation-name:d-shop}.demo .s-note{animation-name:d-note}.demo .s-later{animation-name:d-later}.demo .s-ice{animation-name:d-ice}.demo .s-ask{animation-name:d-ask}.demo .s-saved{animation-name:d-saved}
+.demo .sbar{position:absolute;left:0;right:0;top:0;height:40px;display:flex;justify-content:space-between;align-items:center;padding:6px 26px 0;font:600 13px/1 var(--sans);color:#fff}
+.demo .sbar i{width:22px;height:10px;border-radius:3px;border:1.5px solid #fff;position:relative}
+.demo .sbar i::after{content:"";position:absolute;inset:1.5px;right:5px;background:#fff;border-radius:1px}
+.demo .tap{position:absolute;left:-19px;top:-19px;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.55);box-shadow:0 0 0 2px rgba(255,255,255,.9),0 4px 14px rgba(0,0,0,.35);opacity:0;animation-name:d-tap}
+
+.demo .s-home{background:radial-gradient(120% 80% at 80% 0%,#3a4580 0%,#1D2347 45%,#12152A 100%)}
+.demo .grid{position:absolute;left:20px;right:20px;top:64px;display:grid;grid-template-columns:repeat(4,50px);justify-content:space-between;row-gap:20px}
+.demo .ic{display:grid;justify-items:center;gap:5px}
+.demo .ic i{width:50px;height:50px;border-radius:13px;display:grid;place-items:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.25)}
+.demo .ic i svg{width:30px;height:30px}
+.demo .ic em{font:500 10px/1 var(--sans);color:#E8ECFB;font-style:normal}
+.demo .shop-ic i{animation-name:d-icon}
+.demo .dock{position:absolute;left:14px;right:14px;bottom:16px;height:74px;border-radius:26px;background:rgba(255,255,255,.14);display:flex;justify-content:space-between;align-items:center;padding:0 14px}
+.demo .dock i{width:50px;height:50px;border-radius:13px}
+
+.demo .s-shop{background:#F4F1EA;color:#171A2B;transform-origin:107px 175px}
+.demo .shop-top{height:84px;background:#1B2330;color:#fff;padding:44px 14px 0;display:flex;align-items:center;gap:10px}
+.demo .shop-top b{font:700 15px/1 var(--sans)}
+.demo .shop-top span{flex:1;height:26px;border-radius:8px;background:#fff}
+.demo .shop-pic{margin:14px 14px 0;height:190px;border-radius:14px;background:#E3DAC8;display:grid;place-items:center}
+.demo .shop-pic svg{width:120px;height:120px}
+.demo .shop-txt{padding:12px 16px 0}
+.demo .shop-txt b{display:block;font:700 17px/1.2 var(--sans)}
+.demo .shop-txt span{font-size:12.5px;color:#4d7a56}
+.demo .shop-buy{margin:12px 14px 0;background:#F2A93B;color:#2a1d02;border-radius:999px;font:700 15px/1 var(--sans);text-align:center;padding:13px}
+.demo .shop-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:16px 14px 0}
+.demo .shop-row i{height:96px;border-radius:12px;background:#D9D2C3}
+.demo .dim{position:absolute;inset:0;background:rgba(12,14,24,.62);opacity:0;animation-name:d-dim}
+.demo .shield-in{position:absolute;left:14px;right:14px;top:188px;opacity:0;animation-name:d-shield}
+.demo .shield-in .shield{text-align:center}
+
+.demo .app{background:linear-gradient(180deg,#0E1626 0%,#16304A 55%,#1E4A60 100%)}
+.demo .dh{margin:0;position:absolute;left:14px;right:14px;top:84px;text-align:center;font:700 19px/1.2 var(--sans);letter-spacing:-.01em;color:#fff}
+.demo .dh.left,.demo p.left{text-align:left;left:16px;right:16px}
+.demo .round{position:absolute;left:14px;top:46px;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.12);display:grid;place-items:center;font:500 16px/1 var(--sans);color:#D9E0EC}
+.demo .card{position:absolute;left:14px;right:14px;border-radius:16px;background:rgba(255,255,255,.07);box-shadow:inset 0 0 0 1px rgba(255,255,255,.14);padding:12px}
+.demo .card small{display:block;font:600 11px/1 var(--sans);color:#E3E8F1;margin:0 0 7px}
+.demo q{quotes:none;font:500 9.5px/1 var(--sans);color:#A9B4C4;background:rgba(255,255,255,.1);border-radius:999px;padding:2px 6px;margin-left:3px}
+.demo .btn{position:absolute;left:14px;right:14px;height:40px;border-radius:12px;display:grid;place-items:center;font:600 14px/1 var(--sans);color:#0F1214}
+.demo .btn.main{background:linear-gradient(180deg,#8E9CE6,#7B8CDE)}
+.demo .btn.go{background:linear-gradient(180deg,#93D6A1,#7FC98F)}
+.demo .chips{display:flex;flex-wrap:wrap;gap:6px}
+.demo .chips span{font:500 11px/1 var(--sans);color:#C9D2DF;padding:7px 9px;border-radius:999px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+
+.demo .note-card{top:122px}
+.demo .field{height:34px;border-radius:10px;background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16);display:flex;align-items:center;padding:0 11px;font:600 13.5px/1 var(--sans);margin-bottom:13px}
+.demo .typed i{display:inline-block;overflow:hidden;max-width:0;font-style:normal;vertical-align:bottom;white-space:pre}
+.demo .typed .l0{animation-name:d-l0}.demo .typed .l1{animation-name:d-l1}.demo .typed .l2{animation-name:d-l2}.demo .typed .l3{animation-name:d-l3}.demo .typed .l4{animation-name:d-l4}.demo .typed .l5{animation-name:d-l5}.demo .typed .l6{animation-name:d-l6}.demo .typed .l7{animation-name:d-l7}.demo .typed .l8{animation-name:d-l8}.demo .typed .l9{animation-name:d-l9}
+.demo .field u{width:1.5px;height:17px;background:#7B8CDE;margin-left:1px}
+.demo .chips.four{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-radius:999px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18);margin-bottom:13px}
+.demo .chips.four span{box-shadow:none;text-align:center;padding:8px 0}
+.demo .chips.four .pick{animation-name:d-pick}
+
+.demo .later-card{top:120px}
+.demo .later-card>b{font:700 15px/1.2 var(--sans)}
+.demo .est{margin:3px 0 10px;font:600 12.5px/1.2 var(--sans);padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.14)}
+.demo dl{margin:0}
+.demo dt{font:700 12px/1.2 var(--sans);margin-top:8px}
+.demo dt:first-child{margin-top:0}
+.demo dd{margin:2px 0 0;font-size:10.5px;line-height:1.35;color:#B9C3D2}
+.demo .now{position:absolute;left:0;right:0;bottom:114px;margin:0;text-align:center;font-size:10.5px;color:#C9D2DF}
+.demo .mins{position:absolute;left:0;right:0;bottom:78px;justify-content:center}
+.demo .mins span{color:#8FA0E8;background:rgba(123,140,222,.14);box-shadow:none}
+.demo .nvm{position:absolute;left:0;right:0;bottom:44px;margin:0;text-align:center;font-size:12.5px;color:#C9D2DF}
+
+.demo .ring{position:absolute;left:50%;top:52px;width:170px;height:170px;margin-left:-85px;display:grid;place-items:center}
+.demo .ring svg{position:absolute;inset:0;width:100%;height:100%}
+.demo .arc{animation-name:d-arc;animation-timing-function:linear}
+.demo .clock{position:relative;width:100%;height:30px;margin-top:-6px}
+.demo .clock b{position:absolute;inset:0;text-align:center;font:700 27px/30px var(--sans);letter-spacing:.01em;font-variant-numeric:tabular-nums;opacity:0}
+.demo .clock .k0{animation-name:d-k0}.demo .clock .k1{animation-name:d-k1}.demo .clock .k2{animation-name:d-k2}.demo .clock .k3{animation-name:d-k3}
+.demo .ring span{position:absolute;left:0;right:0;top:106px;text-align:center;font-size:10px;color:#C9D2DF}
+.demo .dh.big{top:240px;font-size:22px}
+.demo .sub{position:absolute;left:14px;right:14px;top:272px;margin:0;text-align:center;font-size:13px;color:#D9E0EC}
+.demo .ice-card{top:306px}
+.demo .ice-card b{font:700 12.5px/1.2 var(--sans)}
+.demo .ice-card p{margin:3px 0 0;font-size:10.5px;line-height:1.35;color:#B9C3D2}
+
+.demo .pill{position:absolute;left:14px;top:46px;font:500 11.5px/1 var(--sans);color:#D9E0EC;background:rgba(255,255,255,.12);border-radius:999px;padding:8px 11px}
+.demo .s-ask .dh{top:96px;font-size:22px}
+.demo .s-ask .sub{top:156px;font-size:12px;color:#C9D2DF}
+.demo .either{position:absolute;left:0;right:0;bottom:22px;margin:0;text-align:center;font-size:10px;color:#C9D2DF}
+
+.demo .s-saved{background:#111418}
+.demo .s-saved .dh{top:62px;font-size:22px}
+.demo .seg{position:absolute;left:14px;right:14px;top:100px;display:grid;grid-template-columns:repeat(3,1fr);border-radius:9px;background:rgba(255,255,255,.08);padding:2px;font:500 10.5px/1 var(--sans);text-align:center}
+.demo .seg span{padding:6px 0;border-radius:7px;color:#C9D2DF}
+.demo .seg .on{background:rgba(255,255,255,.2);color:#fff}
+.demo .saved-card{top:140px;background:#1A1F26}
+.demo .saved-card small{font-weight:500;color:#A9B4C4}
+.demo .sum{margin:8px 0;transform-origin:0 60%;animation-name:d-sum}
+.demo .sum b{font:700 34px/1 var(--sans);color:#7FC98F;letter-spacing:-.01em}
+.demo .saved-card p:last-child{margin:0;font-size:10.5px;line-height:1.4;color:#A9B4C4}
+.demo .let-go{top:282px;background:#1A1F26;display:flex;gap:10px;align-items:center}
+.demo .let-go i{width:28px;height:28px;border-radius:50%;background:rgba(127,201,143,.18);color:#7FC98F;display:grid;place-items:center;font:700 14px/1 var(--sans);font-style:normal;flex:none}
+.demo .let-go b{display:block;font:700 12.5px/1.2 var(--sans)}
+.demo .let-go span{font-size:10.5px;color:#A9B4C4}
+
+.demo .dcap{position:relative;width:290px;height:24px;margin:18px 0 0;text-align:center;font:500 15.5px/24px var(--sans);color:var(--ice)}
+.demo .dcap span{position:absolute;inset:0;opacity:0;white-space:nowrap}
+.demo .dcap .c0{animation-name:d-c0}.demo .dcap .c1{animation-name:d-c1}.demo .dcap .c2{animation-name:d-c2}.demo .dcap .c3{animation-name:d-c3}.demo .dcap .c4{animation-name:d-c4}.demo .dcap .c5{animation-name:d-c5}.demo .dcap .c6{animation-name:d-c6}
+.demo-pause{position:absolute;opacity:0;width:1px;height:1px}
+.demo-ctl{margin-top:8px;font:500 12.5px/1 var(--sans);color:var(--ice-2);cursor:pointer;padding:6px 10px;border-radius:999px;text-decoration:underline;text-underline-offset:3px}
+.demo-ctl .p2{display:none}
+.demo-pause:checked~.demo-ctl .p1{display:none}
+.demo-pause:checked~.demo-ctl .p2{display:inline}
+.demo-pause:focus-visible~.demo-ctl{outline:2px solid var(--amber);outline-offset:2px}
+.demo-pause:checked~.dphone *,.demo-pause:checked~.dcap span{animation-play-state:paused}
+@keyframes d-home{0%{opacity:1}13.26%{opacity:1}13.3%{opacity:0}97.39%{opacity:0}97.43%{opacity:1}100%{opacity:1}}@keyframes d-shop{0%{opacity:0;transform:scale(.6)}11.74%{opacity:0;transform:scale(.6)}13.26%{opacity:1;transform:none}31.52%{opacity:1;transform:none}31.57%{opacity:0;transform:none}100%{opacity:0;transform:none}}@keyframes d-note{0%{opacity:0;transform:translateY(14px)}30%{opacity:0;transform:translateY(14px)}31.52%{opacity:1;transform:none}49.78%{opacity:1;transform:none}49.83%{opacity:0;transform:none}100%{opacity:0;transform:none}}@keyframes d-later{0%{opacity:0;transform:translateY(14px)}48.26%{opacity:0;transform:translateY(14px)}49.78%{opacity:1;transform:none}61.09%{opacity:1;transform:none}61.13%{opacity:0;transform:none}100%{opacity:0;transform:none}}@keyframes d-ice{0%{opacity:0;transform:translateY(14px)}59.57%{opacity:0;transform:translateY(14px)}61.09%{opacity:1;transform:none}75.87%{opacity:1;transform:none}75.91%{opacity:0;transform:none}100%{opacity:0;transform:none}}@keyframes d-ask{0%{opacity:0;transform:translateY(14px)}74.35%{opacity:0;transform:translateY(14px)}75.87%{opacity:1;transform:none}88.91%{opacity:1;transform:none}88.96%{opacity:0;transform:none}100%{opacity:0;transform:none}}@keyframes d-saved{0%{opacity:0}87.39%{opacity:0}88.91%{opacity:1}98.04%{opacity:1}100%{opacity:0}}@keyframes d-dim{0%{opacity:0}16.52%{opacity:0}18.04%{opacity:1}31.52%{opacity:1}31.57%{opacity:0}100%{opacity:0}}@keyframes d-shield{0%{opacity:0;transform:translateY(26px) scale(.94)}16.52%{opacity:0;transform:translateY(26px) scale(.94)}18.26%{opacity:1;transform:none}31.52%{opacity:1;transform:none}31.57%{opacity:0;transform:none}100%{opacity:0;transform:none}}@keyframes d-tap{0%{opacity:0;transform:translate(107px,174px) scale(1)}5.22%{opacity:0;transform:translate(107px,174px) scale(1.25)}6.52%{opacity:.9;transform:translate(107px,174px) scale(1)}7.83%{opacity:.9;transform:translate(107px,174px) scale(.7)}8.61%{opacity:.45;transform:translate(107px,174px) scale(1.2)}9.39%{opacity:0;transform:translate(107px,174px) scale(1.6)}9.43%{opacity:0;transform:translate(84px,360px) scale(1.25)}24.78%{opacity:0;transform:translate(84px,360px) scale(1.25)}26.09%{opacity:.9;transform:translate(84px,360px) scale(1)}27.39%{opacity:.9;transform:translate(84px,360px) scale(.7)}28.17%{opacity:.45;transform:translate(84px,360px) scale(1.2)}28.96%{opacity:0;transform:translate(84px,360px) scale(1.6)}29%{opacity:0;transform:translate(166px,231px) scale(1.25)}38.7%{opacity:0;transform:translate(166px,231px) scale(1.25)}40%{opacity:.9;transform:translate(166px,231px) scale(1)}41.3%{opacity:.9;transform:translate(166px,231px) scale(.7)}42.09%{opacity:.45;transform:translate(166px,231px) scale(1.2)}42.87%{opacity:0;transform:translate(166px,231px) scale(1.6)}42.91%{opacity:0;transform:translate(138px,532px) scale(1.25)}43.48%{opacity:0;transform:translate(138px,532px) scale(1.25)}44.78%{opacity:.9;transform:translate(138px,532px) scale(1)}46.09%{opacity:.9;transform:translate(138px,532px) scale(.7)}46.87%{opacity:.45;transform:translate(138px,532px) scale(1.2)}47.65%{opacity:0;transform:translate(138px,532px) scale(1.6)}47.7%{opacity:0;transform:translate(138px,422px) scale(1.25)}54.35%{opacity:0;transform:translate(138px,422px) scale(1.25)}55.65%{opacity:.9;transform:translate(138px,422px) scale(1)}56.96%{opacity:.9;transform:translate(138px,422px) scale(.7)}57.74%{opacity:.45;transform:translate(138px,422px) scale(1.2)}58.52%{opacity:0;transform:translate(138px,422px) scale(1.6)}58.57%{opacity:0;transform:translate(138px,466px) scale(1.25)}82.17%{opacity:0;transform:translate(138px,466px) scale(1.25)}83.48%{opacity:.9;transform:translate(138px,466px) scale(1)}84.78%{opacity:.9;transform:translate(138px,466px) scale(.7)}85.57%{opacity:.45;transform:translate(138px,466px) scale(1.2)}86.35%{opacity:0;transform:translate(138px,466px) scale(1.6)}100%{opacity:0;transform:translate(107px,174px) scale(1)}}@keyframes d-icon{0%{transform:none}7.61%{transform:none}8.26%{transform:scale(.88)}9.13%{transform:none}100%{transform:none}}@keyframes d-l0{0%{max-width:0}32.61%{max-width:0}32.65%{max-width:1em}100%{max-width:1em}}@keyframes d-l1{0%{max-width:0}33.26%{max-width:0}33.3%{max-width:1em}100%{max-width:1em}}@keyframes d-l2{0%{max-width:0}33.91%{max-width:0}33.96%{max-width:1em}100%{max-width:1em}}@keyframes d-l3{0%{max-width:0}34.57%{max-width:0}34.61%{max-width:1em}100%{max-width:1em}}@keyframes d-l4{0%{max-width:0}35.22%{max-width:0}35.26%{max-width:1em}100%{max-width:1em}}@keyframes d-l5{0%{max-width:0}35.87%{max-width:0}35.91%{max-width:1em}100%{max-width:1em}}@keyframes d-l6{0%{max-width:0}36.52%{max-width:0}36.57%{max-width:1em}100%{max-width:1em}}@keyframes d-l7{0%{max-width:0}37.17%{max-width:0}37.22%{max-width:1em}100%{max-width:1em}}@keyframes d-l8{0%{max-width:0}37.83%{max-width:0}37.87%{max-width:1em}100%{max-width:1em}}@keyframes d-l9{0%{max-width:0}38.48%{max-width:0}38.52%{max-width:1em}100%{max-width:1em}}@keyframes d-pick{0%{background:transparent;color:#C9D2DF}41.3%{background:transparent;color:#C9D2DF}41.35%{background:#7B8CDE;color:#0F1214}100%{background:#7B8CDE;color:#0F1214}}@keyframes d-arc{0%{stroke-dashoffset:0}63.48%{stroke-dashoffset:0}71.3%{stroke-dashoffset:503}97.83%{stroke-dashoffset:503}97.87%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}@keyframes d-k0{0%{opacity:1}64.78%{opacity:1}64.83%{opacity:0}100%{opacity:0}}@keyframes d-k1{0%{opacity:0}64.78%{opacity:0}64.83%{opacity:1}67.39%{opacity:1}67.43%{opacity:0}100%{opacity:0}}@keyframes d-k2{0%{opacity:0}67.39%{opacity:0}67.43%{opacity:1}70%{opacity:1}70.04%{opacity:0}100%{opacity:0}}@keyframes d-k3{0%{opacity:0}70%{opacity:0}70.04%{opacity:1}100%{opacity:1}}@keyframes d-sum{0%{transform:scale(.8)}88.26%{transform:scale(.8)}90%{transform:scale(1.06)}90.87%{transform:none}100%{transform:none}}@keyframes d-c0{0%{opacity:1}16.52%{opacity:1}16.57%{opacity:0}100%{opacity:0}}@keyframes d-c1{0%{opacity:0}16.52%{opacity:0}17.61%{opacity:1}30%{opacity:1}30.04%{opacity:0}100%{opacity:0}}@keyframes d-c2{0%{opacity:0}30%{opacity:0}31.09%{opacity:1}48.26%{opacity:1}48.3%{opacity:0}100%{opacity:0}}@keyframes d-c3{0%{opacity:0}48.26%{opacity:0}49.35%{opacity:1}59.57%{opacity:1}59.61%{opacity:0}100%{opacity:0}}@keyframes d-c4{0%{opacity:0}59.57%{opacity:0}60.65%{opacity:1}74.35%{opacity:1}74.39%{opacity:0}100%{opacity:0}}@keyframes d-c5{0%{opacity:0}74.35%{opacity:0}75.43%{opacity:1}87.39%{opacity:1}87.43%{opacity:0}100%{opacity:0}}@keyframes d-c6{0%{opacity:0}87.39%{opacity:0}88.48%{opacity:1}100%{opacity:1}}
+@media (max-width:860px){
+  .hero-art.demo{display:grid;padding-bottom:36px}
+  .hero-copy{padding-bottom:28px}
+}
+@media (max-width:380px){
+  .demo .dphone{transform:scale(.9);transform-origin:top center;margin-bottom:-60px}
+}
+@media (prefers-reduced-motion:reduce){
+  .demo .dscreen *,.demo .dcap span{animation:none!important}
+  .demo .s-shop,.demo .dim,.demo .shield-in,.demo .dcap .c1{opacity:1}
+  .demo-ctl{display:none}
+}
+.demo .s-note .dh{font-size:15px}.demo .dh.big{font-size:17px}.demo .s-ask .dh{font-size:18px}.demo .dcap{font-size:13.5px}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "TOPSOL", "url": "https://getonice.com/", "logo": "https://getonice.com/apple-touch-icon.png", "email": "topsol.org@gmail.com"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "On Ice: Stop Impulse Buying", "operatingSystem": "iOS", "applicationCategory": "FinanceApplication", "image": "https://getonice.com/apple-touch-icon.png", "description": "Ein Shopping-Blocker für iPhone und iPad, der die Shopping-Apps und -Websites sperrt, die du auswählst, und jeden Wunsch 24 Stunden zurückhält.", "inLanguage": "de", "url": "https://getonice.com/de/home/", "downloadUrl": "https://apps.apple.com/app/id6805130834", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@context": "https://schema.org", "@type": "Organization", "name": "TOPSOL", "url": "https://getonice.com/", "logo": "https://getonice.com/apple-touch-icon.png", "email": "topsol.org@gmail.com"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Sperrt mich On Ice aus meinen Shopping-Apps aus?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Eine normale Sperre ist eine Pause, keine Mauer. Tippe auf Notieren, sag, was dir ins Auge gefallen ist, und Ich muss jetzt einkaufen öffnet den Shop für 1, 5 oder 15 Minuten. Ganz ohne Ausweg sind nur Dinge, die du selbst eingerichtet hast, etwa ein erreichtes Tageslimit, eine zeitgesteuerte Sperre oder eine feste Regel für einen Shop. Jede davon endet von selbst."}}, {"@type": "Question", "name": "Sperrt es Shopping-Websites oder nur Apps?", "acceptedAnswer": {"@type": "Answer", "text": "Beides. Füge die App eines Shops und seine Website getrennt hinzu, dann ist beides gesperrt, die Website in Safari."}}, {"@type": "Question", "name": "Funktioniert es mit Amazon, Temu, Shein und den anderen?", "acceptedAnswer": {"@type": "Answer", "text": "Du wählst die Apps in Apples eigener Bildschirmzeit-Auswahl und fügst Websites per Adresse hinzu. So funktioniert es mit genau den Shops, die dich verführen. On Ice erfährt nie die Namen der Apps, die du auswählst. Apple gibt stattdessen private Codes weiter."}}, {"@type": "Question", "name": "Sieht On Ice, was ich kaufe?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. On Ice hat keinen Zugriff auf deine Bank, deine Bestellungen, deinen Browserverlauf oder deine Karte. Es speichert nur seine eigenen Ereignisse: dass eine Sperre angezeigt wurde und was du gewählt hast. Diese bleiben auf deinem Gerät."}}, {"@type": "Question", "name": "Was passiert mit dem, was ich notiert habe?", "acceptedAnswer": {"@type": "Answer", "text": "Es wartet 24 Stunden auf deiner Liste. Dann fragt On Ice einmal: Willst du es noch? Lässt du es los, wandert der Preis, den du geschätzt hast, in deine geschätzte Ersparnis. Willst du es noch, öffnet sich der Shop für dich. Beide Antworten sind gut."}}, {"@type": "Question", "name": "Ist On Ice kostenlos?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, und kostenlos ist ein funktionierendes Produkt, keine Demo: eine Shopping-App und eine Website gesperrt, die 24-Stunden-Bedenkzeit und deine Liste, deine geschätzte Ersparnis, die Atempause, drei Alternativen, das Tagebuch, ein tägliches Zeitziel fürs Shoppen und zeitgesteuerte Sperren."}}, {"@type": "Question", "name": "Welche Geräte brauche ich?", "acceptedAnswer": {"@type": "Answer", "text": "Ein iPhone oder iPad mit iOS 17 oder neuer. Es gibt kein Konto. Jedes Gerät hat seine eigenen Shops, seine eigene Liste und seinen eigenen Verlauf, und nichts wird zwischen ihnen synchronisiert."}}]}</script>
+<script>(function(){
+var id="G-G1RFFR5ENP",key='analytics-choice',choice=null,loaded=false,tz='';
+try{choice=localStorage.getItem(key)}catch(e){}
+try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||''}catch(e){}
+var asks=/^(Europe\/|Arctic\/|Atlantic\/(Azores|Canary|Faroe|Madeira|Reykjavik)|Asia\/(Nicosia|Famagusta))/.test(tz);
+if(choice===null&&navigator.globalPrivacyControl)choice='no';
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments)}
+function consent(v){return{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:v}}
+var here=consent('denied');here.region=["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IE","IT","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE","IS","LI","NO","GB","CH","GF","GP","MQ","YT","RE","MF"];
+gtag('consent','default',consent(choice==='no'?'denied':'granted'));
+gtag('consent','default',here);
+if(choice==='yes')gtag('consent','update',{analytics_storage:'granted'});
+function load(){
+if(loaded)return;loaded=true;
+gtag('js',new Date());
+gtag('config',id,{allow_google_signals:false,allow_ad_personalization_signals:false});
+var s=document.createElement('script');s.async=true;
+s.src='https://www.googletagmanager.com/gtag/js?id='+id;document.head.appendChild(s);
+}
+function forget(){
+document.cookie.split(';').forEach(function(c){
+var n=c.split('=')[0].trim();if(n.indexOf('_ga')!==0)return;
+['',location.hostname,'.'+location.hostname].forEach(function(d){
+document.cookie=n+'=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/'+(d?';domain='+d:'');
+});
+});
+}
+function choose(v){
+choice=v;try{localStorage.setItem(key,v)}catch(e){}
+gtag('consent','update',{analytics_storage:v==='yes'?'granted':'denied'});
+if(v==='yes')load();else forget();
+}
+if(choice==='yes'||(choice===null&&!asks))load();
+document.addEventListener('DOMContentLoaded',function(){
+var bar=document.getElementById('consent');if(!bar)return;
+function open(focus){bar.hidden=false;if(focus)bar.focus()}
+bar.addEventListener('click',function(e){
+var v=e.target.getAttribute&&e.target.getAttribute('data-choice');
+if(!v)return;choose(v);bar.hidden=true;
+if(location.hash==='#cookie-choices')history.replaceState(null,'',location.pathname+location.search);
+});
+document.addEventListener('click',function(e){
+var a=e.target.closest&&e.target.closest('a[href$="#cookie-choices"]');
+if(a){e.preventDefault();open(true)}
+});
+if(location.hash==='#cookie-choices')open(true);
+else if(choice===null&&asks)open(false);
+});
+})();</script>
+</head>
+<body class="">
+<a class="skip" href="#content">Zum Inhalt springen</a>
+
+<div class="night hero">
+<header class="top"><div class="wrap">
+  <a class="brand" href="/de/home/"><img src="/mark.svg" alt="" width="30" height="30">On Ice</a>
+  <a class="get get-m" href="https://apps.apple.com/app/id6805130834">App laden</a>
+  <nav aria-label="Seiten"><a href="/de/">Hilfe</a><a class="get" href="https://apps.apple.com/app/id6805130834">App laden</a></nav>
+</div></header>
+<main id="content">
+<div class="wrap hero-grid">
+  <div class="hero-copy">
+    <p class="kicker">Shopping-Blocker für iPhone und iPad</p>
+    <h1>Schluss mit Impulskäufen. <em>Erst mal drüber schlafen.</em></h1>
+    <p class="lede">On Ice hält dich kurz an, wenn du eine Shopping-App oder -Website öffnest. Notiere, was du wolltest, warte eine Nacht und entscheide dann.</p>
+    <div class="cta-row">
+      <a class="store" href="https://apps.apple.com/app/id6805130834"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.02-1.5-2.62-1.7-3.19-1.73-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.75 2.21 1.1-.04 1.52-.71 2.85-.71 1.33 0 1.71.71 2.88.69 1.19-.02 1.94-1.08 2.67-2.15.84-1.23 1.19-2.42 1.21-2.48-.03-.01-2.32-.89-2.34-3.54zM14.2 6.13c.61-.74 1.02-1.76.91-2.78-.88.04-1.94.59-2.57 1.32-.56.65-1.06 1.7-.93 2.7.98.08 1.98-.5 2.59-1.24z"/></svg><span><small>Laden im</small><b>App Store</b></span></a>
+      <p class="cta-note">Kostenlos starten. Kein Konto.<br>Keine Bankverbindung.</p>
+    </div>
+  </div>
+  <div class="hero-art demo">
+  <input type="checkbox" id="demo-pause" class="demo-pause">
+  <div class="phone dphone" role="img" aria-label="Eine animierte Zeichnung von On Ice. Jemand öffnet Amazon auf einem iPhone. On Ice legt eine Sperre darüber: Kurz Pause vor dem Kauf. Die Person tippt auf Notieren, gibt Leinenhemd für etwa 50 Euro ein und tippt auf 24 Std. warten, dann entscheiden. Ein Tag vergeht, und nichts wird gekauft. Dann fragt On Ice einmal: Willst du das Leinenhemd immer noch? Die Person tippt auf Will ich nicht mehr, und etwa 50 Euro wandern in ihre geschätzte Ersparnis."><div class="dscreen" aria-hidden="true">
+
+    <div class="sc s-home">
+      <div class="grid"><span class="ic"><i style="background:#3E7BD6"></i><em>Mail</em></span><span class="ic"><i style="background:#E9A23B"></i><em>Fotos</em></span><span class="ic"><i style="background:#58B37A"></i><em>Karten</em></span><span class="ic"><i style="background:#E5C558"></i><em>Notizen</em></span><span class="ic"><i style="background:#D95B6A"></i><em>Musik</em></span><span class="ic shop-ic"><i style="background:#1B2330"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h2.4l2.1 9.2h9.4L19 8H7.2" fill="none" stroke="#F2A93B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.4" cy="18" r="1.5" fill="#F2A93B"/><circle cx="16" cy="18" r="1.5" fill="#F2A93B"/></svg></i><em>Amazon</em></span><span class="ic"><i style="background:#2A2F3A"></i><em>Uhr</em></span><span class="ic"><i style="background:#5AA7DE"></i><em>Wetter</em></span><span class="ic"><i style="background:#E08A3C"></i><em>Bücher</em></span><span class="ic"><i style="background:#F2F2F4"></i><em>Health</em></span><span class="ic"><i style="background:#4B8FE0"></i><em>Dateien</em></span><span class="ic"><i style="background:#8A8F99"></i><em>Kamera</em></span></div>
+      <div class="dock"><i style="background:#58B37A"></i><i style="background:#3E7BD6"></i><i style="background:#E9E9EC"></i><i style="background:#D95B6A"></i></div>
+    </div>
+
+    <div class="sc s-shop">
+      <div class="shop-top"><b>Amazon</b><span></span></div>
+      <div class="shop-pic"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M30 8L13 17L0 38L15 49L24 40V92H76V40L85 49L100 38L87 17L70 8Q50 25 30 8Z" fill="#F7F3EA" stroke="#B9AD96" stroke-width="2.5" stroke-linejoin="round"/></svg></div>
+      <div class="shop-txt"><b>Leinenhemd</b><span>Auf Lager</span></div>
+      <div class="shop-buy">Jetzt kaufen</div>
+      <div class="shop-row"><i></i><i></i><i></i></div>
+      <div class="dim"></div>
+      <div class="shield-in"><div class="shield">
+        <span class="tag">In einem Shop, den du gewählt hast</span>
+        <img src="/mark.svg" alt="" width="44" height="44">
+        <b>Kurz Pause vor dem Kauf.</b>
+        <p>Willst du hier etwas? Notiere es in On Ice und entscheide später.</p>
+        <div class="btns"><span>Notieren</span><span>Doch nicht</span></div>
+      </div></div>
+    </div>
+
+    <div class="sc app s-note">
+      <span class="round">×</span>
+      <div class="dh">Was ist dir ins Auge gefallen?</div>
+      <div class="card note-card">
+        <small>Name</small>
+        <div class="field"><span class="typed"><i class="l0">L</i><i class="l1">e</i><i class="l2">i</i><i class="l3">n</i><i class="l4">e</i><i class="l5">n</i><i class="l6">h</i><i class="l7">e</i><i class="l8">m</i><i class="l9">d</i></span><u></u></div>
+        <small>Was kostet es ungefähr? <q>Optional</q></small>
+        <div class="chips four"><span>≈ 10 €</span><span>≈ 25 €</span><span class="pick">≈ 50 €</span><span>≈ 100 €</span></div>
+        <small>Wie fühlst du dich? <q>Optional</q></small>
+        <div class="chips"><span>Langeweile</span><span>Stress</span><span>Angebots-FOMO</span></div>
+      </div>
+      <div class="btn main" style="bottom:30px">Weiter</div>
+    </div>
+
+    <div class="sc app s-later">
+      <span class="round">‹</span>
+      <div class="dh">Später entscheiden?</div>
+      <div class="card later-card">
+        <b>Ein Leinenhemd</b>
+        <p class="est">≈ 50 € <q>geschätzt</q></p>
+        <dl>
+          <dt>Jetzt sofort</dt><dd>Es wird nichts gekauft. Deine Notiz kommt auf die Liste.</dd>
+          <dt>Morgen</dt><dd>On Ice fragt einmal: Willst du es noch?</dd>
+          <dt>Wenn du es loslässt</dt><dd>≈ 50 € wandert in deine geschätzte Ersparnis.</dd>
+        </dl>
+      </div>
+      <div class="btn main" style="bottom:140px">24 Std. warten, dann entscheiden</div>
+      <p class="now">Ich muss jetzt einkaufen</p>
+      <div class="chips mins"><span>1 Minute</span><span>5 Minuten</span><span>15 Minuten</span></div>
+      <p class="nvm">Doch nicht</p>
+    </div>
+
+    <div class="sc app s-ice">
+      <div class="ring">
+        <svg viewBox="0 0 180 180" aria-hidden="true"><circle cx="90" cy="90" r="80" fill="#0C1626" stroke="rgba(232,193,112,.2)" stroke-width="8"/><circle class="arc" cx="90" cy="90" r="80" fill="none" stroke="#E8C170" stroke-width="8" stroke-linecap="round" transform="rotate(-90 90 90)" stroke-dasharray="503" stroke-dashoffset="0"/></svg>
+        <div class="clock"><b class="k0">23:59:52</b><b class="k1">16:00:00</b><b class="k2">08:00:00</b><b class="k3">00:00:00</b></div>
+        <span>bis du entscheidest</span>
+      </div>
+      <div class="dh big">Es steht auf deiner Liste</div>
+      <p class="sub">Ein Leinenhemd</p>
+      <div class="card ice-card"><b>Morgen um 21:41</b><p>On Ice fragt einmal: Willst du es noch? Wenn ja, öffnet sich der Shop für dich.</p></div>
+      <div class="btn main" style="bottom:30px">Fertig</div>
+    </div>
+
+    <div class="sc app s-ask">
+      <span class="pill">Später</span>
+      <div class="dh left">Willst du das Leinenhemd immer noch?</div>
+      <p class="left sub">Du hast es gestern notiert · ≈ 50 € geschätzt</p>
+      <div class="btn go" style="bottom:96px">Will ich nicht mehr</div>
+      <div class="btn main" style="bottom:48px">Will ich immer noch</div>
+      <p class="either">Beide Antworten sind gut.</p>
+    </div>
+
+    <div class="sc s-saved">
+      <div class="dh left">Ersparnis</div>
+      <div class="seg"><span>Heute</span><span>Woche</span><span class="on">Monat</span></div>
+      <div class="card saved-card">
+        <small>Diesen Monat gespart</small>
+        <p class="sum"><b>≈ 50 €</b> <q>geschätzt</q></p>
+        <p>Aus 1 Artikel, den du diesen Monat losgelassen hast. Deine eigene Schätzung, nichts wird verfolgt.</p>
+      </div>
+      <div class="card let-go"><i>✓</i><div><b>Leinenhemd</b><span>Heute losgelassen · ≈ 50 € geschätzt</span></div></div>
+    </div>
+
+    <div class="sbar"><b>9:41</b><i></i></div>
+    <div class="tap"></div>
+  </div></div>
+  <p class="dcap" aria-hidden="true"><span class="c0">Du öffnest eine Shopping-App</span><span class="c1">On Ice schaltet sich zuerst ein</span><span class="c2">Du notierst, was du wolltest</span><span class="c3">Du entscheidest dich zu warten</span><span class="c4">24 Stunden vergehen. Nichts wird gekauft.</span><span class="c5">Morgen fragt On Ice einmal</span><span class="c6">Du lässt es los und behältst das Geld</span></p>
+  <label class="demo-ctl" for="demo-pause"><span class="p1">Demo anhalten</span><span class="p2">Demo abspielen</span></label>
+</div>
+</div>
+</div>
+
+<div class="paper">
+<section class="sec" id="how"><div class="wrap">
+  <h2>Drei Schritte. <em>Eine Nacht.</em></h2>
+  <ol class="how3">
+    <li>
+      <div class="n"><span>1 · Heute Abend</span><i></i></div>
+      <div class="pic art" role="img" aria-label="Eine Zeichnung einer Einkaufstasche mit Pausetaste und den Worten: Kurz Pause vor dem Kauf."><svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<circle cx="40" cy="48" r="1.6" fill="#E8ECFB" opacity="0.7"/><circle cx="96" cy="26" r="1.2" fill="#E8ECFB" opacity="0.5"/><circle cx="60" cy="150" r="1.3" fill="#E8ECFB" opacity="0.5"/><circle cx="322" cy="34" r="1.4" fill="#E8ECFB" opacity="0.6"/><circle cx="364" cy="96" r="1.5" fill="#E8ECFB" opacity="0.6"/><circle cx="344" cy="190" r="1.2" fill="#E8ECFB" opacity="0.45"/><circle cx="30" cy="226" r="1.2" fill="#E8ECFB" opacity="0.45"/>
+<path d="M350 31a13 13 0 1 0 12.3 20.2a10.7 10.7 0 0 1 -12.3 -20.2z" fill="#E8C170"/>
+<path d="M152 96V78a34 34 0 0 1 68 0V96" fill="none" stroke="#F3D99A" stroke-width="9" stroke-linecap="round"/>
+<path d="M108 92H264L278 226Q279 236 269 236H103Q93 236 94 226Z" fill="#E8C170"/>
+<path d="M108 92H264L266 112H106Z" fill="#D9AE55"/>
+<circle cx="152" cy="112" r="6" fill="#12152A"/><circle cx="220" cy="112" r="6" fill="#12152A"/>
+<circle cx="262" cy="190" r="56" fill="#12152A"/>
+<circle cx="262" cy="190" r="48" fill="#7B8CDE"/>
+<rect x="243" y="168" width="14" height="44" rx="4.5" fill="#fff"/><rect x="267" y="168" width="14" height="44" rx="4.5" fill="#fff"/>
+<rect x="84" y="258" width="232" height="42" rx="21" fill="#12152A" stroke="#E8ECFB" stroke-opacity=".35" stroke-width="1.5"/>
+<text x="200" y="285" text-anchor="middle" font-size="17.5" font-weight="600" fill="#F2F4F7">Kurz Pause vor dem Kauf.</text>
+</svg></div>
+      <h3>On Ice hält dich an</h3>
+      <p>Öffne eine Shopping-App oder -Website, und On Ice schaltet sich ein, bevor du kaufen kannst.</p>
+    </li>
+    <li>
+      <div class="n"><span>2 · Noch heute Abend</span><i></i></div>
+      <div class="pic art" role="img" aria-label="Eine Zeichnung eines Hemds, eingefroren in einem Eiswürfel. Darunter eine Linie vom Mond heute Nacht zur Sonne morgen, beschriftet mit 24 Stunden."><svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<circle cx="34" cy="40" r="1.5" fill="#E8ECFB" opacity="0.6"/><circle cx="84" cy="96" r="1.3" fill="#E8ECFB" opacity="0.5"/><circle cx="46" cy="170" r="1.2" fill="#E8ECFB" opacity="0.45"/><circle cx="352" cy="36" r="1.4" fill="#E8ECFB" opacity="0.6"/><circle cx="322" cy="112" r="1.3" fill="#E8ECFB" opacity="0.5"/><circle cx="370" cy="176" r="1.2" fill="#E8ECFB" opacity="0.45"/>
+<g transform="translate(200 118) scale(0.25) translate(-512 -538)">
+<polygon points="512,250 786,388 786,688 512,826 238,688 238,388" fill="#C7CFF2" stroke="#C7CFF2" stroke-width="64" stroke-linejoin="round"/>
+<polygon points="238,388 512,526 512,826 238,688" fill="#BCC6F0"/>
+<polygon points="512,526 786,388 786,688 512,826" fill="#93A1E4"/>
+<g transform="translate(404 560) rotate(-7 108 100) scale(2.16)"><path d="M30 8L13 17L0 38L15 49L24 40V92H76V40L85 49L100 38L87 17L70 8Q50 25 30 8Z" fill="#E8C170" stroke="#fff" stroke-width="6" stroke-linejoin="round"/></g>
+<polygon points="238,388 512,526 512,826 238,688" fill="#fff" opacity=".16"/>
+<polygon points="512,526 786,388 786,688 512,826" fill="#fff" opacity=".1"/>
+<polygon points="512,250 786,388 512,526 238,388" fill="#EEF1FD"/>
+<path d="M268 386L506 278" stroke="#fff" stroke-width="16" stroke-linecap="round"/>
+<circle cx="300" cy="610" r="10" fill="#fff" opacity=".6"/><circle cx="322" cy="572" r="6" fill="#fff" opacity=".5"/><circle cx="716" cy="500" r="7" fill="#fff" opacity=".45"/>
+</g>
+<path d="M92 252H308" stroke="#E8ECFB" stroke-opacity=".5" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="1 9"/>
+<path d="M52 235a15 15 0 1 0 14.2 23.2a12.3 12.3 0 0 1 -14.2 -23.2z" fill="#E8C170"/>
+<circle cx="344" cy="252" r="13" fill="#E8C170"/><path d="M363.0 252.0L370.0 252.0" stroke="#E8C170" stroke-width="3.4" stroke-linecap="round"/><path d="M357.4 265.4L362.4 270.4" stroke="#E8C170" stroke-width="3.4" stroke-linecap="round"/><path d="M344.0 271.0L344.0 278.0" stroke="#E8C170" stroke-width="3.4" stroke-linecap="round"/><path d="M330.6 265.4L325.6 270.4" stroke="#E8C170" stroke-width="3.4" stroke-linecap="round"/><path d="M325.0 252.0L318.0 252.0" stroke="#E8C170" stroke-width="3.4" stroke-linecap="round"/><path d="M330.6 238.6L325.6 233.6" stroke="#E8C170" stroke-width="3.4" stroke-linecap="round"/><path d="M344.0 233.0L344.0 226.0" stroke="#E8C170" stroke-width="3.4" stroke-linecap="round"/><path d="M357.4 238.6L362.4 233.6" stroke="#E8C170" stroke-width="3.4" stroke-linecap="round"/>
+<rect x="140" y="232" width="120" height="40" rx="20" fill="#12152A" stroke="#E8C170" stroke-width="2"/>
+<text x="200" y="258" text-anchor="middle" font-size="17.5" font-weight="600" fill="#E8C170">24 Stunden</text>
+<g font-size="13.5" font-weight="500" fill="#C9CFE6" text-anchor="middle">
+  <text x="58" y="300">Heute Nacht</text><text x="344" y="300">Morgen</text>
+</g>
+</svg></div>
+      <h3>Du wartest eine Nacht</h3>
+      <p>Schreib auf, was du wolltest. Es wartet 24 Stunden auf deiner Liste. Es wird nichts gekauft.</p>
+    </li>
+    <li>
+      <div class="n"><span>3 · Morgen</span><i></i></div>
+      <div class="pic art day" role="img" aria-label="Eine Zeichnung mit zwei Antworten. Will ich nicht mehr, mit einem Sparglas: Du behältst das Geld. Oder Will ich immer noch, mit einer Einkaufstasche: Der Shop öffnet sich."><svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<rect width="200" height="320" fill="#E9F4EC"/><rect x="200" width="200" height="320" fill="#E8ECFB"/>
+<path d="M200 0V320" stroke="#FFFDF8" stroke-width="4"/>
+<circle cx="200" cy="160" r="20" fill="#FFFDF8"/>
+<text x="200" y="165.5" text-anchor="middle" font-size="14" font-weight="600" fill="#565B70">oder</text>
+<g text-anchor="middle" font-weight="600">
+  <text x="98" y="50" font-size="16" fill="#22643E">Will ich nicht mehr</text>
+  <text x="302" y="50" font-size="16" fill="#35429A">Will ich immer noch</text>
+</g>
+<!-- a jar of what you did not spend -->
+<g transform="translate(46 84)">
+  <rect x="18" y="0" width="68" height="13" rx="5" fill="#2E7D4F"/>
+  <path d="M10 20H94Q104 20 104 31V98Q104 112 90 112H14Q0 112 0 98V31Q0 20 10 20Z" fill="#FFFDF8" stroke="#2E7D4F" stroke-width="3.4"/>
+  <ellipse cx="52" cy="92" rx="34" ry="9" fill="#7FC98F" stroke="#2E7D4F" stroke-width="2.4"/>
+  <ellipse cx="52" cy="80" rx="34" ry="9" fill="#7FC98F" stroke="#2E7D4F" stroke-width="2.4"/>
+  <ellipse cx="52" cy="68" rx="34" ry="9" fill="#7FC98F" stroke="#2E7D4F" stroke-width="2.4"/>
+  <ellipse cx="52" cy="56" rx="34" ry="9" fill="#A9DDB4" stroke="#2E7D4F" stroke-width="2.4"/>
+</g>
+<!-- the bag you went for -->
+<g transform="translate(254 78)">
+  <path d="M30 36V22a18 18 0 0 1 36 0V36" fill="none" stroke="#4352BA" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M6 32H90L84 118H12Z" fill="#FFFDF8" stroke="#4352BA" stroke-width="3.4" stroke-linejoin="round"/>
+  <path d="M32 74l11 11 21-24" fill="none" stroke="#4352BA" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M98 214V234M91 228l7 7 7-7" stroke="#2E7D4F"/><path d="M302 214V234M295 228l7 7 7-7" stroke="#4352BA"/>
+</g>
+<g text-anchor="middle" font-size="16" font-weight="600" fill="#171A2B">
+  <text x="98" y="266">Du behältst das Geld</text>
+  <text x="302" y="266">Der Shop öffnet sich</text>
+</g>
+</svg></div>
+      <h3>Du entscheidest</h3>
+      <p>Willst du es nicht mehr? Sein Preis wandert in deine geschätzte Ersparnis. Willst du es noch? Der Shop öffnet sich. Beide Antworten sind gut.</p>
+    </li>
+  </ol>
+  <p class="fine">Musst du wirklich jetzt etwas kaufen? Der Shop öffnet sich für 1, 5 oder 15 Minuten.</p>
+  <p class="after-steps"><a class="more" href="/how-it-works/">Die echten Bildschirme, Schritt für Schritt (auf Englisch)</a></p>
+</div></section>
+
+<section class="sec"><div class="wrap split">
+  <div>
+    <h2>Sieh, was du <em>nicht</em> ausgegeben hast.</h2>
+    <p class="intro">Alles, was du loslässt, kommt zu einer laufenden Summe dazu. Sie besteht aus Preisen, die du selbst eingegeben hast, und ist immer als geschätzt gekennzeichnet.</p>
+    <ul class="facts">
+      <li><b>Keine Bankverbindung</b><span>On Ice verbindet sich nie mit einem Konto und liest keine Transaktionen.</span></li>
+      <li><b>Kein Konto</b><span>Keine Registrierung, kein E-Mail-Feld.</span></li>
+      <li><b>Privat</b><span>Deine Liste bleibt auf deinem Gerät.</span></li>
+    </ul>
+    <p class="fine"><a href="/de/privacy/">So funktioniert der Datenschutz, ausführlich</a></p>
+  </div>
+  <div class="receipt" aria-label="Ein Beispielbeleg mit Dingen, die diesen Monat nicht gekauft wurden">
+    <div class="head">ON ICE</div>
+    <div class="sub">DINGE, DIE DU NICHT GEKAUFT HAST</div>
+    <div class="row"><span>Leinenhemd</span><i></i><span>≈ 45 €</span></div>
+    <div class="row"><span>Laufschuhe</span><i></i><span>≈ 135 €</span></div>
+    <hr>
+    <div class="row total"><span>DIESEN MONAT LOSGELASSEN</span><i></i><span>≈ 180 €</span></div>
+    <div class="row"><span></span><i style="border:0"></i><span class="est">geschätzt</span></div>
+    <div class="foot">Beispielzahlen. Jeder Betrag ist deine eigene Schätzung.</div>
+  </div>
+</div></section>
+
+<section class="sec" id="pricing"><div class="wrap">
+  <h2>Kostenlos starten. <em>Premium, wenn du mehr willst.</em></h2>
+  <div class="plans">
+    <div><h3>Kostenlos</h3><p class="price">Keine Kosten, keine ablaufende Testphase</p><ul>
+      <li>Eine Shopping-App und eine Website, gesperrt</li>
+      <li>Die 24-Stunden-Bedenkzeit und deine Liste</li>
+      <li>Deine geschätzte Ersparnis</li>
+    </ul></div>
+    <div><h3>Premium</h3><p class="price">Monatlich · Jährlich · Lebenslang · Familie</p><ul>
+      <li>Jeder Shop und jede Website, die du willst</li>
+      <li>Bedenkzeiten von 12, 24, 48 oder 72 Stunden</li>
+      <li>Tageslimits, Risikozeiten und strenger Modus</li>
+    </ul></div>
+  </div>
+  <p class="fine">Läuft ein Abo aus, verlierst du nichts von dem, was du aufgebaut hast. <a href="/pricing/">Pläne und Preise (auf Englisch)</a></p>
+</div></section>
+
+<section class="sec" id="faq"><div class="wrap">
+  <h2>Was die meisten zuerst fragen</h2>
+  <div class="faq"><details><summary>Sperrt mich On Ice aus meinen Shopping-Apps aus?</summary><div><p>Nein. Eine normale Sperre ist eine Pause, keine Mauer. Tippe auf <kbd>Notieren</kbd>, sag, was dir ins Auge gefallen ist, und <kbd>Ich muss jetzt einkaufen</kbd> öffnet den Shop für 1, 5 oder 15 Minuten. Ganz ohne Ausweg sind nur Dinge, die du selbst eingerichtet hast, etwa ein erreichtes Tageslimit, eine zeitgesteuerte Sperre oder eine feste Regel für einen Shop. Jede davon endet von selbst.</p></div></details><details><summary>Sperrt es Shopping-Websites oder nur Apps?</summary><div><p>Beides. Füge die App eines Shops und seine Website getrennt hinzu, dann ist beides gesperrt, die Website in Safari.</p></div></details><details><summary>Funktioniert es mit Amazon, Temu, Shein und den anderen?</summary><div><p>Du wählst die Apps in Apples eigener Bildschirmzeit-Auswahl und fügst Websites per Adresse hinzu. So funktioniert es mit genau den Shops, die dich verführen. On Ice erfährt nie die Namen der Apps, die du auswählst. Apple gibt stattdessen private Codes weiter.</p></div></details><details><summary>Sieht On Ice, was ich kaufe?</summary><div><p>Nein. On Ice hat keinen Zugriff auf deine Bank, deine Bestellungen, deinen Browserverlauf oder deine Karte. Es speichert nur seine eigenen Ereignisse: dass eine Sperre angezeigt wurde und was du gewählt hast. Diese bleiben auf deinem Gerät.</p></div></details><details><summary>Was passiert mit dem, was ich notiert habe?</summary><div><p>Es wartet 24 Stunden auf deiner Liste. Dann fragt On Ice einmal: Willst du es noch? Lässt du es los, wandert der Preis, den du geschätzt hast, in deine geschätzte Ersparnis. Willst du es noch, öffnet sich der Shop für dich. Beide Antworten sind gut.</p></div></details><details><summary>Ist On Ice kostenlos?</summary><div><p>Ja, und kostenlos ist ein funktionierendes Produkt, keine Demo: eine Shopping-App und eine Website gesperrt, die 24-Stunden-Bedenkzeit und deine Liste, deine geschätzte Ersparnis, die Atempause, drei Alternativen, das Tagebuch, ein tägliches Zeitziel fürs Shoppen und zeitgesteuerte Sperren.</p></div></details><details><summary>Welche Geräte brauche ich?</summary><div><p>Ein iPhone oder iPad mit iOS 17 oder neuer. Es gibt kein Konto. Jedes Gerät hat seine eigenen Shops, seine eigene Liste und seinen eigenen Verlauf, und nichts wird zwischen ihnen synchronisiert.</p></div></details></div>
+  <p class="fine">Noch etwas? <a href="/de/#faq">Die Hilfeseite</a> erklärt Einrichtung, Problemlösung und wie du uns erreichst.</p>
+</div></section>
+
+</div>
+
+<section class="night closing"><div class="wrap">
+  <h2>Leg deinen nächsten Impulskauf <em>auf Eis.</em></h2>
+  <div class="cta-row">
+    <a class="store" href="https://apps.apple.com/app/id6805130834"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.02-1.5-2.62-1.7-3.19-1.73-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.75 2.21 1.1-.04 1.52-.71 2.85-.71 1.33 0 1.71.71 2.88.69 1.19-.02 1.94-1.08 2.67-2.15.84-1.23 1.19-2.42 1.21-2.48-.03-.01-2.32-.89-2.34-3.54zM14.2 6.13c.61-.74 1.02-1.76.91-2.78-.88.04-1.94.59-2.57 1.32-.56.65-1.06 1.7-.93 2.7.98.08 1.98-.5 2.59-1.24z"/></svg><span><small>Laden im</small><b>App Store</b></span></a>
+    <p class="cta-note">iPhone und iPad, ab iOS 17.<br>Auf Deutsch und in sieben weiteren Sprachen.</p>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap">
+  <div class="who">
+    <a class="brand" href="/de/home/"><img src="/mark.svg" alt="" width="30" height="30">On Ice</a>
+    <p>Eine Nacht zwischen dir und dem Kaufen-Button. Von TOPSOL. Schreib an <a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a>, und ein Mensch antwortet.</p>
+  </div>
+  <div><p class="fh">Die App</p><ul>
+    <li><a href="https://apps.apple.com/app/id6805130834">Im App Store laden</a></li>
+  </ul></div>
+  <div><p class="fh">Hilfe und Rechtliches</p><ul>
+    <li><a href="/de/">Hilfe</a></li>
+    <li><a href="/de/privacy/">Datenschutz</a></li>
+    <li><a href="/de/terms/">Bedingungen</a></li>
+    <li><a href="/de/delete-data/">Deine Daten</a></li>
+    <li><a href="/#cookie-choices">Cookie-Einstellungen</a></li>
+  </ul></div>
+  <p class="legal">© 2026 On Ice · TOPSOL. Geldbeträge auf dieser Website sind Beispielschätzungen. On Ice verbindet sich mit keiner Bank und gibt keine Finanzberatung. Apple, iPhone, iPad, Safari und App Store sind Marken von Apple Inc. Amazon ist eine Marke von Amazon.com, Inc. oder verbundenen Unternehmen, und On Ice ist nicht mit Amazon verbunden. Diese Seite auf: <a href="/" lang="en" hreflang="en">English</a> · <a href="/es/home/" lang="es" hreflang="es">Español</a> · <a href="/ja/home/" lang="ja" hreflang="ja">日本語</a>. Hilfe in anderen Sprachen: <a href="/support/" lang="en" hreflang="en">English</a> · <a href="/es/" lang="es" hreflang="es">Español</a> · <a href="/fr/" lang="fr" hreflang="fr">Français</a> · <a href="/ja/" lang="ja" hreflang="ja">日本語</a> · <a href="/ko/" lang="ko" hreflang="ko">한국어</a> · <a href="/pt-BR/" lang="pt-BR" hreflang="pt-BR">Português (Brasil)</a> · <a href="/zh-Hans/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a></p>
+</div></footer>
+<div class="consent" id="consent" role="region" aria-label="Cookie-Einstellungen" tabindex="-1" hidden>
+  <p>Diese Website zählt Besuche mit Google Analytics. Ist ein Cookie dafür für dich in Ordnung? <a href="/de/privacy/#web">Was erfasst wird</a></p>
+  <div class="consent-btns"><button type="button" data-choice="no">Nein danke</button><button type="button" data-choice="yes">OK</button></div>
+</div>
+</body>
+</html>

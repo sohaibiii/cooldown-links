@@ -523,6 +523,11 @@
   <url>
     <loc>https://getonice.com/</loc>
     <lastmod>2026-11-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getonice.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://getonice.com/de/home/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getonice.com/es/home/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://getonice.com/ja/home/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getonice.com/"/>
   </url>
   <url>
     <loc>https://getonice.com/how-it-works/</loc>
@@ -575,5 +580,32 @@
   <url>
     <loc>https://getonice.com/guides/how-to-stop-emotional-spending/</loc>
     <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://getonice.com/de/home/</loc>
+    <lastmod>2026-11-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getonice.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://getonice.com/de/home/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getonice.com/es/home/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://getonice.com/ja/home/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getonice.com/"/>
+  </url>
+  <url>
+    <loc>https://getonice.com/es/home/</loc>
+    <lastmod>2026-11-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getonice.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://getonice.com/de/home/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getonice.com/es/home/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://getonice.com/ja/home/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getonice.com/"/>
+  </url>
+  <url>
+    <loc>https://getonice.com/ja/home/</loc>
+    <lastmod>2026-11-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getonice.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://getonice.com/de/home/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getonice.com/es/home/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://getonice.com/ja/home/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getonice.com/"/>
   </url>
 </urlset>

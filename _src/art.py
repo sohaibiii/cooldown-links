@@ -10,6 +10,8 @@ only on the realized save; the waiting item is amber.
 """
 import math
 
+from i18n import t
+
 SHIRT = "M30 8L13 17L0 38L15 49L24 40V92H76V40L85 49L100 38L87 17L70 8Q50 25 30 8Z"
 
 
@@ -60,7 +62,7 @@ def scene_pause():
 <circle cx="262" cy="190" r="48" fill="#7B8CDE"/>
 <rect x="243" y="168" width="14" height="44" rx="4.5" fill="#fff"/><rect x="267" y="168" width="14" height="44" rx="4.5" fill="#fff"/>
 <rect x="84" y="258" width="232" height="42" rx="21" fill="#12152A" stroke="#E8ECFB" stroke-opacity=".35" stroke-width="1.5"/>
-<text x="200" y="285" text-anchor="middle" font-size="17.5" font-weight="600" fill="#F2F4F7">Pause before you buy.</text>
+<text x="200" y="285" text-anchor="middle" font-size="17.5" font-weight="600" fill="#F2F4F7">{t("Pause before you buy.")}</text>
 </svg>'''
 
 
@@ -75,9 +77,9 @@ def scene_ice():
 {moon(52, 250, 15)}
 {sun(344, 252, 13)}
 <rect x="140" y="232" width="120" height="40" rx="20" fill="#12152A" stroke="#E8C170" stroke-width="2"/>
-<text x="200" y="258" text-anchor="middle" font-size="17.5" font-weight="600" fill="#E8C170">24 hours</text>
+<text x="200" y="258" text-anchor="middle" font-size="17.5" font-weight="600" fill="#E8C170">{t("24 hours")}</text>
 <g font-size="13.5" font-weight="500" fill="#C9CFE6" text-anchor="middle">
-  <text x="58" y="300">Tonight</text><text x="344" y="300">Tomorrow</text>
+  <text x="58" y="300">{t("Tonight")}</text><text x="344" y="300">{t("Tomorrow")}</text>
 </g>
 </svg>'''
 
@@ -88,10 +90,10 @@ def scene_decide():
 <rect width="200" height="320" fill="#E9F4EC"/><rect x="200" width="200" height="320" fill="#E8ECFB"/>
 <path d="M200 0V320" stroke="#FFFDF8" stroke-width="4"/>
 <circle cx="200" cy="160" r="20" fill="#FFFDF8"/>
-<text x="200" y="165.5" text-anchor="middle" font-size="14" font-weight="600" fill="#565B70">or</text>
+<text x="200" y="165.5" text-anchor="middle" font-size="14" font-weight="600" fill="#565B70">{t("or")}</text>
 <g text-anchor="middle" font-weight="600">
-  <text x="98" y="50" font-size="16" fill="#22643E">Don't want it anymore</text>
-  <text x="302" y="50" font-size="16" fill="#35429A">Still want it</text>
+  <text x="98" y="50" font-size="16" fill="#22643E">{t("Don't want it anymore")}</text>
+  <text x="302" y="50" font-size="16" fill="#35429A">{t("Still want it")}</text>
 </g>
 <!-- a jar of what you did not spend -->
 <g transform="translate(46 84)">
@@ -112,7 +114,7 @@ def scene_decide():
   <path d="M98 214V234M91 228l7 7 7-7" stroke="#2E7D4F"/><path d="M302 214V234M295 228l7 7 7-7" stroke="#4352BA"/>
 </g>
 <g text-anchor="middle" font-size="16" font-weight="600" fill="#171A2B">
-  <text x="98" y="266">You keep the money</text>
-  <text x="302" y="266">The shop opens</text>
+  <text x="98" y="266">{t("You keep the money")}</text>
+  <text x="302" y="266">{t("The shop opens")}</text>
 </g>
 </svg>'''
