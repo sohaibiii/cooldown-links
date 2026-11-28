@@ -126,7 +126,7 @@ def file_of(code, key):
 SUPPORT_CARDS = ["how", "requirements", "start", "money", "faq", "trouble", "contact"]
 PRIVACY_CARDS = [
     "summary", "collect", "device", "journal", "permissions", "screentime", "ai",
-    "purchases", "notifications", "third", "delete", "rights", "children", "changes",
+    "purchases", "notifications", "web", "third", "delete", "rights", "children", "changes",
     "contact",
 ]
 TERMS_CARDS = [
@@ -433,6 +433,7 @@ def context(code, prefix, C):
     ctx.update(
         BASE=BASE, L=prefix, APP=APP, COMPANY=COMPANY, EMAIL=EMAIL, MAIL=mail, YEAR=YEAR,
         DATE=C["ui.date"],
+        PDATE=C["ui.date.privacy"],
     )
     for key, label in C.items():
         if key.startswith("k."):

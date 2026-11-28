@@ -28,6 +28,7 @@ COPY = {
 "ui.store_soon": "Em breve na App Store",
 "ui.store_get": "Baixar na App Store",
 "ui.date": "22 de outubro de 2026",
+"ui.date.privacy": "28 de novembro de 2026",
 "ui.last_updated": "Última atualização: {DATE}",
 
 # Copiados do Localizable.xcstrings do app e dos rótulos do próprio iOS.
@@ -63,7 +64,7 @@ COPY = {
 "meta.about.title": "On Ice · Uma noite entre você e o botão de comprar",
 "meta.about.desc": "O On Ice bloqueia os apps e sites de compras que você escolher e pede que você durma com a ideia primeiro. Sem acesso ao banco, sem rastreamento de preços, sem links de afiliados.",
 "meta.privacy.title": "Política de Privacidade · On Ice",
-"meta.privacy.desc": "O On Ice não tem conta, nem conexão com o banco, nem análise de uso. O que fica no seu dispositivo, e exatamente o que o único recurso de IA opcional envia.",
+"meta.privacy.desc": "O app On Ice não tem conta, nem conexão com o banco, nem análise de uso. O que fica no seu dispositivo, e exatamente o que o único recurso de IA opcional envia.",
 "meta.terms.title": "Termos de Uso · On Ice",
 "meta.terms.desc": "Termos de Uso (EULA) do On Ice: o que o app é e o que não é, por que todo valor é uma estimativa, como o Premium e os planos familiares são cobrados, e o que o modo rigoroso pede de você.",
 "meta.data.title": "Apagar seus dados · On Ice",
@@ -252,15 +253,15 @@ COPY = {
 # --- privacy --------------------------------------------------------------
 "p.eyebrow": "Política de Privacidade",
 "p.h1": "Ele nunca vê o que você compra.",
-"p.sub": "Sem conta, sem conexão com o banco, sem histórico de compras, sem rastreamento de preços e sem análise de uso. O que o On Ice sabe fica no seu dispositivo — com um recurso opcional, desativado até você ativá-lo, cujo conteúdo exato está listado abaixo.",
-"p.meta": "Em vigor desde {DATE} · vale para o app On Ice para iPhone e iPad, e para este site",
+"p.sub": "No app: sem conta, sem conexão com o banco, sem histórico de compras, sem rastreamento de preços e sem análise de uso. O que o On Ice sabe fica no seu dispositivo — com um recurso opcional, desativado até você ativá-lo, cujo conteúdo exato está listado abaixo.",
+"p.meta": "Em vigor desde {PDATE} · vale para o app On Ice para iPhone e iPad, e para este site",
 
 "p.summary.h": "A versão curta",
 "p.summary.b": """
-<p class="lead"><strong>O On Ice não tem conta, nem análise de uso, nem publicidade, nem código de terceiros.</strong> Não há conexão com o banco, nem histórico de compras, nem rastreamento de preços, nem link de afiliado em lugar nenhum dele. Tudo o que ele sabe é gravado no seu iPhone ou iPad e fica lá.</p>
+<p class="lead"><strong>O app On Ice não tem conta, nem análise de uso, nem publicidade, nem código de terceiros.</strong> Não há conexão com o banco, nem histórico de compras, nem rastreamento de preços, nem link de afiliado em lugar nenhum dele. Tudo o que ele sabe é gravado no seu iPhone ou iPad e fica lá.</p>
 <div class="callout"><span class="tile">{eye-off}</span><div>Os apps que você escolhe no seletor do Tempo de Uso da Apple chegam ao On Ice como tokens opacos que só o seu dispositivo consegue interpretar. Não há nome de app, nem identificador, nem nada a enviar.</div></div>
 <p>Há exatamente uma exceção, e ela fica desativada até você ativá-la: a <strong>reflexão com IA</strong> opcional. Com o <strong>Apple Intelligence</strong> escrevendo, ela roda no seu dispositivo e nada sai. Com a <strong>OpenAI</strong> escrevendo, sai uma lista curta e fixa de informações — listada por completo <a href="#ai">abaixo</a>. O seu diário nunca sai do dispositivo, seja quem for que escreva.</p>
-<p>Esta política vale para o app On Ice para iPhone e iPad, publicado pela {COMPANY}, e para este site.</p>
+<p>Esta política vale para o app On Ice para iPhone e iPad, publicado pela {COMPANY}, e para este site. O site conta suas visitas, o que o app nunca faz: veja <a href="#web">Este site</a>.</p>
 """,
 
 "p.collect.h": "O que coletamos",
@@ -381,14 +382,23 @@ COPY = {
 <p><strong>Os widgets, as Atividades ao Vivo e os controles da Central de Controle</strong> leem um pequeno instantâneo no seu dispositivo: totais, contagens, a sua sequência, e os nomes e horários de até três dos itens cuja espera termina primeiro. Eles não têm acesso ao Tempo de Uso e nunca veem quais lojas você escolheu. <strong>O widget “No gelo” e a Atividade ao Vivo de um item mostram o nome do item</strong>, então, numa Tela Bloqueada, qualquer pessoa que esteja segurando o aparelho pode lê-lo. Os valores em dinheiro ficam ocultos ali enquanto o aparelho está bloqueado. Coloque-os onde você se sinta à vontade para vê-los.</p>
 """,
 
+"p.web.h": "Este site",
+"p.web.b": """
+<p>O app e este site são separados. Nada no app tem ligação com o que vem a seguir, e nada disso muda o que o app faz.</p>
+<p>As páginas públicas deste site (a página inicial, “How it works”, “Pricing” e os guias, todas em inglês) usam o <strong>Google Analytics</strong> para contar as visitas: quais páginas são lidas, em que parte do mundo os visitantes estão aproximadamente, que tipo de dispositivo e navegador usam, qual site os enviou e se tocaram no botão da App Store. O Google recebe isso com o seu endereço IP, que, segundo o Google, o Analytics não registra nem armazena, e com um identificador aleatório guardado em um cookie. Usamos isso só para ver quais páginas são úteis. Os recursos de publicidade, os indicadores do Google e a personalização de anúncios estão desativados, e nunca enviamos ao Google seu nome, seu e-mail nem nada do app.</p>
+<p>Se o relógio do seu dispositivo estiver em um fuso horário europeu, perguntamos primeiro, e o Google Analytics só é carregado se você escolher <strong>OK</strong>. Para os visitantes que o Google localiza no Espaço Econômico Europeu, no Reino Unido ou na Suíça, nenhum cookie de análise é gravado sem esse OK. Um navegador que envia o sinal Global Privacy Control é tratado como um não. Onde quer que você esteja, dá para mudar sua escolha a qualquer momento em <a href="{BASE}/#cookie-choices">Cookie choices</a>, e um não também remove o cookie. As outras páginas (Ajuda, Sobre, Privacidade, Termos e Seus dados) não carregam o Google Analytics em nenhum idioma.</p>
+<p>O site é entregue pela Cloudflare, que trata os dados técnicos de que qualquer servidor web precisa para enviar uma página a você, como o seu endereço IP.</p>
+""",
+
 "p.third.h": "Terceiros",
 "p.third.b": """
-<p>O On Ice não contém <strong>código de terceiros</strong>: nem análise de uso, nem publicidade, nem atribuição, nem relatório de falhas, nem SDKs. Só estas partes estão envolvidas, e só da forma descrita aqui:</p>
+<p>O app On Ice não contém <strong>código de terceiros</strong>: nem análise de uso, nem publicidade, nem atribuição, nem relatório de falhas, nem SDKs. Só estas partes estão envolvidas, e só da forma descrita aqui:</p>
 <ul>
   <li><strong>Apple</strong> — opera a App Store e o Compartilhamento Familiar, processa as compras, aplica o bloqueio do Tempo de Uso, roda o Apple Intelligence no seu dispositivo e fornece o App Attest. Se você aceitou compartilhar com os desenvolvedores, a Apple pode compartilhar conosco registros de falhas sob a política dela.</li>
   <li><strong>Cloudflare</strong> — hospeda o serviço de IA do On Ice. Quando a reflexão com IA usa a OpenAI, as solicitações passam por ela, e ela não guarda nada do conteúdo delas.</li>
   <li><strong>OpenAI</strong> — roda o modelo por trás das reflexões da OpenAI, só enquanto essa opção de escrita estiver em uso, e recebe só o que está listado <a href="#ai">acima</a>.</li>
   <li><strong>Google Cloud</strong> — tem esse papel apenas nas versões anteriores do app.</li>
+  <li><strong>Google Analytics</strong>: conta as visitas às páginas públicas deste site, como descrito em <a href="#web">Este site</a>. Não está no app.</li>
 </ul>
 <p>Não vendemos, alugamos nem compartilhamos dados pessoais com ninguém, e não compartilhamos nada com corretores de dados nem anunciantes. Um link que você dá a uma “coisa para fazer no lugar” abre o app ou o site que você escolheu, sob a política própria desse app ou site.</p>
 """,
@@ -411,7 +421,7 @@ COPY = {
 
 "p.changes.h": "Mudanças nesta política",
 "p.changes.b": """
-<p>Podemos atualizar esta política conforme o app muda. A data no topo muda quando isso acontece, e as mudanças relevantes são anotadas nas notas de versão do app. Esta versão descreve a escolha entre o Apple Intelligence e a OpenAI para a reflexão com IA, o diário, os passos de caminhada, as etapas de uso, os planos familiares, o iPad e mais sete idiomas. Continuar usando o On Ice depois de uma mudança significa que você aceita a política revisada.</p>
+<p>Podemos atualizar esta política conforme o app muda. A data no topo muda quando isso acontece, e as mudanças relevantes são anotadas nas notas de versão do app. Esta versão descreve a escolha entre o Apple Intelligence e a OpenAI para a reflexão com IA, o diário, os passos de caminhada, as etapas de uso, os planos familiares, o iPad e mais sete idiomas. Ela também descreve como este site conta as visitas. Continuar usando o On Ice depois de uma mudança significa que você aceita a política revisada.</p>
 <p>Esta política é publicada em oito idiomas. Se uma tradução e o inglês divergirem, vale o inglês.</p>
 """,
 

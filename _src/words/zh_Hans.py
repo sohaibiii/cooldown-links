@@ -24,6 +24,7 @@ COPY = {
 "ui.store_soon": "即将上架 App Store",
 "ui.store_get": "在 App Store 下载",
 "ui.date": "2026年10月22日",
+"ui.date.privacy": "2026年11月28日",
 "ui.last_updated": "最后更新：{DATE}",
 
 "k.settings": "设置",
@@ -58,7 +59,7 @@ COPY = {
 "meta.about.title": "On Ice · 在你和购买按钮之间，隔上一晚",
 "meta.about.desc": "On Ice 会屏蔽你选择的购物 App 和网站，请你先睡一觉再说。不访问银行，不追踪价格，没有联盟推广链接。",
 "meta.privacy.title": "隐私政策 · On Ice",
-"meta.privacy.desc": "On Ice 没有账号、不连接银行，也没有分析统计。哪些内容留在你的设备上，以及那唯一的可选 AI 功能究竟发送什么。",
+"meta.privacy.desc": "On Ice App 没有账号、不连接银行，也没有分析统计。哪些内容留在你的设备上，以及那唯一的可选 AI 功能究竟发送什么。",
 "meta.terms.title": "使用条款 · On Ice",
 "meta.terms.desc": "On Ice 使用条款（EULA）：这个 App 是什么、不是什么，为什么每个数字都是估计，Premium 和家庭方案如何计费，以及严格模式对你的要求。",
 "meta.data.title": "删除你的数据 · On Ice",
@@ -247,15 +248,15 @@ COPY = {
 # --- privacy --------------------------------------------------------------
 "p.eyebrow": "隐私政策",
 "p.h1": "它从来看不到你买了什么。",
-"p.sub": "没有账号、不关联银行、不读取购买记录、不追踪价格，也没有分析统计。On Ice 知道的一切都留在你的设备上——只有一个可选功能例外，它在你打开之前一直关着，它发送的具体内容列在下文。",
-"p.meta": "自 {DATE} 起生效 · 适用于 iPhone 和 iPad 版 On Ice App，以及本网站",
+"p.sub": "App 里没有账号、不关联银行、不读取购买记录、不追踪价格，也没有分析统计。On Ice 知道的一切都留在你的设备上——只有一个可选功能例外，它在你打开之前一直关着，它发送的具体内容列在下文。",
+"p.meta": "自 {PDATE} 起生效 · 适用于 iPhone 和 iPad 版 On Ice App，以及本网站",
 
 "p.summary.h": "简短版本",
 "p.summary.b": """
-<p class="lead"><strong>On Ice 没有账号、没有分析统计、没有广告，也没有任何第三方代码。</strong>它的任何地方都没有银行连接、购买记录、价格追踪或联盟推广链接。它知道的一切都写在你的 iPhone 或 iPad 上，并留在那里。</p>
+<p class="lead"><strong>On Ice App 没有账号、没有分析统计、没有广告，也没有任何第三方代码。</strong>它的任何地方都没有银行连接、购买记录、价格追踪或联盟推广链接。它知道的一切都写在你的 iPhone 或 iPad 上，并留在那里。</p>
 <div class="callout"><span class="tile">{eye-off}</span><div>你在 Apple 的“屏幕使用时间”选择器里挑选的 App，到达 On Ice 时是只有你的设备才能解读的不透明令牌。没有 App 名称，没有标识符，也没有可以发送的东西。</div></div>
 <p>只有一个例外，而且它在你打开之前一直关着：可选的 <strong>AI 反思</strong>。以 <strong>Apple Intelligence</strong> 作为撰写方时，它在你的设备上运行，什么都不会离开。以 <strong>OpenAI</strong> 作为撰写方时，会有一份简短、固定的信息离开设备——<a href="#ai">下文</a>完整列出。无论你选择哪个撰写方，你的日记都永远不会离开设备。</p>
-<p>本政策适用于由 {COMPANY} 发行的 iPhone 和 iPad 版 On Ice App，以及本网站。</p>
+<p>本政策适用于由 {COMPANY} 发行的 iPhone 和 iPad 版 On Ice App，以及本网站。网站会统计访问量，而 App 从不这样做：见<a href="#web">关于本网站</a>。</p>
 """,
 
 "p.collect.h": "我们收集什么",
@@ -376,14 +377,23 @@ COPY = {
 <p><strong>小组件、实时活动和控制中心控件</strong>读取的是你设备上的一份小快照：总额、计数、你的连续记录，以及最快到期的最多三件物品的名称和时间。它们没有“屏幕使用时间”权限，永远看不到你选择了哪些商店。<strong>“冷静中”小组件和物品的实时活动会显示物品名称</strong>，所以在锁定屏幕上，任何拿着这台设备的人都能读到。设备锁定时，那里的金额会被隐藏。请把它们放在你看着舒服的地方。</p>
 """,
 
+"p.web.h": "关于本网站",
+"p.web.b": """
+<p>App 和本网站是分开的。App 里的任何内容都与下文无关，下文所述也不会改变 App 的行为。</p>
+<p>本网站的公开页面（首页、“How it works”、“Pricing”和各篇指南，均为英文）使用 <strong>Google Analytics</strong> 统计访问量：哪些页面被阅读、访客大致在世界哪个地区、使用哪类设备和浏览器、从哪个网站来，以及是否点了 App Store 按钮。Google 会连同你的 IP 地址（据 Google 称，Analytics 不记录也不存储它）和保存在 Cookie 里的一个随机标识符一起收到这些信息。我们只用它来了解哪些页面有用。广告功能、Google 信号和广告个性化都已关闭，我们绝不会把你的姓名、邮箱地址或 App 里的任何内容发送给 Google。</p>
+<p>如果你设备的时钟设在欧洲时区，我们会先询问，只有你选择 <strong>OK</strong> 才会加载 Google Analytics。对于 Google 判定来自欧洲经济区、英国或瑞士的访客，没有这一同意也不会写入分析 Cookie。发送 Global Privacy Control 信号的浏览器按“否”处理。无论你在哪里，都可以随时通过 <a href="{BASE}/#cookie-choices">Cookie choices</a> 更改选择，选择“否”还会删除该 Cookie。其他页面（支持、关于、隐私、条款和你的数据）在任何语言下都不加载 Google Analytics。</p>
+<p>本网站由 Cloudflare 分发。Cloudflare 会处理任何网页服务器发送页面所需的技术信息，例如你的 IP 地址。</p>
+""",
+
 "p.third.h": "第三方",
 "p.third.b": """
-<p>On Ice 里<strong>没有第三方代码</strong>：没有分析统计、没有广告、没有归因、没有崩溃上报工具、没有 SDK。参与其中的只有以下各方，且仅以此处描述的方式参与：</p>
+<p>On Ice App 里<strong>没有第三方代码</strong>：没有分析统计、没有广告、没有归因、没有崩溃上报工具、没有 SDK。参与其中的只有以下各方，且仅以此处描述的方式参与：</p>
 <ul>
   <li><strong>Apple</strong>——运营 App Store 和家人共享，处理购买，执行“屏幕使用时间”屏蔽，在你的设备上运行 Apple Intelligence，并提供 App Attest。如果你已选择与开发者共享，Apple 可能会依据其自身政策向我们提供崩溃日志。</li>
   <li><strong>Cloudflare</strong>——托管 On Ice 的 AI 服务。当 AI 反思使用 OpenAI 时，请求会经过它，而它不保存其中任何内容。</li>
   <li><strong>OpenAI</strong>——运行 OpenAI 反思背后的模型，仅在该撰写方被使用期间，并且只接收<a href="#ai">上文</a>列出的内容。</li>
   <li><strong>Google Cloud</strong>——仅为早期版本的 App 承担这一角色。</li>
+  <li><strong>Google Analytics</strong>：如<a href="#web">关于本网站</a>所述，统计本网站公开页面的访问量。App 里没有它。</li>
 </ul>
 <p>我们不向任何人出售、出租或共享个人数据，也不与数据经纪商或广告商共享任何东西。你为某件“可以代替的事”设置的链接，会打开你选择的 App 或网站，适用该 App 或网站自己的政策。</p>
 """,
@@ -406,7 +416,7 @@ COPY = {
 
 "p.changes.h": "本政策的变更",
 "p.changes.b": """
-<p>随着 App 的变化，我们可能会更新本政策。更新时顶部的日期会随之变动，重要变更会写进 App 的版本说明。本版本描述了 AI 反思在 Apple Intelligence 和 OpenAI 之间的选择、日记、散步步数、使用档位、家庭方案、iPad，以及新增的七种语言。变更之后继续使用 On Ice，即表示你接受修订后的政策。</p>
+<p>随着 App 的变化，我们可能会更新本政策。更新时顶部的日期会随之变动，重要变更会写进 App 的版本说明。本版本描述了 AI 反思在 Apple Intelligence 和 OpenAI 之间的选择、日记、散步步数、使用档位、家庭方案、iPad，以及新增的七种语言。此外还说明了本网站如何统计访问量。变更之后继续使用 On Ice，即表示你接受修订后的政策。</p>
 <p>本政策以八种语言发布。如果译本与英文版本有出入，以英文版本为准。</p>
 """,
 
