@@ -28,6 +28,7 @@ COPY = {
 "ui.store_soon": "Bald im App Store",
 "ui.store_get": "Im App Store laden",
 "ui.date": "22. Oktober 2026",
+"ui.date.privacy": "28. November 2026",
 "ui.last_updated": "Zuletzt aktualisiert: {DATE}",
 
 # Copied from the app's Localizable.xcstrings and iOS's own German labels.
@@ -58,17 +59,17 @@ COPY = {
 "k.remove": "Entfernen",
 "k.follow_ups": "Nachfragen",
 
-"meta.support.title": "On Ice — Hilfe",
+"meta.support.title": "On Ice · Hilfe",
 "meta.support.desc": "Offizielle Hilfe zu On Ice, der App für iPhone und iPad, die eine Nacht zwischen dich und den Kauf-Button legt. Wie es funktioniert, Voraussetzungen, FAQ und Kontakt.",
-"meta.about.title": "On Ice — Eine Nacht zwischen dir und dem Kauf-Button",
+"meta.about.title": "On Ice · Eine Nacht zwischen dir und dem Kauf-Button",
 "meta.about.desc": "On Ice sperrt die Shopping-Apps und Websites, die du auswählst, und bittet dich, erst eine Nacht darüber zu schlafen. Kein Bankzugriff, keine Preisverfolgung, keine Affiliate-Links.",
-"meta.privacy.title": "Datenschutzerklärung — On Ice",
-"meta.privacy.desc": "On Ice hat kein Konto, keine Bankverbindung und keine Analyse. Was auf deinem Gerät bleibt – und genau, was die eine optionale KI-Funktion sendet.",
-"meta.terms.title": "Nutzungsbedingungen — On Ice",
+"meta.privacy.title": "Datenschutzerklärung · On Ice",
+"meta.privacy.desc": "Die App On Ice hat kein Konto, keine Bankverbindung und keine Analyse. Was auf deinem Gerät bleibt – und genau, was die eine optionale KI-Funktion sendet.",
+"meta.terms.title": "Nutzungsbedingungen · On Ice",
 "meta.terms.desc": "Nutzungsbedingungen (EULA) für On Ice: was die App ist und was nicht, warum jeder Betrag eine Schätzung ist, wie Premium und Familienpläne abgerechnet werden und worauf dich der strenge Modus festlegt.",
-"meta.data.title": "Deine Daten löschen — On Ice",
+"meta.data.title": "Deine Daten löschen · On Ice",
 "meta.data.desc": "Wie du entfernst, was On Ice speichert – alles davon auf deinem Gerät – und was mit deinem Abo passiert.",
-"meta.nf.title": "Nicht gefunden — On Ice",
+"meta.nf.title": "Nicht gefunden · On Ice",
 "meta.nf.desc": "Seite nicht gefunden.",
 
 # --- support --------------------------------------------------------------
@@ -252,15 +253,15 @@ COPY = {
 # --- privacy --------------------------------------------------------------
 "p.eyebrow": "Datenschutzerklärung",
 "p.h1": "Es sieht nie, was du kaufst.",
-"p.sub": "Kein Konto, keine Bankverbindung, kein Kaufverlauf, keine Preisverfolgung und keine Analyse. Was On Ice weiß, bleibt auf deinem Gerät – mit einer optionalen Funktion, die aus ist, bis du sie einschaltest, und deren genauer Inhalt unten aufgeführt ist.",
-"p.meta": "Gültig ab {DATE} · gilt für die App On Ice für iPhone und iPad und für diese Website",
+"p.sub": "In der App: kein Konto, keine Bankverbindung, kein Kaufverlauf, keine Preisverfolgung und keine Analyse. Was On Ice weiß, bleibt auf deinem Gerät – mit einer optionalen Funktion, die aus ist, bis du sie einschaltest, und deren genauer Inhalt unten aufgeführt ist.",
+"p.meta": "Gültig ab {PDATE} · gilt für die App On Ice für iPhone und iPad und für diese Website",
 
 "p.summary.h": "Die kurze Fassung",
 "p.summary.b": """
-<p class="lead"><strong>On Ice hat kein Konto, keine Analyse, keine Werbung und keinen fremden Code.</strong> Es gibt darin nirgends eine Bankverbindung, einen Kaufverlauf, eine Preisverfolgung oder einen Affiliate-Link. Alles, was es weiß, wird auf dein iPhone oder iPad geschrieben und bleibt dort.</p>
+<p class="lead"><strong>Die App On Ice hat kein Konto, keine Analyse, keine Werbung und keinen fremden Code.</strong> Es gibt darin nirgends eine Bankverbindung, einen Kaufverlauf, eine Preisverfolgung oder einen Affiliate-Link. Alles, was es weiß, wird auf dein iPhone oder iPad geschrieben und bleibt dort.</p>
 <div class="callout"><span class="tile">{eye-off}</span><div>Die Apps, die du in Apples Bildschirmzeit-Auswahl auswählst, erreichen On Ice als undurchsichtige Tokens, die nur dein Gerät deuten kann. Es gibt keinen App-Namen, keine Kennung und nichts zu senden.</div></div>
 <p>Es gibt genau eine Ausnahme, und sie ist aus, bis du sie einschaltest: die optionale <strong>KI-Reflexion</strong>. Mit <strong>Apple Intelligence</strong> als Verfasser läuft sie auf deinem Gerät, und nichts geht hinaus. Mit <strong>OpenAI</strong> als Verfasser geht eine kurze, feste Liste von Angaben hinaus – vollständig aufgeführt <a href="#ai">unten</a>. Dein Tagebuch verlässt das Gerät nie, egal welchen Verfasser du wählst.</p>
-<p>Diese Erklärung gilt für die App On Ice für iPhone und iPad, herausgegeben von {COMPANY}, und für diese Website.</p>
+<p>Diese Erklärung gilt für die App On Ice für iPhone und iPad, herausgegeben von {COMPANY}, und für diese Website. Die Website zählt ihre Besucher, was die App nie tut: siehe <a href="#web">Diese Website</a>.</p>
 """,
 
 "p.collect.h": "Was wir erfassen",
@@ -381,14 +382,23 @@ COPY = {
 <p><strong>Widgets, Live-Aktivitäten und Steuerelemente im Kontrollzentrum</strong> lesen eine kleine Momentaufnahme auf deinem Gerät: Summen, Anzahlen, deine Serie sowie die Namen und Zeiten von bis zu drei der als Nächstes fälligen Artikel. Sie haben keinen Bildschirmzeit-Zugriff und sehen nie, welche Shops du ausgewählt hast. <strong>Das Widget „Auf Eis“ und die Live-Aktivität eines Artikels zeigen den Namen des Artikels</strong>, sodass ihn auf einem Sperrbildschirm jeder lesen kann, der das Gerät in der Hand hält. Geldbeträge sind dort ausgeblendet, solange das Gerät gesperrt ist. Platziere sie dort, wo es dir recht ist, sie zu sehen.</p>
 """,
 
+"p.web.h": "Diese Website",
+"p.web.b": """
+<p>Die App und diese Website sind getrennt. Nichts in der App hängt mit dem Folgenden zusammen, und nichts davon ändert, was die App tut.</p>
+<p>Die öffentlichen Seiten dieser Website (die Startseite, „How it works“, „Pricing“ und die Ratgeber, alle auf Englisch) nutzen <strong>Google Analytics</strong>, um Besuche zu zählen: welche Seiten gelesen werden, ungefähr wo auf der Welt die Besucher sind, welche Art von Gerät und Browser sie nutzen, von welcher Website sie kommen und ob sie auf den App-Store-Button getippt haben. Google erhält das zusammen mit deiner IP-Adresse, die Analytics nach Angaben von Google weder protokolliert noch speichert, und mit einer zufälligen Kennung, die in einem Cookie liegt. Wir nutzen das nur, um zu sehen, welche Seiten nützlich sind. Werbefunktionen, Google-Signale und personalisierte Werbung sind ausgeschaltet, und wir senden Google nie deinen Namen, deine E-Mail-Adresse oder irgendetwas aus der App.</p>
+<p>Wenn die Uhr deines Geräts auf eine europäische Zeitzone eingestellt ist, fragen wir zuerst, und Google Analytics wird nur geladen, wenn du <strong>OK</strong> wählst. Bei Besuchern, die Google dem Europäischen Wirtschaftsraum, dem Vereinigten Königreich oder der Schweiz zuordnet, wird ohne dieses OK ebenfalls kein Analyse-Cookie gesetzt. Ein Browser, der das Signal „Global Privacy Control“ sendet, gilt als Nein. Wo immer du bist, kannst du deine Wahl jederzeit über <a href="{BASE}/#cookie-choices">Cookie choices</a> ändern, und ein Nein entfernt auch das Cookie. Die übrigen Seiten (Hilfe, Über die App, Datenschutz, Nutzungsbedingungen und Deine Daten) laden Google Analytics in keiner Sprache.</p>
+<p>Die Website wird von Cloudflare ausgeliefert. Cloudflare verarbeitet dabei die technischen Angaben, die jeder Webserver braucht, um dir eine Seite zu senden, etwa deine IP-Adresse.</p>
+""",
+
 "p.third.h": "Dritte",
 "p.third.b": """
-<p>On Ice enthält <strong>keinen fremden Code</strong>: keine Analyse, keine Werbung, keine Attribution, keinen Absturzbericht, keine SDKs. Nur diese Parteien sind beteiligt, und nur so, wie hier beschrieben:</p>
+<p>Die App On Ice enthält <strong>keinen fremden Code</strong>: keine Analyse, keine Werbung, keine Attribution, keinen Absturzbericht, keine SDKs. Nur diese Parteien sind beteiligt, und nur so, wie hier beschrieben:</p>
 <ul>
   <li><strong>Apple</strong> – betreibt den App Store und die Familienfreigabe, wickelt Käufe ab, setzt die Bildschirmzeit-Sperre durch, führt Apple Intelligence auf deinem Gerät aus und stellt App Attest bereit. Wenn du dem Teilen mit Entwicklern zugestimmt hast, kann Apple uns nach seiner eigenen Richtlinie Absturzprotokolle weitergeben.</li>
   <li><strong>Cloudflare</strong> – hostet den KI-Dienst von On Ice. Wenn die KI-Reflexion OpenAI nutzt, laufen Anfragen durch ihn, und er speichert nichts von ihrem Inhalt.</li>
   <li><strong>OpenAI</strong> – betreibt das Modell hinter den OpenAI-Reflexionen, nur solange dieser Verfasser genutzt wird, und bekommt nur, was <a href="#ai">oben</a> aufgeführt ist.</li>
   <li><strong>Google Cloud</strong> – übernimmt diese Rolle nur für frühere Versionen der App.</li>
+  <li><strong>Google Analytics</strong>: zählt Besuche auf den öffentlichen Seiten dieser Website, wie unter <a href="#web">Diese Website</a> beschrieben. In der App ist es nicht enthalten.</li>
 </ul>
 <p>Wir verkaufen, vermieten oder teilen personenbezogene Daten mit niemandem, und wir teilen nichts mit Datenhändlern oder Werbetreibenden. Ein Link, den du einer „Alternative“ gibst, öffnet die App oder Website, die du gewählt hast, nach deren eigener Richtlinie.</p>
 """,
@@ -411,7 +421,7 @@ COPY = {
 
 "p.changes.h": "Änderungen an dieser Erklärung",
 "p.changes.b": """
-<p>Wir können diese Erklärung aktualisieren, wenn sich die App ändert. Das Datum oben ändert sich dann mit, und wesentliche Änderungen werden in den Versionshinweisen der App vermerkt. Diese Fassung beschreibt die Wahl zwischen Apple Intelligence und OpenAI für die KI-Reflexion, das Tagebuch, Schritte beim Spazierengehen, Nutzungsstufen, Familienpläne, das iPad und sieben weitere Sprachen. Wenn du On Ice nach einer Änderung weiter nutzt, nimmst du die geänderte Erklärung an.</p>
+<p>Wir können diese Erklärung aktualisieren, wenn sich die App ändert. Das Datum oben ändert sich dann mit, und wesentliche Änderungen werden in den Versionshinweisen der App vermerkt. Diese Fassung beschreibt die Wahl zwischen Apple Intelligence und OpenAI für die KI-Reflexion, das Tagebuch, Schritte beim Spazierengehen, Nutzungsstufen, Familienpläne, das iPad und sieben weitere Sprachen. Sie beschreibt außerdem, wie diese Website Besuche zählt. Wenn du On Ice nach einer Änderung weiter nutzt, nimmst du die geänderte Erklärung an.</p>
 <p>Diese Erklärung wird in acht Sprachen veröffentlicht. Wenn eine Übersetzung und die englische Fassung voneinander abweichen, gilt die englische Fassung.</p>
 """,
 

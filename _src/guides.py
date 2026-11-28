@@ -20,7 +20,7 @@ GUIDES = [
         "title": "How to block Amazon on iPhone (the app and Safari)",
         "seo_title": "How to Block Amazon on iPhone: App and Safari (3 Ways)",
         "description": "Three ways to block Amazon on an iPhone, from a Screen Time limit to a full block of "
-                       "amazon.com in Safari, with the exact steps and where each one stops working.",
+                       "amazon.com in Safari, with exact steps and where each one stops working.",
         "blurb": "Three ways, from a soft limit to a full block, and the one tap that undoes most of them.",
         "standfirst": "Amazon lives in two places on your phone: the app, and amazon.com in Safari. Block one and "
                       "the other is still a tap away. Here are three ways to cover both, from lightest to firmest.",
@@ -86,10 +86,9 @@ GUIDES = [
         "topic": "Blocking shops",
         "minutes": 5,
         "title": "How to block shopping websites on iPhone",
-        "seo_title": "How to Block Shopping Websites on iPhone (Safari and Screen Time)",
-        "description": "How to block shopping websites in Safari on an iPhone using Screen Time: the Never Allow "
-                       "list, website time limits, their side effects, and a softer option that still lets you buy "
-                       "what you need.",
+        "seo_title": "How to Block Shopping Websites on iPhone in Safari",
+        "description": "How to block shopping websites in Safari on an iPhone with Screen Time: the Never Allow "
+                       "list, website time limits, and a softer option that still lets you buy.",
         "blurb": "The Never Allow list, website time limits, and a softer option for sites you still need.",
         "standfirst": "Deleting a shopping app doesn't do much if the website opens in Safari in two taps. Your "
                       "iPhone can block sites by address. Here is how, and what each method costs you.",
@@ -138,9 +137,9 @@ GUIDES = [
         "topic": "Habits",
         "minutes": 5,
         "title": "The 24 hour rule for shopping: how to actually use it",
-        "seo_title": "The 24 Hour Rule for Shopping: Does It Work, and How to Use It",
+        "seo_title": "The 24 Hour Rule for Shopping: Does It Work? How to Use It",
         "description": "The 24 hour rule means waiting a day before any unplanned purchase. Why it works, how to "
-                       "do it with nothing but the Notes app, and the three places it usually breaks.",
+                       "do it with just the Notes app, and where it usually breaks.",
         "blurb": "Why waiting one night works, how to do it with the Notes app, and where it usually breaks.",
         "standfirst": "The rule is one sentence long: if you didn't plan to buy it, wait a day. It is the most "
                       "reliable trick there is for impulse buying, and almost nobody manages to keep it up. "
