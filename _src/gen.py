@@ -22,10 +22,12 @@ Run `python3 _src/check.py` after touching a words file: it holds the eight
 catalogues to the same key set and the same links, which is the half of a
 translation that no reader of that language will ever check for us.
 """
+import datetime
+import html
 import importlib
 import os
+import subprocess
 import sys
-import html
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(HERE)
@@ -50,6 +52,10 @@ YEAR = "2026"
 # button renders as a quiet "coming soon" label rather than a dead link.
 APP_STORE_ID = "6805130834"
 APP_STORE_URL = "https://apps.apple.com/app/id" + APP_STORE_ID
+
+# What every indexable page tells a search engine: index it, and feel free to
+# show a large image and a full snippet. The 404 page says noindex instead.
+ROBOTS = "index,follow,max-image-preview:large,max-snippet:-1"
 
 # The eight languages On Ice ships in, in the order the app's own picker shows
 # them (Core/Localization/AppLanguage.swift). The directory is spelled exactly as
@@ -143,6 +149,19 @@ ABOUT_FEATURES = [
 ]
 
 E = lambda s: html.escape(s, quote=True)
+
+# The display font, served from this site. It used to come from Google Fonts,
+# which cost every visit a blocking request to another company's server.
+FONT_FACE = (
+    '@font-face{font-family:"Nunito";font-style:normal;font-weight:400 800;font-display:swap;'
+    f'src:url("{BASE}/assets/fonts/nunito-latin-ext-wght-normal.woff2") format("woff2");'
+    'unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,'
+    'U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}'
+    '@font-face{font-family:"Nunito";font-style:normal;font-weight:400 800;font-display:swap;'
+    f'src:url("{BASE}/assets/fonts/nunito-latin-wght-normal.woff2") format("woff2");'
+    'unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,'
+    'U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}'
+)
 CUR = ' aria-current="page"'
 
 # ---------------------------------------------------------------------------
@@ -436,7 +455,7 @@ def hero(eyebrow, h1, sub, ctas="", meta=""):
     )
 
 
-def page(code, prefix, key, title, description, hero_html, body, toc=None, canonical=""):
+def page(code, prefix, key, title, description, hero_html, body, toc=None, canonical="", robots=ROBOTS):
     """One rendered page, in one language."""
     C = copy_for(code)
     fmt = lambda k: C[k].format(**context(code, prefix, C))
@@ -476,7 +495,8 @@ def page(code, prefix, key, title, description, hero_html, body, toc=None, canon
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{E(description)}">
-<meta name="robots" content="index,follow">
+<meta name="robots" content="{robots}">
+<meta name="apple-itunes-app" content="app-id={APP_STORE_ID}">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F5F6FA">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0F1214">
@@ -485,15 +505,18 @@ def page(code, prefix, key, title, description, hero_html, body, toc=None, canon
 <meta property="og:type" content="website">
 <meta property="og:locale" content="{HTML_LANG[code].replace('-', '_')}">
 <meta property="og:url" content="{E(SITE + prefix + canonical)}">
+<meta property="og:site_name" content="{APP}">
+<meta property="og:image" content="{SITE}/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="{E(SITE + prefix + canonical)}">
 {alternates}
 <link rel="icon" href="{BASE}/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="{BASE}/apple-touch-icon.png">
 <title>{E(title)}</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap">
-<style>{CSS}</style>
+<link rel="preload" href="{BASE}/assets/fonts/nunito-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>{FONT_FACE}{CSS}</style>
 </head>
 <body>
 <a class="skip" href="#content">{fmt("ui.skip")}</a>
@@ -602,7 +625,20 @@ def render_404():
     hero_html = hero(fmt("nf.eyebrow"), fmt("nf.h1"), fmt("nf.sub"),
                      f'<a class="btn primary" href="{BASE}/">{fmt("nf.cta")}</a>')
     return page("en", "", "404", fmt("meta.nf.title"), fmt("meta.nf.desc"),
-                hero_html, body, None, "/404.html")
+                hero_html, body, None, "/404.html", robots="noindex,follow")
+
+
+def lastmod(loc):
+    """The day a page last really changed: its last commit, or today if it differs from that.
+
+    A sitemap date that moves on every build teaches a search engine to ignore
+    it, so this asks git instead of the clock.
+    """
+    rel = loc.lstrip("/") + ("index.html" if loc.endswith("/") else "")
+    git = lambda *a: subprocess.run(["git", "-C", OUT, *a], capture_output=True, text=True)
+    changed = git("status", "--porcelain", "--", rel).stdout.strip()
+    day = "" if changed else git("log", "-1", "--format=%cs", "--", rel).stdout.strip()
+    return day or datetime.date.today().isoformat()
 
 
 def sitemap(extra=()):
@@ -612,6 +648,9 @@ def sitemap(extra=()):
     privacy policy as eight competing pages rather than one page in eight
     languages, and picks a winner on its own.
     """
+    def entry(loc, alts=""):
+        return f"  <url>\n    <loc>{SITE + loc}</loc>\n    <lastmod>{lastmod(loc)}</lastmod>{alts}\n  </url>"
+
     urls = []
     for key in NAV_ORDER:
         alts = "".join(
@@ -619,9 +658,9 @@ def sitemap(extra=()):
             for c, p in LANGUAGES
         ) + f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{SITE + path_of("en", key)}"/>'
         for c, p in LANGUAGES:
-            urls.append(f"  <url>\n    <loc>{SITE + p + path_of(c, key)}</loc>{alts}\n  </url>")
+            urls.append(entry(p + path_of(c, key), alts))
     for loc in extra:
-        urls.append(f"  <url>\n    <loc>{SITE + loc}</loc>\n  </url>")
+        urls.append(entry(loc))
     return (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'
@@ -629,6 +668,27 @@ def sitemap(extra=()):
         + "\n".join(urls)
         + "\n</urlset>\n"
     )
+
+
+# Cloudflare reads this file; it is not served. Fonts never change under the
+# same name and the stylesheet's address carries a hash of its contents, so both
+# can be kept for a year. The last rule keeps the *.workers.dev copies of the
+# site (the test address and every branch preview) out of search results.
+HEADERS = """/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/site.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/img/*
+  Cache-Control: public, max-age=2592000
+
+/assets/og.png
+  Cache-Control: public, max-age=604800
+
+https://:version.:subdomain.workers.dev/*
+  X-Robots-Tag: noindex
+"""
 
 
 def write(rel, content):
@@ -659,3 +719,4 @@ if __name__ == "__main__":
         write("CNAME", DOMAIN + "\n")
     write("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {SITE}/sitemap.xml\n")
     write(".nojekyll", "")
+    write("_headers", HEADERS)

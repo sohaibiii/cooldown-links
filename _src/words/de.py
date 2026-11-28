@@ -58,17 +58,17 @@ COPY = {
 "k.remove": "Entfernen",
 "k.follow_ups": "Nachfragen",
 
-"meta.support.title": "On Ice — Hilfe",
+"meta.support.title": "On Ice · Hilfe",
 "meta.support.desc": "Offizielle Hilfe zu On Ice, der App für iPhone und iPad, die eine Nacht zwischen dich und den Kauf-Button legt. Wie es funktioniert, Voraussetzungen, FAQ und Kontakt.",
-"meta.about.title": "On Ice — Eine Nacht zwischen dir und dem Kauf-Button",
+"meta.about.title": "On Ice · Eine Nacht zwischen dir und dem Kauf-Button",
 "meta.about.desc": "On Ice sperrt die Shopping-Apps und Websites, die du auswählst, und bittet dich, erst eine Nacht darüber zu schlafen. Kein Bankzugriff, keine Preisverfolgung, keine Affiliate-Links.",
-"meta.privacy.title": "Datenschutzerklärung — On Ice",
+"meta.privacy.title": "Datenschutzerklärung · On Ice",
 "meta.privacy.desc": "On Ice hat kein Konto, keine Bankverbindung und keine Analyse. Was auf deinem Gerät bleibt – und genau, was die eine optionale KI-Funktion sendet.",
-"meta.terms.title": "Nutzungsbedingungen — On Ice",
+"meta.terms.title": "Nutzungsbedingungen · On Ice",
 "meta.terms.desc": "Nutzungsbedingungen (EULA) für On Ice: was die App ist und was nicht, warum jeder Betrag eine Schätzung ist, wie Premium und Familienpläne abgerechnet werden und worauf dich der strenge Modus festlegt.",
-"meta.data.title": "Deine Daten löschen — On Ice",
+"meta.data.title": "Deine Daten löschen · On Ice",
 "meta.data.desc": "Wie du entfernst, was On Ice speichert – alles davon auf deinem Gerät – und was mit deinem Abo passiert.",
-"meta.nf.title": "Nicht gefunden — On Ice",
+"meta.nf.title": "Nicht gefunden · On Ice",
 "meta.nf.desc": "Seite nicht gefunden.",
 
 # --- support --------------------------------------------------------------

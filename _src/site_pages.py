@@ -11,6 +11,7 @@ Rules these pages keep, same as the app (CLAUDE.md in the app repo):
   * only features the app has, named the way its screens name them;
   * no long dashes in copy, and the name "Cooldown" never reaches a reader.
 """
+import hashlib
 import json
 import os
 import shutil
@@ -31,6 +32,23 @@ PROVIDER_TOKEN = None
 
 UPDATED = "27 November 2026"
 UPDATED_ISO = "2026-11-27"
+
+# The stylesheet is cached for a year (see HEADERS in gen.py), so its address
+# carries a hash of its contents: change the file and every page asks for a new one.
+with open(os.path.join(ROOT, "assets", "site.css"), "rb") as _f:
+    CSS_VERSION = hashlib.sha256(_f.read()).hexdigest()[:10]
+
+# Who publishes the site, in the words search engines read.
+ORG = {"@context": "https://schema.org", "@type": "Organization", "name": COMPANY, "url": SITE + "/",
+       "logo": SITE + "/apple-touch-icon.png", "email": EMAIL}
+
+
+def crumbs(*trail):
+    """A breadcrumb trail from the home page: crumbs(("Guides", "/guides/"), ...)."""
+    items = [("Home", "/")] + list(trail)
+    return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": i, "name": name, "item": SITE + path}
+        for i, (name, path) in enumerate(items, 1)]}
 
 APPLE = ('<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 '
          '1.88-3.31-1.02-1.5-2.62-1.7-3.19-1.73-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 '
@@ -93,6 +111,7 @@ def layout(key, path, title, description, body, *, ct, dark_top=False, jsonld=()
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{E(title)}</title>
 <meta name="description" content="{E(description)}">
+<meta name="robots" content="{gen.ROBOTS}">
 <link rel="canonical" href="{E(url)}">
 <meta name="apple-itunes-app" content="app-id={APP_STORE_ID}">
 <meta name="theme-color" content="{'#1D2347' if dark_top else '#F6F3EC'}">
@@ -101,12 +120,16 @@ def layout(key, path, title, description, body, *, ct, dark_top=False, jsonld=()
 <meta property="og:title" content="{E(title)}">
 <meta property="og:description" content="{E(description)}">
 <meta property="og:url" content="{E(url)}">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="{SITE}/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{APP}: stop impulse buying. Sleep on it first.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{BASE}/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="{BASE}/apple-touch-icon.png">
 <link rel="preload" href="{ASSETS}/fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="{ASSETS}/site.css">
+<link rel="stylesheet" href="{ASSETS}/site.css?v={CSS_VERSION}">
 {head}{ld}
 </head>
 <body class="{'' if dark_top else 'on-paper'}">
@@ -301,20 +324,24 @@ def home():
 </div></section>
 </main>"""
     ld = [
+        {"@context": "https://schema.org", "@type": "WebSite", "name": APP, "alternateName": "On Ice app",
+         "url": SITE + "/"},
+        ORG,
         {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "On Ice: Stop Impulse Buying",
-         "operatingSystem": "iOS 17 or later", "applicationCategory": "FinanceApplication",
+         "operatingSystem": "iOS", "applicationCategory": "FinanceApplication",
+         "image": SITE + "/apple-touch-icon.png",
          "description": "A shopping blocker for iPhone and iPad that shields the shopping apps and websites you "
                         "choose and holds each want for 24 hours.",
          "url": SITE + "/", "downloadUrl": APP_STORE_URL,
          "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
-         "publisher": {"@type": "Organization", "name": COMPANY}},
+         "publisher": ORG},
         {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": strip_tags(a)}}
             for q, a in faq]},
     ]
     return layout("home", "/", "Stop Impulse Buying: On Ice, the Shopping Blocker for iPhone",
                   "On Ice shields the shopping apps and websites you choose, holds each want for 24 hours, and "
-                  "adds up what you didn't spend. Free to start. No account, no bank linking.",
+                  "adds up what you didn't spend. Free to start, no account.",
                   body, ct="home", dark_top=True, jsonld=ld, head=f"<style>{demo.css()}</style>\n")
 
 
@@ -406,7 +433,8 @@ def how_it_works():
 </main>"""
     return layout("how-it-works", "/how-it-works/", "How On Ice Works: A Shopping Blocker That Waits 24 Hours",
                   "Step by step: choose your shops, meet the shield, note what caught your eye, wait a night, "
-                  "then decide. With real screens from the app.", body, ct="how-it-works")
+                  "then decide. With real screens from the app.", body, ct="how-it-works",
+                  jsonld=[crumbs(("How it works", "/how-it-works/"))])
 
 
 # ---------------------------------------------------------------------------
@@ -470,7 +498,8 @@ def pricing():
 </main>"""
     return layout("pricing", "/pricing/", "On Ice Pricing: Free Plan and Premium",
                   "On Ice is free for one shopping app and one website. Premium adds every shop, longer waits, "
-                  "daily limits and strict mode. Monthly, yearly, lifetime and family plans.", body, ct="pricing")
+                  "daily limits and strict mode. Monthly, yearly and lifetime plans.", body, ct="pricing",
+                  jsonld=[crumbs(("Pricing", "/pricing/"))])
 
 
 # ---------------------------------------------------------------------------
@@ -493,9 +522,10 @@ def guides_index():
   <ul class="toc-list" style="margin-top:0">{rows}</ul>
 </div>
 </main>"""
-    return layout("guides", "/guides/", "Guides: Block Shopping Apps and Stop Impulse Buying on iPhone",
+    return layout("guides", "/guides/", "Guides: Block Shopping Apps and Stop Impulse Buying",
                   "Practical guides to blocking shopping apps and websites on iPhone, the 24 hour rule, and "
-                  "getting through sale season without overspending.", body, ct="guides")
+                  "getting through sale season without overspending.", body, ct="guides",
+                  jsonld=[crumbs(("Guides", "/guides/"))])
 
 
 def guide_page(g):
@@ -529,8 +559,9 @@ def guide_page(g):
     ld = [{"@context": "https://schema.org", "@type": "Article", "headline": g["title"],
            "description": g["description"], "dateModified": UPDATED_ISO, "datePublished": UPDATED_ISO,
            "author": {"@type": "Organization", "name": "On Ice"},
-           "publisher": {"@type": "Organization", "name": COMPANY},
-           "mainEntityOfPage": SITE + f'/guides/{g["slug"]}/'}]
+           "publisher": ORG, "image": SITE + "/assets/og.png",
+           "mainEntityOfPage": SITE + f'/guides/{g["slug"]}/'},
+          crumbs(("Guides", "/guides/"), (g["title"], f'/guides/{g["slug"]}/'))]
     return layout("guides", f'/guides/{g["slug"]}/', g["seo_title"], g["description"], body, ct=ct,
                   jsonld=ld, og_type="article")
 
