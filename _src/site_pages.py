@@ -524,14 +524,17 @@ def guides_index():
 </div>
 </main>"""
     return layout("guides", "/guides/", "Guides: Block Shopping Apps and Stop Impulse Buying",
-                  "Practical guides to blocking shopping apps and websites on iPhone, the 24 hour rule, and "
-                  "getting through sale season without overspending.", body, ct="guides",
+                  "Practical guides to blocking shopping apps and websites on iPhone, the 24 hour rule, "
+                  "no spend challenges, and shopping less late at night.", body, ct="guides",
                   jsonld=[crumbs(("Guides", "/guides/"))])
 
 
 def guide_page(g):
     from guides import GUIDES
-    others = [o for o in GUIDES if o["slug"] != g["slug"]][:3]
+    # Guides on the same topic first, so "Keep reading" stays on the subject.
+    others = sorted((o for o in GUIDES if o["slug"] != g["slug"]),
+                    key=lambda o: o["topic"] != g["topic"])[:3]
+    updated, updated_iso = g.get("updated", UPDATED), g.get("updated_iso", UPDATED_ISO)
     rel = "".join(
         f'<li><a href="{BASE}/guides/{o["slug"]}/"><b>{o["title"]}</b><i>{o["minutes"]} min read</i></a></li>'
         for o in others
@@ -548,7 +551,7 @@ def guide_page(g):
     <p class="crumbs"><a href="{BASE}/guides/">Guides</a> / {g["topic"]}</p>
     <h1>{g["title"]}</h1>
     <p class="standfirst">{g["standfirst"]}</p>
-    <p class="byline">By the On Ice team · Updated {UPDATED} · {g["minutes"]} min read</p>
+    <p class="byline">By the On Ice team · Updated {updated} · {g["minutes"]} min read</p>
   </header>
   <div class="prose">
 {content}
@@ -558,7 +561,7 @@ def guide_page(g):
 <div class="related"><h2>Keep reading</h2><ul class="toc-list">{rel}</ul></div>
 </main>"""
     ld = [{"@context": "https://schema.org", "@type": "Article", "headline": g["title"],
-           "description": g["description"], "dateModified": UPDATED_ISO, "datePublished": UPDATED_ISO,
+           "description": g["description"], "dateModified": updated_iso, "datePublished": updated_iso,
            "author": {"@type": "Organization", "name": "On Ice"},
            "publisher": ORG, "image": SITE + "/assets/og.png",
            "mainEntityOfPage": SITE + f'/guides/{g["slug"]}/'},
