@@ -139,7 +139,7 @@ def html(base):
 
     <div class="sc app s-note">
       <span class="round">×</span>
-      <h4>What caught your eye?</h4>
+      <div class="ttl">What caught your eye?</div>
       <div class="card note-card">
         <small>Name</small>
         <div class="field"><span class="typed">{typed}</span><u></u></div>
@@ -153,7 +153,7 @@ def html(base):
 
     <div class="sc app s-later">
       <span class="round">‹</span>
-      <h4>Decide later?</h4>
+      <div class="ttl">Decide later?</div>
       <div class="card later-card">
         <b>A linen shirt</b>
         <p class="est">≈ $50 <q>estimated</q></p>
@@ -175,7 +175,7 @@ def html(base):
         <div class="clock"><b class="k0">23:59:52</b><b class="k1">16:00:00</b><b class="k2">08:00:00</b><b class="k3">00:00:00</b></div>
         <span>until you decide</span>
       </div>
-      <h4 class="big">It's on your list</h4>
+      <div class="ttl big">It's on your list</div>
       <p class="sub">A linen shirt</p>
       <div class="card ice-card"><b>Tomorrow at 9:41 PM</b><p>On Ice asks once: still want it? If you do, the shop opens for you.</p></div>
       <div class="btn main" style="bottom:30px">Done</div>
@@ -183,7 +183,7 @@ def html(base):
 
     <div class="sc app s-ask">
       <span class="pill">Later</span>
-      <h4 class="left">Still want the linen shirt?</h4>
+      <div class="ttl left">Still want the linen shirt?</div>
       <p class="left sub">You noted it yesterday · ≈ $50 estimated</p>
       <div class="btn go" style="bottom:96px">Don't want it anymore</div>
       <div class="btn main" style="bottom:48px">Still want it</div>
@@ -191,7 +191,7 @@ def html(base):
     </div>
 
     <div class="sc s-saved">
-      <h4 class="left">Savings</h4>
+      <div class="ttl left">Savings</div>
       <div class="seg"><span>Today</span><span>Week</span><span class="on">Month</span></div>
       <div class="card saved-card">
         <small>Saved this month</small>
@@ -324,8 +324,8 @@ def css():
 .demo .shield-in .shield{{text-align:center}}
 
 .demo .app{{background:linear-gradient(180deg,#0E1626 0%,#16304A 55%,#1E4A60 100%)}}
-.demo h4{{margin:0;position:absolute;left:14px;right:14px;top:84px;text-align:center;font:700 19px/1.2 var(--sans);letter-spacing:-.01em;color:#fff}}
-.demo h4.left,.demo p.left{{text-align:left;left:16px;right:16px}}
+.demo .ttl{{margin:0;position:absolute;left:14px;right:14px;top:84px;text-align:center;font:700 19px/1.2 var(--sans);letter-spacing:-.01em;color:#fff}}
+.demo .ttl.left,.demo p.left{{text-align:left;left:16px;right:16px}}
 .demo .round{{position:absolute;left:14px;top:46px;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.12);display:grid;place-items:center;font:500 16px/1 var(--sans);color:#D9E0EC}}
 .demo .card{{position:absolute;left:14px;right:14px;border-radius:16px;background:rgba(255,255,255,.07);box-shadow:inset 0 0 0 1px rgba(255,255,255,.14);padding:12px}}
 .demo .card small{{display:block;font:600 11px/1 var(--sans);color:#E3E8F1;margin:0 0 7px}}
@@ -364,19 +364,19 @@ def css():
 .demo .clock b{{position:absolute;inset:0;text-align:center;font:700 27px/30px var(--sans);letter-spacing:.01em;font-variant-numeric:tabular-nums;opacity:0}}
 {clock_rules}
 .demo .ring span{{position:absolute;left:0;right:0;top:106px;text-align:center;font-size:10px;color:#C9D2DF}}
-.demo h4.big{{top:240px;font-size:22px}}
+.demo .ttl.big{{top:240px;font-size:22px}}
 .demo .sub{{position:absolute;left:14px;right:14px;top:272px;margin:0;text-align:center;font-size:13px;color:#D9E0EC}}
 .demo .ice-card{{top:306px}}
 .demo .ice-card b{{font:700 12.5px/1.2 var(--sans)}}
 .demo .ice-card p{{margin:3px 0 0;font-size:10.5px;line-height:1.35;color:#B9C3D2}}
 
 .demo .pill{{position:absolute;left:14px;top:46px;font:500 11.5px/1 var(--sans);color:#D9E0EC;background:rgba(255,255,255,.12);border-radius:999px;padding:8px 11px}}
-.demo .s-ask h4{{top:96px;font-size:22px}}
+.demo .s-ask .ttl{{top:96px;font-size:22px}}
 .demo .s-ask .sub{{top:156px;font-size:12px;color:#C9D2DF}}
 .demo .either{{position:absolute;left:0;right:0;bottom:22px;margin:0;text-align:center;font-size:10px;color:#C9D2DF}}
 
 .demo .s-saved{{background:#111418}}
-.demo .s-saved h4{{top:62px;font-size:22px}}
+.demo .s-saved .ttl{{top:62px;font-size:22px}}
 .demo .seg{{position:absolute;left:14px;right:14px;top:100px;display:grid;grid-template-columns:repeat(3,1fr);border-radius:9px;background:rgba(255,255,255,.08);padding:2px;font:500 10.5px/1 var(--sans);text-align:center}}
 .demo .seg span{{padding:6px 0;border-radius:7px;color:#C9D2DF}}
 .demo .seg .on{{background:rgba(255,255,255,.2);color:#fff}}

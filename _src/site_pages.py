@@ -142,17 +142,17 @@ def layout(key, path, title, description, body, *, ct, dark_top=False, jsonld=()
     <a class="brand" href="{BASE}/"><img src="{BASE}/mark.svg" alt="" width="30" height="30">{APP}</a>
     <p>One night between you and the buy button. Made by {COMPANY}. Write to <a href="mailto:{EMAIL}">{EMAIL}</a> and a person will reply.</p>
   </div>
-  <div><h4>The app</h4><ul>
+  <div><h2>The app</h2><ul>
     <li><a href="{BASE}/how-it-works/">How it works</a></li>
     <li><a href="{BASE}/pricing/">Pricing</a></li>
     <li><a href="{E(store_url(ct + "-footer"))}">Download on the App Store</a></li>
   </ul></div>
-  <div><h4>Read</h4><ul>
+  <div><h2>Read</h2><ul>
     <li><a href="{BASE}/guides/">All guides</a></li>
     <li><a href="{BASE}/guides/how-to-block-amazon-on-iphone/">Block Amazon on iPhone</a></li>
     <li><a href="{BASE}/guides/24-hour-rule-for-shopping/">The 24 hour rule</a></li>
   </ul></div>
-  <div><h4>Help and legal</h4><ul>
+  <div><h2>Help and legal</h2><ul>
     <li><a href="{BASE}/support/">Support</a></li>
     <li><a href="{BASE}/privacy/">Privacy Policy</a></li>
     <li><a href="{BASE}/terms/">Terms of Use</a></li>
