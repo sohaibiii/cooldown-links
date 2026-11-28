@@ -20,6 +20,8 @@ import art
 import demo
 import analytics
 import gen
+import i18n
+from i18n import t, money
 from gen import APP, APP_STORE_ID, APP_STORE_URL, BASE, COMPANY, E, EMAIL, SITE, YEAR
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -66,7 +68,7 @@ def store_url(ct):
 
 def store(ct):
     return (f'<a class="store" href="{E(store_url(ct))}">{APPLE}'
-            f'<span><small>Download on the</small><b>App Store</b></span></a>')
+            f'<span><small>{t("Download on the")}</small><b>App Store</b></span></a>')
 
 
 def phone(img, alt, lazy=True):
@@ -87,57 +89,49 @@ NAV = [("how-it-works", "How it works", "/how-it-works/"), ("pricing", "Pricing"
        ("guides", "Guides", "/guides/"), ("support", "Support", "/support/")]
 
 
-def layout(key, path, title, description, body, *, ct, dark_top=False, jsonld=(), og_type="website", head=""):
-    """One page. `path` is its address under the site root, `ct` its campaign name."""
+def layout(key, path, title, description, body, *, ct, dark_top=False, jsonld=(), og_type="website", head="",
+           alternates=()):
+    """One page. `path` is its address under the site root, `ct` its campaign name.
+
+    `alternates` are (language, path) pairs for a page that exists in more than one
+    language (only the home page so far). While `i18n.use()` has picked a language
+    other than English, the page is built in that language with a slimmer header and
+    footer, because the other English-only pages have no translation to link to.
+    """
+    lang = i18n.current()
+    prefix = i18n.HOMES[lang][0]
+    home_path = i18n.HOMES[lang][1]
+    W = gen.copy_for(lang) if lang != "en" else None
     url = SITE + path
     current = ' aria-current="page"'
-    nav = "".join(
-        f'<a href="{BASE}{p}"{current if k == key else ""}>{label}</a>' for k, label, p in NAV
-    )
-    get = f'<a class="get" href="{E(store_url(ct + "-nav"))}">Get the app</a>'
+    if lang == "en":
+        nav = "".join(
+            f'<a href="{BASE}{p}"{current if k == key else ""}>{label}</a>' for k, label, p in NAV
+        )
+    else:
+        nav = f'<a href="{BASE}{prefix}/">{W["nav.support"]}</a>'
+    get = f'<a class="get" href="{E(store_url(ct + "-nav"))}">{t("Get the app")}</a>'
     ld = "".join(f'<script type="application/ld+json">{json.dumps(d, ensure_ascii=False)}</script>' for d in jsonld)
     top = f"""<header class="top"><div class="wrap">
-  <a class="brand" href="{BASE}/"><img src="{BASE}/mark.svg" alt="" width="30" height="30">{APP}</a>
-  <a class="get get-m" href="{E(store_url(ct + "-nav"))}">Get the app</a>
-  <nav aria-label="Pages">{nav}{get}</nav>
+  <a class="brand" href="{BASE}{home_path}"><img src="{BASE}/mark.svg" alt="" width="30" height="30">{APP}</a>
+  <a class="get get-m" href="{E(store_url(ct + "-nav"))}">{t("Get the app")}</a>
+  <nav aria-label="{t("Pages")}">{nav}{get}</nav>
 </div></header>"""
     languages = " · ".join(
-        f'<a href="{BASE}{p}/" lang="{c}" hreflang="{c}">{E(gen.NATIVE_NAME[c])}</a>'
-        for c, p in gen.LANGUAGES if c != "en"
+        f'<a href="{BASE}{p}{gen.path_of(c, "support")}" lang="{c}" hreflang="{c}">{E(gen.NATIVE_NAME[c])}</a>'
+        for c, p in gen.LANGUAGES if c != lang
     )
-    html = f"""<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{E(title)}</title>
-<meta name="description" content="{E(description)}">
-<meta name="robots" content="{gen.ROBOTS}">
-<link rel="canonical" href="{E(url)}">
-<meta name="apple-itunes-app" content="app-id={APP_STORE_ID}">
-<meta name="theme-color" content="{'#1D2347' if dark_top else '#F6F3EC'}">
-<meta property="og:site_name" content="{APP}">
-<meta property="og:type" content="{og_type}">
-<meta property="og:title" content="{E(title)}">
-<meta property="og:description" content="{E(description)}">
-<meta property="og:url" content="{E(url)}">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="{SITE}/assets/og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="{APP}: stop impulse buying. Sleep on it first.">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="{BASE}/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="{BASE}/apple-touch-icon.png">
-<link rel="preload" href="{ASSETS}/fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="{ASSETS}/site.css?v={CSS_VERSION}">
-{head}{ld}
-{analytics.head()}</head>
-<body class="{'' if dark_top else 'on-paper'}">
-<a class="skip" href="#content">Skip to content</a>
-{'' if dark_top else top}
-{body.replace('<!--TOP-->', top) if dark_top else body}
-<footer><div class="wrap">
+    this_page = ""
+    if alternates:
+        this_page = t("This page in:") + " " + " · ".join(
+            f'<a href="{BASE}{p}" lang="{c}" hreflang="{c}">{E(gen.NATIVE_NAME[c])}</a>'
+            for c, p in alternates if c != lang
+        ) + ". "
+    hreflang = "".join(
+        f'<link rel="alternate" hreflang="{c}" href="{E(SITE + p)}">\n' for c, p in alternates
+    ) + (f'<link rel="alternate" hreflang="x-default" href="{E(SITE + dict(alternates)["en"])}">\n' if alternates else "")
+    if lang == "en":
+        footer = f"""<footer><div class="wrap">
   <div class="who">
     <a class="brand" href="{BASE}/"><img src="{BASE}/mark.svg" alt="" width="30" height="30">{APP}</a>
     <p>One night between you and the buy button. Made by {COMPANY}. Write to <a href="mailto:{EMAIL}">{EMAIL}</a> and a person will reply.</p>
@@ -158,9 +152,59 @@ def layout(key, path, title, description, body, *, ct, dark_top=False, jsonld=()
     <li><a href="{BASE}/terms/">Terms of Use</a></li>
     <li><a href="{BASE}/delete-data/">Your data</a></li>{analytics.footer_link(BASE)}
   </ul></div>
-  <p class="legal">© {YEAR} {APP} · {COMPANY}. Money figures on this site are sample estimates. On Ice does not connect to a bank and does not give financial advice. Apple, iPhone, iPad, Safari and App Store are trademarks of Apple Inc. Amazon is a trademark of Amazon.com, Inc. or its affiliates, and On Ice is not affiliated with it. Support in other languages: {languages}</p>
-</div></footer>
-{analytics.banner(BASE)}</body>
+  <p class="legal">© {YEAR} {APP} · {COMPANY}. Money figures on this site are sample estimates. On Ice does not connect to a bank and does not give financial advice. Apple, iPhone, iPad, Safari and App Store are trademarks of Apple Inc. Amazon is a trademark of Amazon.com, Inc. or its affiliates, and On Ice is not affiliated with it. {this_page}Support in other languages: {languages}</p>
+</div></footer>"""
+    else:
+        footer = f"""<footer><div class="wrap">
+  <div class="who">
+    <a class="brand" href="{BASE}{home_path}"><img src="{BASE}/mark.svg" alt="" width="30" height="30">{APP}</a>
+    <p>{t("One night between you and the buy button. Made by {company}. Write to {email} and a person will reply.").format(company=COMPANY, email=f'<a href="mailto:{EMAIL}">{EMAIL}</a>')}</p>
+  </div>
+  <div><p class="fh">{t("The app")}</p><ul>
+    <li><a href="{E(store_url(ct + "-footer"))}">{t("Download on the App Store")}</a></li>
+  </ul></div>
+  <div><p class="fh">{t("Help and legal")}</p><ul>
+    <li><a href="{BASE}{prefix}/">{W["nav.support"]}</a></li>
+    <li><a href="{BASE}{prefix}/privacy/">{W["nav.privacy"]}</a></li>
+    <li><a href="{BASE}{prefix}/terms/">{W["nav.terms"]}</a></li>
+    <li><a href="{BASE}{prefix}/delete-data/">{W["nav.data"]}</a></li>{analytics.footer_link(BASE)}
+  </ul></div>
+  <p class="legal">© {YEAR} {APP} · {COMPANY}. {t("Money figures on this site are sample estimates. On Ice does not connect to a bank and does not give financial advice. Apple, iPhone, iPad, Safari and App Store are trademarks of Apple Inc. Amazon is a trademark of Amazon.com, Inc. or its affiliates, and On Ice is not affiliated with it.")} {this_page}{t("Support in other languages:")} {languages}</p>
+</div></footer>"""
+    html = f"""<!DOCTYPE html>
+<html lang="{lang}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{E(title)}</title>
+<meta name="description" content="{E(description)}">
+<meta name="robots" content="{gen.ROBOTS}">
+<link rel="canonical" href="{E(url)}">
+{hreflang}<meta name="apple-itunes-app" content="app-id={APP_STORE_ID}">
+<meta name="theme-color" content="{'#1D2347' if dark_top else '#F6F3EC'}">
+<meta property="og:site_name" content="{APP}">
+<meta property="og:type" content="{og_type}">
+<meta property="og:title" content="{E(title)}">
+<meta property="og:description" content="{E(description)}">
+<meta property="og:url" content="{E(url)}">
+<meta property="og:locale" content="{i18n.HOMES[lang][2]}">
+<meta property="og:image" content="{SITE}/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{E(t("On Ice: stop impulse buying. Sleep on it first."))}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="{BASE}/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{BASE}/apple-touch-icon.png">
+<link rel="preload" href="{ASSETS}/fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{ASSETS}/site.css?v={CSS_VERSION}">
+{head}{ld}
+{analytics.head()}</head>
+<body class="{'' if dark_top else 'on-paper'}">
+<a class="skip" href="#content">{t("Skip to content")}</a>
+{'' if dark_top else top}
+{body.replace('<!--TOP-->', top) if dark_top else body}
+{footer}
+{analytics.banner(BASE, prefix)}</body>
 </html>
 """
     return html
@@ -212,23 +256,35 @@ def strip_tags(s):
 
 def home():
     from guides import GUIDES
+    lang = i18n.current()
+    prefix, home_path = i18n.HOMES[lang][0], i18n.HOMES[lang][1]
+    support = BASE + prefix + gen.path_of(lang, "support")
     faq = [(q, a) for q, a in FAQ if not q.startswith(("What does Premium add", "How is this different"))]
+    if lang != "en":
+        faq = i18n.faq()
     faq_html = "".join(f"<details><summary>{q}</summary><div><p>{a}</p></div></details>" for q, a in faq)
     guide_rows = "".join(
         f'<li><a href="{BASE}/guides/{g["slug"]}/"><b>{g["title"]}</b><i>{g["minutes"]} min read</i>'
         f'<span>{g["blurb"]}</span></a></li>' for g in GUIDES[:3]
     )
+    guides = f"""<section class="sec"><div class="wrap">
+  <h2>Guides, <em>with or without the app.</em></h2>
+  <p class="intro">Plain instructions for the settings your iPhone already has, and honest notes on where they stop working.</p>
+  <ul class="toc-list">{guide_rows}</ul>
+  <p><a class="more" href="{BASE}/guides/">All guides</a></p>
+</div></section>
+""" if lang == "en" else ""
     body = f"""<div class="night hero">
 <!--TOP-->
 <main id="content">
 <div class="wrap hero-grid">
   <div class="hero-copy">
-    <p class="kicker">Shopping blocker for iPhone and iPad</p>
-    <h1>Stop impulse buying. <em>Sleep on it first.</em></h1>
-    <p class="lede">On Ice pauses you when you open a shopping app or website. Note what you wanted, wait one night, then decide.</p>
+    <p class="kicker">{t("Shopping blocker for iPhone and iPad")}</p>
+    <h1>{t("Stop impulse buying. <em>Sleep on it first.</em>")}</h1>
+    <p class="lede">{t("On Ice pauses you when you open a shopping app or website. Note what you wanted, wait one night, then decide.")}</p>
     <div class="cta-row">
       {store("home-hero")}
-      <p class="cta-note">Free to start. No account.<br>No bank linking.</p>
+      <p class="cta-note">{t("Free to start. No account.<br>No bank linking.")}</p>
     </div>
   </div>
   {demo.html(BASE)}
@@ -237,113 +293,112 @@ def home():
 
 <div class="paper">
 <section class="sec" id="how"><div class="wrap">
-  <h2>Three steps. <em>One night.</em></h2>
+  <h2>{t("Three steps. <em>One night.</em>")}</h2>
   <ol class="how3">
     <li>
-      <div class="n"><span>1 · Tonight</span><i></i></div>
-      <div class="pic art" role="img" aria-label="A drawing of a shopping bag with a pause button on it, and the words: Pause before you buy.">{art.scene_pause()}</div>
-      <h3>On Ice pauses you</h3>
-      <p>Open a shopping app or website and On Ice steps in before you can buy.</p>
+      <div class="n"><span>{t("1 · Tonight")}</span><i></i></div>
+      <div class="pic art" role="img" aria-label="{t("A drawing of a shopping bag with a pause button on it, and the words: Pause before you buy.")}">{art.scene_pause()}</div>
+      <h3>{t("On Ice pauses you")}</h3>
+      <p>{t("Open a shopping app or website and On Ice steps in before you can buy.")}</p>
     </li>
     <li>
-      <div class="n"><span>2 · Still tonight</span><i></i></div>
-      <div class="pic art" role="img" aria-label="A drawing of a shirt frozen inside an ice cube. Under it, a line from tonight's moon to tomorrow's sun, marked 24 hours.">{art.scene_ice()}</div>
-      <h3>You wait one night</h3>
-      <p>Write down what you wanted. It waits on your list for 24 hours. Nothing is bought.</p>
+      <div class="n"><span>{t("2 · Still tonight")}</span><i></i></div>
+      <div class="pic art" role="img" aria-label="{t("A drawing of a shirt frozen inside an ice cube. Under it, a line from tonight's moon to tomorrow's sun, marked 24 hours.")}">{art.scene_ice()}</div>
+      <h3>{t("You wait one night")}</h3>
+      <p>{t("Write down what you wanted. It waits on your list for 24 hours. Nothing is bought.")}</p>
     </li>
     <li>
-      <div class="n"><span>3 · Tomorrow</span><i></i></div>
-      <div class="pic art day" role="img" aria-label="A drawing of two answers. Don't want it anymore, with a savings jar: you keep the money. Or, Still want it, with a shopping bag: the shop opens.">{art.scene_decide()}</div>
-      <h3>You decide</h3>
-      <p>Don't want it anymore? Its price joins your estimated savings. Still want it? The shop opens. Either answer is a good one.</p>
+      <div class="n"><span>{t("3 · Tomorrow")}</span><i></i></div>
+      <div class="pic art day" role="img" aria-label="{t("A drawing of two answers. Don't want it anymore, with a savings jar: you keep the money. Or, Still want it, with a shopping bag: the shop opens.")}">{art.scene_decide()}</div>
+      <h3>{t("You decide")}</h3>
+      <p>{t("Don't want it anymore? Its price joins your estimated savings. Still want it? The shop opens. Either answer is a good one.")}</p>
     </li>
   </ol>
-  <p class="fine">Really need to buy something now? The shop opens for 1, 5 or 15 minutes.</p>
-  <p class="after-steps"><a class="more" href="{BASE}/how-it-works/">See the real screens, step by step</a></p>
+  <p class="fine">{t("Really need to buy something now? The shop opens for 1, 5 or 15 minutes.")}</p>
+  <p class="after-steps"><a class="more" href="{BASE}/how-it-works/">{t("See the real screens, step by step")}</a></p>
 </div></section>
 
 <section class="sec"><div class="wrap split">
   <div>
-    <h2>See what you <em>didn't</em> spend.</h2>
-    <p class="intro">Every item you let go adds to a running total. It is built from prices you typed yourself, and it always says estimated.</p>
+    <h2>{t("See what you <em>didn't</em> spend.")}</h2>
+    <p class="intro">{t("Every item you let go adds to a running total. It is built from prices you typed yourself, and it always says estimated.")}</p>
     <ul class="facts">
-      <li><b>No bank linking</b><span>On Ice never connects to an account or reads a transaction.</span></li>
-      <li><b>No account</b><span>No sign up, no email field.</span></li>
-      <li><b>Private</b><span>Your list stays on your device.</span></li>
+      <li><b>{t("No bank linking")}</b><span>{t("On Ice never connects to an account or reads a transaction.")}</span></li>
+      <li><b>{t("No account")}</b><span>{t("No sign up, no email field.")}</span></li>
+      <li><b>{t("Private")}</b><span>{t("Your list stays on your device.")}</span></li>
     </ul>
-    <p class="fine"><a href="{BASE}/privacy/">How the privacy works, in full</a></p>
+    <p class="fine"><a href="{BASE}{prefix}/privacy/">{t("How the privacy works, in full")}</a></p>
   </div>
-  <div class="receipt" aria-label="A sample receipt of things not bought this month">
+  <div class="receipt" aria-label="{t("A sample receipt of things not bought this month")}">
     <div class="head">ON ICE</div>
-    <div class="sub">THINGS YOU DIDN'T BUY</div>
-    <div class="row"><span>Linen shirt</span><i></i><span>≈ $45</span></div>
-    <div class="row"><span>Running shoes</span><i></i><span>≈ $135</span></div>
+    <div class="sub">{t("THINGS YOU DIDN'T BUY")}</div>
+    <div class="row"><span>{t("Linen shirt")}</span><i></i><span>{money(45)}</span></div>
+    <div class="row"><span>{t("Running shoes")}</span><i></i><span>{money(135)}</span></div>
     <hr>
-    <div class="row total"><span>LET GO THIS MONTH</span><i></i><span>≈ $180</span></div>
-    <div class="row"><span></span><i style="border:0"></i><span class="est">estimated</span></div>
-    <div class="foot">Sample figures. Every amount is your own estimate.</div>
+    <div class="row total"><span>{t("LET GO THIS MONTH")}</span><i></i><span>{money(180)}</span></div>
+    <div class="row"><span></span><i style="border:0"></i><span class="est">{t("estimated")}</span></div>
+    <div class="foot">{t("Sample figures. Every amount is your own estimate.")}</div>
   </div>
 </div></section>
 
 <section class="sec" id="pricing"><div class="wrap">
-  <h2>Free to start. <em>Premium if you want more.</em></h2>
+  <h2>{t("Free to start. <em>Premium if you want more.</em>")}</h2>
   <div class="plans">
-    <div><h3>Free</h3><p class="price">No charge, no trial clock</p><ul>
-      <li>One shopping app and one website, shielded</li>
-      <li>The 24 hour wait and your list</li>
-      <li>Your estimated savings</li>
+    <div><h3>{t("Free")}</h3><p class="price">{t("No charge, no trial clock")}</p><ul>
+      <li>{t("One shopping app and one website, shielded")}</li>
+      <li>{t("The 24 hour wait and your list")}</li>
+      <li>{t("Your estimated savings")}</li>
     </ul></div>
-    <div><h3>Premium</h3><p class="price">Monthly · Yearly · Lifetime · Family</p><ul>
-      <li>Every shop and website you want</li>
-      <li>Waits of 12, 24, 48 or 72 hours</li>
-      <li>Daily limits, danger hours and strict mode</li>
+    <div><h3>{t("Premium")}</h3><p class="price">{t("Monthly · Yearly · Lifetime · Family")}</p><ul>
+      <li>{t("Every shop and website you want")}</li>
+      <li>{t("Waits of 12, 24, 48 or 72 hours")}</li>
+      <li>{t("Daily limits, danger hours and strict mode")}</li>
     </ul></div>
   </div>
-  <p class="fine">Nothing you built is taken away if a subscription lapses. <a href="{BASE}/pricing/">Plans and prices</a></p>
+  <p class="fine">{t("Nothing you built is taken away if a subscription lapses.")} <a href="{BASE}/pricing/">{t("Plans and prices")}</a></p>
 </div></section>
 
 <section class="sec" id="faq"><div class="wrap">
-  <h2>Questions people ask first</h2>
+  <h2>{t("Questions people ask first")}</h2>
   <div class="faq">{faq_html}</div>
-  <p class="fine">Something else? <a href="{BASE}/support/#faq">The full support page</a> covers setup, troubleshooting and how to reach us.</p>
+  <p class="fine">{t('Something else? <a href="{support}">The full support page</a> covers setup, troubleshooting and how to reach us.').format(support=support + "#faq")}</p>
 </div></section>
 
-<section class="sec"><div class="wrap">
-  <h2>Guides, <em>with or without the app.</em></h2>
-  <p class="intro">Plain instructions for the settings your iPhone already has, and honest notes on where they stop working.</p>
-  <ul class="toc-list">{guide_rows}</ul>
-  <p><a class="more" href="{BASE}/guides/">All guides</a></p>
-</div></section>
-</div>
+{guides}</div>
 
 <section class="night closing"><div class="wrap">
-  <h2>Put your next impulse buy <em>on ice.</em></h2>
+  <h2>{t("Put your next impulse buy <em>on ice.</em>")}</h2>
   <div class="cta-row">
     {store("home-closing")}
-    <p class="cta-note">iPhone and iPad, iOS 17 or newer.<br>English and seven other languages.</p>
+    <p class="cta-note">{t("iPhone and iPad, iOS 17 or newer.<br>English and seven other languages.")}</p>
   </div>
 </div></section>
 </main>"""
     ld = [
-        {"@context": "https://schema.org", "@type": "WebSite", "name": APP, "alternateName": "On Ice app",
-         "url": SITE + "/"},
         ORG,
         {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "On Ice: Stop Impulse Buying",
          "operatingSystem": "iOS", "applicationCategory": "FinanceApplication",
          "image": SITE + "/apple-touch-icon.png",
-         "description": "A shopping blocker for iPhone and iPad that shields the shopping apps and websites you "
-                        "choose and holds each want for 24 hours.",
-         "url": SITE + "/", "downloadUrl": APP_STORE_URL,
+         "description": t("A shopping blocker for iPhone and iPad that shields the shopping apps and websites you "
+                          "choose and holds each want for 24 hours."),
+         "inLanguage": lang,
+         "url": SITE + home_path, "downloadUrl": APP_STORE_URL,
          "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
          "publisher": ORG},
         {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": strip_tags(a)}}
             for q, a in faq]},
     ]
-    return layout("home", "/", "Stop Impulse Buying: On Ice, the Shopping Blocker for iPhone",
-                  "On Ice shields the shopping apps and websites you choose, holds each want for 24 hours, and "
-                  "adds up what you didn't spend. Free to start, no account.",
-                  body, ct="home", dark_top=True, jsonld=ld, head=f"<style>{demo.css()}</style>\n")
+    if lang == "en":
+        ld.insert(0, {"@context": "https://schema.org", "@type": "WebSite", "name": APP, "alternateName": "On Ice app",
+                      "url": SITE + "/"})
+    alternates = [(c, i18n.HOMES[c][1]) for c in ["en"] + i18n.LANGS]
+    return layout("home", home_path, t("Stop Impulse Buying: On Ice, the Shopping Blocker for iPhone"),
+                  t("On Ice shields the shopping apps and websites you choose, holds each want for 24 hours, and "
+                    "adds up what you didn't spend. Free to start, no account."),
+                  body, ct="home" if lang == "en" else "home-" + lang, dark_top=True, jsonld=ld,
+                  head=f"<style>{demo.css(t('Linen shirt'))}{i18n.DEMO_CSS.get(lang, '')}</style>\n",
+                  alternates=alternates)
 
 
 # ---------------------------------------------------------------------------
@@ -589,6 +644,10 @@ def check(rel, html):
         raise SystemExit(f"{rel}: the codebase's name reached a page")
 
 
+# Pages that exist in more than one language, for the sitemap's alternates.
+ALTERNATES = {i18n.HOMES[c][1]: [(x, i18n.HOMES[x][1]) for x in ["en"] + i18n.LANGS] for c in ["en"] + i18n.LANGS}
+
+
 def build():
     """[(file, html, sitemap path or None)]"""
     from guides import GUIDES
@@ -600,6 +659,13 @@ def build():
     ]
     for g in GUIDES:
         out.append((f'guides/{g["slug"]}/index.html', guide_page(g), f'/guides/{g["slug"]}/'))
+    for lang in i18n.LANGS:
+        i18n.use(lang)
+        try:
+            path = i18n.HOMES[lang][1]
+            out.append((path.lstrip("/") + "index.html", home(), path))
+        finally:
+            i18n.use("en")
     for rel, html, _ in out:
         check(rel, html)
     return out

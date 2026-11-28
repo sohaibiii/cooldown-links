@@ -103,15 +103,19 @@ CART = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h2.4l2.1 9.2h9
 
 
 def html(base):
+    from i18n import t, tx, money
+    names = tx("APPS", [n for n, _ in APPS])
+    typed_text = t("Linen shirt")
     icons = "".join(
         f'<span class="ic{" shop-ic" if n == "Amazon" else ""}"><i style="background:{c}">'
-        f'{CART if n == "Amazon" else ""}</i><em>{n}</em></span>' for n, c in APPS)
-    typed = "".join(f'<i class="l{i}">{"&nbsp;" if ch == " " else ch}</i>' for i, ch in enumerate(TYPED))
-    caps = "".join(f'<span class="c{i}">{text}</span>' for i, (_, _, text) in enumerate(CAPTIONS))
-    label = ("An animated drawing of On Ice at work. Someone opens Amazon on an iPhone. On Ice covers it with a "
+        f'{CART if n == "Amazon" else ""}</i><em>{label}</em></span>' for (n, c), label in zip(APPS, names))
+    typed = "".join(f'<i class="l{i}">{"&nbsp;" if ch == " " else ch}</i>' for i, ch in enumerate(typed_text))
+    caps = "".join(f'<span class="c{i}">{t(text)}</span>' for i, (_, _, text) in enumerate(CAPTIONS))
+    label = tx("DEMO_LABEL", "An animated drawing of On Ice at work. Someone opens Amazon on an iPhone. On Ice covers it with a "
              "shield: Pause before you buy. They tap Note it, type Linen shirt at about 50 dollars, and tap "
              "Wait 24h, then decide. A day passes and nothing is bought. Then On Ice asks once: Still want the "
              "linen shirt? They tap Don't want it anymore, and about 50 dollars joins their estimated savings.")
+    m50 = money(50)
     return f"""<div class="hero-art demo">
   <input type="checkbox" id="demo-pause" class="demo-pause">
   <div class="phone dphone" role="img" aria-label="{label}"><div class="dscreen" aria-hidden="true">
@@ -124,92 +128,92 @@ def html(base):
     <div class="sc s-shop">
       <div class="shop-top"><b>Amazon</b><span></span></div>
       <div class="shop-pic"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="{SHIRT}" fill="#F7F3EA" stroke="#B9AD96" stroke-width="2.5" stroke-linejoin="round"/></svg></div>
-      <div class="shop-txt"><b>Linen shirt</b><span>In stock</span></div>
-      <div class="shop-buy">Buy now</div>
+      <div class="shop-txt"><b>{t("Linen shirt")}</b><span>{t("In stock")}</span></div>
+      <div class="shop-buy">{t("Buy now")}</div>
       <div class="shop-row"><i></i><i></i><i></i></div>
       <div class="dim"></div>
       <div class="shield-in"><div class="shield">
-        <span class="tag">In a shop you chose</span>
+        <span class="tag">{t("In a shop you chose")}</span>
         <img src="{base}/mark.svg" alt="" width="44" height="44">
-        <b>Pause before you buy.</b>
-        <p>Want something here? Note it in On Ice and decide later.</p>
-        <div class="btns"><span>Note it</span><span>Never mind</span></div>
+        <b>{t("Pause before you buy.")}</b>
+        <p>{t("Want something here? Note it in On Ice and decide later.")}</p>
+        <div class="btns"><span>{t("Note it")}</span><span>{t("Never mind")}</span></div>
       </div></div>
     </div>
 
     <div class="sc app s-note">
       <span class="round">×</span>
-      <div class="dh">What caught your eye?</div>
+      <div class="dh">{t("What caught your eye?")}</div>
       <div class="card note-card">
-        <small>Name</small>
+        <small>{t("Name")}</small>
         <div class="field"><span class="typed">{typed}</span><u></u></div>
-        <small>Roughly what does it cost? <q>Optional</q></small>
-        <div class="chips four"><span>≈ $10</span><span>≈ $25</span><span class="pick">≈ $50</span><span>≈ $100</span></div>
-        <small>How are you feeling? <q>Optional</q></small>
-        <div class="chips"><span>Bored</span><span>Stressed</span><span>Deal FOMO</span></div>
+        <small>{t("Roughly what does it cost?")} <q>{t("Optional")}</q></small>
+        <div class="chips four"><span>{money(10)}</span><span>{money(25)}</span><span class="pick">{m50}</span><span>{money(100)}</span></div>
+        <small>{t("How are you feeling?")} <q>{t("Optional")}</q></small>
+        <div class="chips"><span>{t("Bored")}</span><span>{t("Stressed")}</span><span>{t("Deal FOMO")}</span></div>
       </div>
-      <div class="btn main" style="bottom:30px">Next</div>
+      <div class="btn main" style="bottom:30px">{t("Next")}</div>
     </div>
 
     <div class="sc app s-later">
       <span class="round">‹</span>
-      <div class="dh">Decide later?</div>
+      <div class="dh">{t("Decide later?")}</div>
       <div class="card later-card">
-        <b>A linen shirt</b>
-        <p class="est">≈ $50 <q>estimated</q></p>
+        <b>{t("A linen shirt")}</b>
+        <p class="est">{m50} <q>{t("estimated")}</q></p>
         <dl>
-          <dt>Right now</dt><dd>Nothing is bought. Your note goes on the list.</dd>
-          <dt>Tomorrow</dt><dd>On Ice asks once: still want it?</dd>
-          <dt>If you let it go</dt><dd>≈ $50 joins your estimated savings.</dd>
+          <dt>{t("Right now")}</dt><dd>{t("Nothing is bought. Your note goes on the list.")}</dd>
+          <dt>{t("Tomorrow")}</dt><dd>{t("On Ice asks once: still want it?")}</dd>
+          <dt>{t("If you let it go")}</dt><dd>{t("{price} joins your estimated savings.").format(price=m50)}</dd>
         </dl>
       </div>
-      <div class="btn main" style="bottom:140px">Wait 24h, then decide</div>
-      <p class="now">I need to shop now</p>
-      <div class="chips mins"><span>1 minute</span><span>5 minutes</span><span>15 minutes</span></div>
-      <p class="nvm">Never mind</p>
+      <div class="btn main" style="bottom:140px">{t("Wait 24h, then decide")}</div>
+      <p class="now">{t("I need to shop now")}</p>
+      <div class="chips mins"><span>{t("1 minute")}</span><span>{t("5 minutes")}</span><span>{t("15 minutes")}</span></div>
+      <p class="nvm">{t("Never mind")}</p>
     </div>
 
     <div class="sc app s-ice">
       <div class="ring">
         <svg viewBox="0 0 180 180" aria-hidden="true"><circle cx="90" cy="90" r="80" fill="#0C1626" stroke="rgba(232,193,112,.2)" stroke-width="8"/><circle class="arc" cx="90" cy="90" r="80" fill="none" stroke="#E8C170" stroke-width="8" stroke-linecap="round" transform="rotate(-90 90 90)" stroke-dasharray="503" stroke-dashoffset="0"/></svg>
         <div class="clock"><b class="k0">23:59:52</b><b class="k1">16:00:00</b><b class="k2">08:00:00</b><b class="k3">00:00:00</b></div>
-        <span>until you decide</span>
+        <span>{t("until you decide")}</span>
       </div>
-      <div class="dh big">It's on your list</div>
-      <p class="sub">A linen shirt</p>
-      <div class="card ice-card"><b>Tomorrow at 9:41 PM</b><p>On Ice asks once: still want it? If you do, the shop opens for you.</p></div>
-      <div class="btn main" style="bottom:30px">Done</div>
+      <div class="dh big">{t("It's on your list")}</div>
+      <p class="sub">{t("A linen shirt")}</p>
+      <div class="card ice-card"><b>{t("Tomorrow at 9:41 PM")}</b><p>{t("On Ice asks once: still want it? If you do, the shop opens for you.")}</p></div>
+      <div class="btn main" style="bottom:30px">{t("Done")}</div>
     </div>
 
     <div class="sc app s-ask">
-      <span class="pill">Later</span>
-      <div class="dh left">Still want the linen shirt?</div>
-      <p class="left sub">You noted it yesterday · ≈ $50 estimated</p>
-      <div class="btn go" style="bottom:96px">Don't want it anymore</div>
-      <div class="btn main" style="bottom:48px">Still want it</div>
-      <p class="either">Either answer is a good one.</p>
+      <span class="pill">{t("Later")}</span>
+      <div class="dh left">{t("Still want the linen shirt?")}</div>
+      <p class="left sub">{t("You noted it yesterday · {price} estimated").format(price=m50)}</p>
+      <div class="btn go" style="bottom:96px">{t("Don't want it anymore")}</div>
+      <div class="btn main" style="bottom:48px">{t("Still want it")}</div>
+      <p class="either">{t("Either answer is a good one.")}</p>
     </div>
 
     <div class="sc s-saved">
-      <div class="dh left">Savings</div>
-      <div class="seg"><span>Today</span><span>Week</span><span class="on">Month</span></div>
+      <div class="dh left">{t("Savings")}</div>
+      <div class="seg"><span>{t("Today")}</span><span>{t("Week")}</span><span class="on">{t("Month")}</span></div>
       <div class="card saved-card">
-        <small>Saved this month</small>
-        <p class="sum"><b>≈ $50</b> <q>estimated</q></p>
-        <p>From 1 item you let go this month. Your own estimate, nothing is tracked.</p>
+        <small>{t("Saved this month")}</small>
+        <p class="sum"><b>{m50}</b> <q>{t("estimated")}</q></p>
+        <p>{t("From 1 item you let go this month. Your own estimate, nothing is tracked.")}</p>
       </div>
-      <div class="card let-go"><i>✓</i><div><b>Linen shirt</b><span>Let go today · ≈ $50 estimated</span></div></div>
+      <div class="card let-go"><i>✓</i><div><b>{t("Linen shirt")}</b><span>{t("Let go today · {price} estimated").format(price=m50)}</span></div></div>
     </div>
 
     <div class="sbar"><b>9:41</b><i></i></div>
     <div class="tap"></div>
   </div></div>
   <p class="dcap" aria-hidden="true">{caps}</p>
-  <label class="demo-ctl" for="demo-pause"><span class="p1">Pause the demo</span><span class="p2">Play the demo</span></label>
+  <label class="demo-ctl" for="demo-pause"><span class="p1">{t("Pause the demo")}</span><span class="p2">{t("Play the demo")}</span></label>
 </div>"""
 
 
-def css():
+def css(typed=TYPED):
     k = []
     names = [n for n, _, _ in SCENES]
     for i, (name, start, end) in enumerate(SCENES):
@@ -250,9 +254,9 @@ def css():
     k.append(frames("d-icon", [(0, "transform:none"), (t0 - 0.05, "transform:none"), (t0 + 0.1, "transform:scale(.88)"),
                                (t0 + 0.3, "transform:none"), (T, "transform:none")]))
     # typing, one letter at a time
-    step = (TYPE_TO - TYPE_FROM) / len(TYPED)
+    step = (TYPE_TO - TYPE_FROM) / len(typed)
     letters = []
-    for i in range(len(TYPED)):
+    for i in range(len(typed)):
         k.append(switch(f"d-l{i}", TYPE_FROM + i * step, "max-width:0", "max-width:1em"))
         letters.append(f".demo .typed .l{i}{{animation-name:d-l{i}}}")
     k.append(switch("d-pick", TAPS[2][0], "background:transparent;color:#C9D2DF", "background:#7B8CDE;color:#0F1214"))
